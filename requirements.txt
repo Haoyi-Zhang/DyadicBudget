@@ -1,0 +1,2 @@
+# The scientific artifact uses only the Python standard library.
+# No third-party Python package is required.

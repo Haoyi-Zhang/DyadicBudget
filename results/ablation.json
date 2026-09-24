@@ -1,0 +1,48 @@
+{
+  "positive_exact": 502,
+  "programs": 512,
+  "selected_relaxation": {
+    "marginal": 57,
+    "residual": 290,
+    "tie": 165
+  },
+  "strategies": {
+    "halfstep": {
+      "equal": 114,
+      "max_ratio": "553/20",
+      "median_ratio": "19/17",
+      "p90_ratio": "90/59",
+      "p95_ratio": "153/82",
+      "strict": 388,
+      "zero_exact_positive_bound": 4
+    },
+    "marginal": {
+      "equal": 107,
+      "max_ratio": "33",
+      "median_ratio": "294/221",
+      "p90_ratio": "59/27",
+      "p95_ratio": "11/4",
+      "strict": 395,
+      "zero_exact_positive_bound": 0
+    },
+    "residual": {
+      "equal": 117,
+      "max_ratio": "241/20",
+      "median_ratio": "133/120",
+      "p90_ratio": "13/9",
+      "p95_ratio": "14/9",
+      "strict": 385,
+      "zero_exact_positive_bound": 2
+    },
+    "separation": {
+      "equal": 146,
+      "max_ratio": "4",
+      "median_ratio": "13/12",
+      "p90_ratio": "68/49",
+      "p95_ratio": "210/143",
+      "strict": 356,
+      "zero_exact_positive_bound": 0
+    }
+  },
+  "zero_exact": 10
+}

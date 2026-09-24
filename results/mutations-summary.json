@@ -1,0 +1,9 @@
+{
+  "boundary_counterexamples": 2,
+  "cpu_seconds": 0.012380064999999996,
+  "failures": 0,
+  "peak_rss_kib": 94892,
+  "rejected_mutations": 24,
+  "wall_seconds": 0.012380269999994198,
+  "workers": 1
+}

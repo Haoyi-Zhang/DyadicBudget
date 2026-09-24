@@ -1,0 +1,202 @@
+{
+  "all_commands_passed": true,
+  "baseline_label": "artifact",
+  "command_groups": 15,
+  "commands": [
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "cpu_seconds": 3.837761,
+      "exit_code": 0,
+      "obligation": "unit",
+      "passed": true,
+      "peak_child_rss_kib": 95404,
+      "tests_run": 26,
+      "timed_out": false,
+      "wall_seconds": 3.8382572339999115
+    },
+    {
+      "command": "python pilot.py",
+      "cpu_seconds": 0.7504940000000002,
+      "exit_code": 0,
+      "obligation": "pilot",
+      "passed": true,
+      "peak_child_rss_kib": 95404,
+      "result": {
+        "cpu_seconds": 0.17547839499999995,
+        "failures": 0,
+        "negative_control": {
+          "independent_envelope": "3/4",
+          "true_budget": "0"
+        },
+        "oracle_point_evaluations": 3300,
+        "peak_rss_kib": 93092,
+        "tests": 701,
+        "wall_seconds": 0.1754785240000274,
+        "wide_gap": {
+          "budget": "1/2",
+          "pieces": 83,
+          "span_bits": 80,
+          "threshold_lower_bound": "1208925819614629174706176"
+        },
+        "workers": 1
+      },
+      "timed_out": false,
+      "wall_seconds": 0.7515150889998949
+    },
+    {
+      "command": "python reproduce.py --suite support",
+      "cpu_seconds": 3.8416049999999995,
+      "exit_code": 0,
+      "obligation": "support",
+      "passed": true,
+      "peak_child_rss_kib": 98340,
+      "timed_out": false,
+      "wall_seconds": 3.8422113139999965
+    },
+    {
+      "command": "python reproduce.py --suite envelopes",
+      "cpu_seconds": 6.159384000000001,
+      "exit_code": 0,
+      "obligation": "envelopes",
+      "passed": true,
+      "peak_child_rss_kib": 98340,
+      "timed_out": false,
+      "wall_seconds": 6.162040644000172
+    },
+    {
+      "command": "python reproduce.py --suite periods",
+      "cpu_seconds": 5.327195999999997,
+      "exit_code": 0,
+      "obligation": "periods",
+      "passed": true,
+      "peak_child_rss_kib": 98340,
+      "timed_out": false,
+      "wall_seconds": 5.3276685250000355
+    },
+    {
+      "command": "python reproduce.py --suite programs",
+      "cpu_seconds": 4.060628000000001,
+      "exit_code": 0,
+      "obligation": "programs",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 4.064601787999891
+    },
+    {
+      "command": "python reproduce.py --suite scaling",
+      "cpu_seconds": 3.379981000000001,
+      "exit_code": 0,
+      "obligation": "scaling",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 3.380442298999924
+    },
+    {
+      "command": "python reproduce.py --suite mutations",
+      "cpu_seconds": 0.5865419999999979,
+      "exit_code": 0,
+      "obligation": "mutations",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 0.5874471440001798
+    },
+    {
+      "command": "python reproduce.py --suite baselines",
+      "cpu_seconds": 2.8611059999999995,
+      "exit_code": 0,
+      "obligation": "baselines",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 2.8614912470000036
+    },
+    {
+      "command": "python reproduce.py --suite separation",
+      "cpu_seconds": 1.4492080000000058,
+      "exit_code": 0,
+      "obligation": "separation",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 1.4499103820000983
+    },
+    {
+      "command": "python reproduce.py --suite fusion",
+      "cpu_seconds": 0.8678269999999912,
+      "exit_code": 0,
+      "obligation": "fusion",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 0.8682086769999842
+    },
+    {
+      "command": "python reproduce.py --suite ablation",
+      "cpu_seconds": 0.6495880000000085,
+      "exit_code": 0,
+      "obligation": "ablation",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 0.6502459060000092
+    },
+    {
+      "command": "python -O reproduce.py --suite periods",
+      "cpu_seconds": 5.370591999999995,
+      "exit_code": 0,
+      "obligation": "optimized_periods",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 5.371166356000003
+    },
+    {
+      "command": "python export_tables.py",
+      "cpu_seconds": 0.5860259999999968,
+      "exit_code": 0,
+      "obligation": "tables",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "timed_out": false,
+      "wall_seconds": 0.5867168750000928
+    },
+    {
+      "command": "python budget.py verify results/example-certificate.json",
+      "cpu_seconds": 0.550097000000001,
+      "exit_code": 0,
+      "obligation": "example",
+      "passed": true,
+      "peak_child_rss_kib": 101928,
+      "result": {
+        "budget": "1/6",
+        "certificate_replayed": true,
+        "strict_witness_replayed": true
+      },
+      "timed_out": false,
+      "wall_seconds": 0.5505717739999909
+    }
+  ],
+  "compared_result_and_input_files": 40,
+  "comparison": "JSON compared after removing only the listed diagnostic timing/RSS fields; other JSON values and all CSV/TeX/input/source bytes compared exactly.",
+  "finite_checks_are_not_general_proofs": true,
+  "ignored_diagnostic_json_fields": [
+    "analysis_cpu_seconds",
+    "cpu_seconds",
+    "peak_child_rss_kib",
+    "peak_rss_kib",
+    "replay_cpu_seconds",
+    "wall_seconds"
+  ],
+  "optimized_mode_checks": [
+    "unit-test subprocess for pilot",
+    "full periods suite"
+  ],
+  "scientific_mismatches": [],
+  "scientific_source_files_byte_compared": 15,
+  "scope": "One-worker bounded replay of all frozen scientific suites and certificate/table products.",
+  "source": "artifact/run_all.py",
+  "standalone_without_paper": true
+}

@@ -1,0 +1,12 @@
+{
+  "cpu_seconds": 0.222319673,
+  "failures": 0,
+  "normalized_weight_checks": 781,
+  "peak_rss_kib": 95272,
+  "published_weight_rows": 5,
+  "static_envelope_cases": 10,
+  "strict_witnesses": 10,
+  "wall_seconds": 0.22266055299996879,
+  "wide_range_checks": 60,
+  "workers": 1
+}

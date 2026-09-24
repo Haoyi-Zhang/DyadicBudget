@@ -1,0 +1,9 @@
+{
+  "checks": 3750,
+  "cpu_seconds": 10.133498719,
+  "failures": 0,
+  "oracle_points": 83400,
+  "peak_rss_kib": 96044,
+  "wall_seconds": 10.137964158000017,
+  "workers": 1
+}

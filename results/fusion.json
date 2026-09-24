@@ -1,0 +1,82 @@
+[
+  {
+    "converters": 1,
+    "exact_budget": "1/2",
+    "ratio": "1",
+    "separated_budget": "1/2",
+    "uncertainty_radius": "0",
+    "uniform_phase_variance": "1/12"
+  },
+  {
+    "converters": 1,
+    "exact_budget": "33/64",
+    "ratio": "1",
+    "separated_budget": "33/64",
+    "uncertainty_radius": "1/64",
+    "uniform_phase_variance": "1/12"
+  },
+  {
+    "converters": 2,
+    "exact_budget": "1/2",
+    "ratio": "5/4",
+    "separated_budget": "5/8",
+    "uncertainty_radius": "0",
+    "uniform_phase_variance": "5/96"
+  },
+  {
+    "converters": 2,
+    "exact_budget": "33/64",
+    "ratio": "41/33",
+    "separated_budget": "41/64",
+    "uncertainty_radius": "1/64",
+    "uniform_phase_variance": "5/96"
+  },
+  {
+    "converters": 3,
+    "exact_budget": "1/2",
+    "ratio": "3/2",
+    "separated_budget": "3/4",
+    "uncertainty_radius": "0",
+    "uniform_phase_variance": "1/24"
+  },
+  {
+    "converters": 3,
+    "exact_budget": "33/64",
+    "ratio": "49/33",
+    "separated_budget": "49/64",
+    "uncertainty_radius": "1/64",
+    "uniform_phase_variance": "1/24"
+  },
+  {
+    "converters": 4,
+    "exact_budget": "1/2",
+    "ratio": "7/4",
+    "separated_budget": "7/8",
+    "uncertainty_radius": "0",
+    "uniform_phase_variance": "7/192"
+  },
+  {
+    "converters": 4,
+    "exact_budget": "33/64",
+    "ratio": "19/11",
+    "separated_budget": "57/64",
+    "uncertainty_radius": "1/64",
+    "uniform_phase_variance": "7/192"
+  },
+  {
+    "converters": 5,
+    "exact_budget": "1/2",
+    "ratio": "2",
+    "separated_budget": "1",
+    "uncertainty_radius": "0",
+    "uniform_phase_variance": "1/30"
+  },
+  {
+    "converters": 5,
+    "exact_budget": "33/64",
+    "ratio": "65/33",
+    "separated_budget": "65/64",
+    "uncertainty_radius": "1/64",
+    "uniform_phase_variance": "1/30"
+  }
+]

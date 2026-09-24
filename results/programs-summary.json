@@ -1,0 +1,11 @@
+{
+  "cpu_seconds": 3.496197086,
+  "failures": 0,
+  "generated_programs": 500,
+  "peak_rss_kib": 101672,
+  "sample_valuations": 1500,
+  "specimens": 12,
+  "strict_witnesses": 1506,
+  "wall_seconds": 3.497779883000021,
+  "workers": 1
+}

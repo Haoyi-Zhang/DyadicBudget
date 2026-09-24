@@ -1,0 +1,144 @@
+{
+  "files": {
+    "LICENSE": {
+      "sha256": "af8879dd10caf72b0d0d1b50f8ce2e859977eeb413a8baa82ad195695777681c",
+      "size": 1281
+    },
+    "README.md": {
+      "sha256": "70aacd51e95abd35c222b7f77326113a606ce7996d22bdbf6fe06f4558d5313b",
+      "size": 8381
+    },
+    "budget.py": {
+      "sha256": "0688e03c3b2097d3cd623ef14496663b5d8b9e7212cd871187c3f166adcad6e7",
+      "size": 4325
+    },
+    "claim_evidence_ledger.csv": {
+      "sha256": "685eebb9d120e51860fa92fa47446cbf2d8837e265f6207ef92cb89c33c50b53",
+      "size": 8110
+    },
+    "docs/RELEASE-CLOSURE.md": {
+      "sha256": "02d140d62cf1d57677b2e6b8a70a7b659e51df6f5ce920f8dadf6c9f08bd11c5",
+      "size": 1622
+    },
+    "docs/REPRODUCIBILITY.md": {
+      "sha256": "07eb345a16a3f9de0af42d11d1688ef2c16d514d9fe0398343d3dad5ad0ec765",
+      "size": 1601
+    },
+    "docs/experiment-plan.md": {
+      "sha256": "bbd81595c379ebee4a3c28980c718580d972f85ed18f39c0c14a10891a344c1b",
+      "size": 6643
+    },
+    "docs/readiness.md": {
+      "sha256": "2f65471d755190ec790cb92d0cb4c21499a4a2305f3b72c122babbc90eb2bdc4",
+      "size": 3304
+    },
+    "docs/reference-audit.md": {
+      "sha256": "60c3c278fbadce1b13847e0d4f3c8a10500b5dc7968aeaa5b5b4c6f8ddcb8556",
+      "size": 3498
+    },
+    "environment-lock.json": {
+      "sha256": "f5c03aefdcaa5c96b1d8f9b179cec27951a591e3afd6fce8d98fbc0d5dda6557",
+      "size": 557
+    },
+    "export_tables.py": {
+      "sha256": "8bc69186eb1c582d5e7a1fdcc8bd45e331b94a13967507dae86da0be6643b8fc",
+      "size": 3706
+    },
+    "external_resources.csv": {
+      "sha256": "049d0a815f9b20a3cdeba6246cc119c9f601900765b6a41413b09ea9f3ca5ebb",
+      "size": 12516
+    },
+    "inputs/example.json": {
+      "sha256": "fbc6b2d15b41e2f0679c2a175e4d06e79ed13508e1f662931456ce36a9f50dc5",
+      "size": 1216
+    },
+    "inputs/generated.json": {
+      "sha256": "b6281e9245274fa69e0b31dfd758d06fdf0949306e7f4554cbde99f5083ee942",
+      "size": 857197
+    },
+    "inputs/published-fusion-README.md": {
+      "sha256": "74e67d4e12f2e918a4a9d951167e14984232ca5f7fe0beb45b40129e22612d43",
+      "size": 1988
+    },
+    "inputs/published-fusion.csv": {
+      "sha256": "19bf5c0e6abbe50fc27b38766d4424f5d7efc7c15ee7b801d1b3ab3baa35b505",
+      "size": 106
+    },
+    "inputs/specimens.json": {
+      "sha256": "5073569de5794a1638a8f6f6c53ca4e0c9d7f195743a4cb94d7660ce15abfd08",
+      "size": 14127
+    },
+    "licenses/README.md": {
+      "sha256": "1f89ea57a1424641032b03117c0d34a7f56fa8537ccdc5798da3fe916d6fc259",
+      "size": 505
+    },
+    "pilot.py": {
+      "sha256": "9f27d9fa5027ef3c0cc208d3559f4af5f63f978d573d8748b51829d7c8aaf3ef",
+      "size": 2584
+    },
+    "proofs/principal-budgets.md": {
+      "sha256": "0bf8f9554caa4eeeb9c415a29f764f0ffd33a696dce573fbc2af47db51534bd6",
+      "size": 24834
+    },
+    "reference_audit.csv": {
+      "sha256": "7121d4ba982ddb607adbcf93bc648b719731be4e6b7c137fd16e64cd331b6e5c",
+      "size": 25335
+    },
+    "reproduce.py": {
+      "sha256": "2785486f136d2be7d477d7c40bc1ed174c13166f725e3207708b4d47bd9ae3cf",
+      "size": 23311
+    },
+    "requirements.txt": {
+      "sha256": "a1bcadec4ce63cc63be23c9b5a3936cb08af784477b7fdfac1910e64aa09b321",
+      "size": 110
+    },
+    "run_all.py": {
+      "sha256": "1c938307d5ce11590a3b17f3fe51c366142a922c93ec4598b0cbaa543cd1ca2c",
+      "size": 10467
+    },
+    "src/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "src/cases.py": {
+      "sha256": "5f9e5518b7f81e86593a762da3f29a71b73efd27f3fddedc494a6574a2b0cc67",
+      "size": 5560
+    },
+    "src/checks.py": {
+      "sha256": "8e1eded8c42036a0d17f2fad87795dc06a58b1e7240c73fe097cb7269d8fcbba",
+      "size": 523
+    },
+    "src/comparisons.py": {
+      "sha256": "00bea9eab62cdf76bfef79bb987cc1855153c413a59bf4954482e82ef199e00d",
+      "size": 2173
+    },
+    "src/dyadic.py": {
+      "sha256": "dafeff43867cc853bd3842e5404f88cb8f86015d1eec16d3d5130cf0abc68cab",
+      "size": 7350
+    },
+    "src/language.py": {
+      "sha256": "233f6d7b143b4bc2a8284f84a15623d99c3b6d25d3e01e4043da8928662caadd",
+      "size": 10692
+    },
+    "src/oracle.py": {
+      "sha256": "6855804ed7284ab82dd90eac8a05e27cef65c1db9d4fd6b3a93428ecd935e5ca",
+      "size": 2295
+    },
+    "src/verify.py": {
+      "sha256": "6273ab46b20baabe7ee197b5e97c82e2df03a331365a997faa7a114d2d4885fb",
+      "size": 15014
+    },
+    "tests/test_core.py": {
+      "sha256": "6058e341021c85f9c8c398d6ebc7a9c9a90886ef4d58f10cf39ec619f61d1cf0",
+      "size": 6719
+    },
+    "verify_release.py": {
+      "sha256": "fe728e893f1cfcafdb8a9c3e7e006f717ce587d0bc747a5a99f4cd2099565744",
+      "size": 2831
+    }
+  },
+  "hash_algorithm": "sha256",
+  "kind": "artifact",
+  "schema_version": 1,
+  "scope": "immutable distributed files; generated results/build products are excluded"
+}

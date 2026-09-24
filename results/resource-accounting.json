@@ -1,0 +1,22 @@
+{
+  "accounting_note": "POSIX child resource accounting and wall-clock measurements are diagnostics. Literature work, editing, rendering, TeX, short exploratory commands, and an outer-wrapper-interrupted replay were not all metered; therefore no exact whole-campaign CPU total is asserted. The interrupted wrapper was not counted as a successful replay.",
+  "campaign_cpu_budget_seconds": 28800,
+  "external_compute_used": false,
+  "external_model_api_used_by_scientific_computation": false,
+  "final_clean_replay_child_cpu_seconds": 40.278034999999996,
+  "final_clean_replay_command_groups": 15,
+  "final_clean_replay_peak_child_rss_kib": 101928,
+  "final_clean_replay_unit_tests": 26,
+  "final_clean_replay_wall_seconds_sum": 40.29249525400019,
+  "gpu_used": false,
+  "host_logical_cpus_observed": 5,
+  "host_memory_available_bytes_final_recheck": 5240647680,
+  "host_memory_total_bytes_observed": 6236913664,
+  "host_swap_total_bytes": 0,
+  "project_cpu_core_limit": 4,
+  "project_memory_limit_bytes": 4294967296,
+  "reserved_repair_seconds": 7200,
+  "scope": "Final accepted clean-extraction replay only; not an exact total for all research activity.",
+  "workers": 1,
+  "writable_available_bytes_final_recheck": 31969947648
+}
