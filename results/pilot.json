@@ -1,6 +1,7 @@
 {
   "tests": 701,
-  "oracle_point_evaluations": 3300,
+  "oracle_value_calls": 5550,
+  "oracle_set_points": 3300,
   "failures": 0,
   "negative_control": {
     "true_budget": "0",
@@ -12,8 +13,8 @@
     "pieces": 83,
     "budget": "1/2"
   },
-  "cpu_seconds": 0.32567912199999993,
-  "wall_seconds": 0.3257192739999937,
-  "peak_rss_kib": 93092,
+  "cpu_seconds": 0.238877844,
+  "wall_seconds": 0.23907566699995186,
+  "peak_rss_kib": 93352,
   "workers": 1
 }

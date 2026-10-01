@@ -58,6 +58,7 @@ limit per scientific subprocess. It writes a machine-readable report to
 `results/clean-reproduction.json` and returns nonzero on any failure:
 
 ```sh
+export PYTHONDONTWRITEBYTECODE=1
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 python run_all.py
 ```
@@ -76,6 +77,7 @@ scientific mismatch.
 The equivalent explicit sequence is:
 
 ```sh
+export PYTHONDONTWRITEBYTECODE=1
 python -m unittest discover -s tests -v
 timeout 35s python pilot.py
 for suite in support envelopes periods programs scaling mutations baselines separation fusion ablation; do
@@ -86,7 +88,7 @@ python export_tables.py
 python budget.py verify results/example-certificate.json
 ```
 
-The final campaign contains 15 command groups and 26 unit tests. The unit suite also
+The final campaign contains 15 command groups and 29 unit tests. The unit suite also
 launches the pilot under `python -O`; all scientific cross-checks use explicit
 runtime guards, not removable Python `assert` statements. The protocol and all
 post-pilot repairs are documented in `docs/experiment-plan.md`.
@@ -101,8 +103,9 @@ The frozen campaign covers 8,250 support queries, 3,750 capture-envelope queries
 cases, 24 invalid mutations, and two excluded-semantics counterexamples. Derived
 checks cover 2,800 integer-weight banks, 1,440 transformed-norm vertices, nine
 extremal families, 781 normalized cases, 60 wide-range cases, ten published-weight
-envelope cases, and ten additional witnesses. The four-level ablation evaluates all
-512 unchanged programs. Counts overlap and must not be summed into a workload-breadth
+envelope cases, and ten additional witnesses. The four-interface partial-order ablation evaluates all
+512 unchanged programs; the two exact-marginal decompositions are incomparable and
+the reported separation row is their pointwise minimum. Counts overlap and must not be summed into a workload-breadth
 claim.
 
 `results/clean-reproduction.json` records the clean-extraction replay. Exact budgets,
@@ -111,6 +114,12 @@ vary. `results/resource-accounting.json` separates measured replay diagnostics f
 unmetered literature, editing, rendering, and TeX work rather than inventing an exact
 whole-campaign total.
 
+`results/frozen-value-baseline-check.json` records the independent comparison with
+the untouched originally supplied project archive: all 512 baseline rows and the
+reported 356, `13/12`, `68/49`, `4`, and 57/290/165 statistics are retained.
+`results/cache-integrity-validation.json` records the writable-clean-copy sequence
+of integrity check, replay, second integrity check, and repeated verifier entry.
+
 ## Repository map
 
 - `src/language.py`: finite affine DAG admission, signed effects, paired interpreters,
@@ -118,7 +127,7 @@ whole-campaign total.
 - `src/dyadic.py`: phase-bit coefficients, aligned covers, fibers, and full-period
   support.
 - `src/oracle.py`: independently written exact threshold sweep, capped at 200,000
-  breakpoints.
+  set points, with separate cumulative set-point and actual objective-call counters.
 - `src/verify.py`: separate admission, reverse effects, coefficient reconstruction,
   cover replay, and witness evaluation.
 - `src/comparisons.py`: specified local relaxation baselines, not external tools.

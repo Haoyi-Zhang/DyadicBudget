@@ -1,27 +1,47 @@
-# Release closure
+# Release verification
 
-This record closes the internal research-delivery cycle for the frozen model. It reports checks performed on the packaged sources and generated PDF; it does not claim peer review, proof-assistant certification, acceptance, or real-hardware validation.
+This record describes the current internal delivery checks for the frozen model. It
+does not claim peer review, proof-assistant certification, acceptance, or physical-
+hardware validation.
 
 ## Distribution facts
 
-- Project release date: 2026-09-19
-- Paper PDF: `main.pdf`
-- PDF pages: 23
-- References begin on page: 21
-- Embedded fonts check: FAIL
-- BibTeX records: 62
-- Unique DOI fields: 52
-- Additional URL fields: 2
-- Artifact Python files: 15
+- Paper PDF: `paper/main.pdf` in the matching full project.
+- PDF pages: 23, with 20 content pages and references beginning on page 21.
+- Embedded-font audit: passed.
+- Bibliography: 62 unique cited records, including 60 DOI records and two stable-URL-only records.
+- Artifact Python files: 15.
+- Scientific replay: 15 sequential command groups and 29 unit tests.
 
 ## Required release gates
 
-1. `python run_all.py` must return zero in a clean extraction.
-2. `python verify_release.py --integrity-only` must validate the immutable manifest.
-3. The paper's `python build.py` must return zero and enforce the page, anonymity, bibliography, font, and log contracts.
-4. The full-project and standalone-artifact archives must contain a single safe root and no symbolic links, absolute paths, path traversal, or packaged caches.
-5. A second clean extraction must reproduce the retained scientific files without a scientific difference.
+1. `python verify_release.py --integrity-only` must validate required files, safe paths,
+   the immutable source manifest, Python syntax, and absence of packaged caches.
+2. `python run_all.py` must return zero in a writable clean copy. The runner suppresses
+   bytecode for itself and all child processes, even when the parent environment does
+   not set `PYTHONDONTWRITEBYTECODE`.
+3. A second integrity check must pass after replay. `python verify_release.py --run`
+   performs the pre-check, replay, and post-check as one controlled entry.
+4. The paper's `python build.py` must return zero and enforce page, anonymity,
+   bibliography, embedded-font, and LaTeX-log contracts.
+5. The full-project and standalone-artifact archives must contain one safe root and no
+   symbolic links, absolute paths, path traversal, or packaged bytecode caches.
+
+`results/cache-integrity-validation.json` records the completed writable-clean-copy
+sequence. All 34 manifest-listed immutable hashes remained unchanged and no
+`__pycache__` directory or `.pyc` file remained. The earlier incomplete pre-repair
+attempt is not reported as an observed failure.
+
+`results/frozen-value-baseline-check.json` records a separate comparison with the
+untouched originally supplied project archive. It verifies that the repair did not
+change the 512 frozen numerical baseline rows or the reported ablation statistics.
 
 ## Scientific boundary
 
-The implementation uses exact rational arithmetic and retained deterministic inputs. Finite executable checks support the implementation and examples. General statements rely on the written proofs in the paper. Saturation, biased quantizers, non-dyadic steps, nonlinear downstream operators, stochastic or temporal noise, physical-device calibration, energy, latency, and deployment performance remain outside the frozen theorem and experiment boundary unless explicitly stated otherwise in the paper.
+The implementation uses exact rational arithmetic and deterministic retained inputs.
+Finite executable checks support the implementation and examples; general statements
+rely on the written proofs. Saturation, biased quantizers, non-dyadic steps, cascaded
+quantizers, nonlinear downstream operators, stochastic or temporal noise, physical-
+device calibration, energy, latency, and deployment performance remain outside the
+frozen theorem and experiment boundary unless explicitly stated otherwise in the
+paper.

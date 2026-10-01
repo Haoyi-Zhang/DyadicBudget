@@ -18,6 +18,10 @@ import resource
 from pathlib import Path
 from typing import Any
 
+# The documented runner and every child process must leave a clean distribution
+# tree: release verification rejects bytecode caches by design.
+sys.dont_write_bytecode = True
+
 ROOT = Path(__file__).resolve().parent
 RESULTS = ROOT / "results"
 DIAGNOSTIC_FIELDS = {
@@ -50,6 +54,7 @@ def run_command(obligation: str, command: list[str], timeout: int = 35) -> dict[
             "OPENBLAS_NUM_THREADS": "1",
             "MKL_NUM_THREADS": "1",
             "NUMEXPR_NUM_THREADS": "1",
+            "PYTHONDONTWRITEBYTECODE": "1",
         }
     )
     before = resource.getrusage(resource.RUSAGE_CHILDREN)

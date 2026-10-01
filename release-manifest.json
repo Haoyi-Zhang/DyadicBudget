@@ -5,31 +5,31 @@
       "size": 1281
     },
     "README.md": {
-      "sha256": "70aacd51e95abd35c222b7f77326113a606ce7996d22bdbf6fe06f4558d5313b",
-      "size": 8381
+      "sha256": "ace89078da5557011bfe976e580ba7eaa50e5ff7c1d13e4616ea5015de18ed74",
+      "size": 9056
     },
     "budget.py": {
       "sha256": "0688e03c3b2097d3cd623ef14496663b5d8b9e7212cd871187c3f166adcad6e7",
       "size": 4325
     },
     "claim_evidence_ledger.csv": {
-      "sha256": "685eebb9d120e51860fa92fa47446cbf2d8837e265f6207ef92cb89c33c50b53",
-      "size": 8110
+      "sha256": "017bc4f8344c0a73b4f498425df11747f48c0eae830214ba0f7028e06ddb9347",
+      "size": 9020
     },
     "docs/RELEASE-CLOSURE.md": {
-      "sha256": "02d140d62cf1d57677b2e6b8a70a7b659e51df6f5ce920f8dadf6c9f08bd11c5",
-      "size": 1622
+      "sha256": "0ddd0444f5c564bb6d67e55e07e4596e8b992eea8fec332dd7cb94f77f2ef2dd",
+      "size": 2551
     },
     "docs/REPRODUCIBILITY.md": {
-      "sha256": "07eb345a16a3f9de0af42d11d1688ef2c16d514d9fe0398343d3dad5ad0ec765",
-      "size": 1601
+      "sha256": "3d470bf45ec1f6963a67af9bb42f6a2e47725d803448fea9a17e26a93559d1b0",
+      "size": 1852
     },
     "docs/experiment-plan.md": {
-      "sha256": "bbd81595c379ebee4a3c28980c718580d972f85ed18f39c0c14a10891a344c1b",
-      "size": 6643
+      "sha256": "8cd067495dcc5268ada6ebda6f11a9efc1649516fa36b8b13c596a9b5b64c520",
+      "size": 6784
     },
     "docs/readiness.md": {
-      "sha256": "2f65471d755190ec790cb92d0cb4c21499a4a2305f3b72c122babbc90eb2bdc4",
+      "sha256": "1e0e3a724353f1cde1a50e279edb4c4baad5a0e7d2315209f236521084deaae8",
       "size": 3304
     },
     "docs/reference-audit.md": {
@@ -73,8 +73,8 @@
       "size": 505
     },
     "pilot.py": {
-      "sha256": "9f27d9fa5027ef3c0cc208d3559f4af5f63f978d573d8748b51829d7c8aaf3ef",
-      "size": 2584
+      "sha256": "e27b245f15c2e1d0e41d83a341bdf56d695789fc3c4a767056f172497a32e1dd",
+      "size": 2710
     },
     "proofs/principal-budgets.md": {
       "sha256": "0bf8f9554caa4eeeb9c415a29f764f0ffd33a696dce573fbc2af47db51534bd6",
@@ -85,16 +85,16 @@
       "size": 25335
     },
     "reproduce.py": {
-      "sha256": "2785486f136d2be7d477d7c40bc1ed174c13166f725e3207708b4d47bd9ae3cf",
-      "size": 23311
+      "sha256": "d705ff840b637ac0bde26416561d3352a5350d677eb5822a84017d01d62ac9e6",
+      "size": 23805
     },
     "requirements.txt": {
       "sha256": "a1bcadec4ce63cc63be23c9b5a3936cb08af784477b7fdfac1910e64aa09b321",
       "size": 110
     },
     "run_all.py": {
-      "sha256": "1c938307d5ce11590a3b17f3fe51c366142a922c93ec4598b0cbaa543cd1ca2c",
-      "size": 10467
+      "sha256": "53217ff43aca3b5ce690a988438f9e9f28dcd2fa69d10ca569c0d515dd8b76b3",
+      "size": 10687
     },
     "src/__init__.py": {
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -109,8 +109,8 @@
       "size": 523
     },
     "src/comparisons.py": {
-      "sha256": "00bea9eab62cdf76bfef79bb987cc1855153c413a59bf4954482e82ef199e00d",
-      "size": 2173
+      "sha256": "c465f97f44c9cb3bb791addc1ae08c3b869211df518590df4cf1ae84593864d3",
+      "size": 2229
     },
     "src/dyadic.py": {
       "sha256": "dafeff43867cc853bd3842e5404f88cb8f86015d1eec16d3d5130cf0abc68cab",
@@ -121,20 +121,20 @@
       "size": 10692
     },
     "src/oracle.py": {
-      "sha256": "6855804ed7284ab82dd90eac8a05e27cef65c1db9d4fd6b3a93428ecd935e5ca",
-      "size": 2295
+      "sha256": "7a606400543a9251d718c923fd6ad3950aba3b7fa9bb5b0822671355bd1c40dd",
+      "size": 4180
     },
     "src/verify.py": {
       "sha256": "6273ab46b20baabe7ee197b5e97c82e2df03a331365a997faa7a114d2d4885fb",
       "size": 15014
     },
     "tests/test_core.py": {
-      "sha256": "6058e341021c85f9c8c398d6ebc7a9c9a90886ef4d58f10cf39ec619f61d1cf0",
-      "size": 6719
+      "sha256": "1f77964d01a78f08500fe4e223d5eccc7007b135ecd0d99fe0c753f3f0166f66",
+      "size": 7380
     },
     "verify_release.py": {
-      "sha256": "fe728e893f1cfcafdb8a9c3e7e006f717ce587d0bc747a5a99f4cd2099565744",
-      "size": 2831
+      "sha256": "060f8653cc6a4ef03e4b704d08782d850af0d1d4beccac8d4881ceb22f882e91",
+      "size": 2979
     }
   },
   "hash_algorithm": "sha256",

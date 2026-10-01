@@ -10,6 +10,7 @@ import unittest
 from src.cases import program, specimens
 from src.dyadic import support, full_period_budget, round_dyadic, cover
 from src.language import analyze, evaluate, validate, witness
+from src.oracle import sweep, group_oracle
 from src.verify import well_formed, check_result, replay_witness
 from src.checks import require
 
@@ -37,6 +38,22 @@ class Core(unittest.TestCase):
     def test_no_quantizers(self):
         z=support({},F(-4,7),F(3,5),F(-2),F(1))
         self.assertEqual((z.lower.value,z.upper.value),(F(-1,5),F(15,7)))
+
+    def test_oracle_count_interval(self):
+        z=sweep({0:F(1)},F(0),F(1))
+        self.assertEqual(z.set_points,3)
+        self.assertEqual(z.value_calls,5)
+
+    def test_oracle_count_singleton(self):
+        z=sweep({0:F(1)},F(1,2),F(1,2))
+        self.assertEqual(z.set_points,1)
+        self.assertEqual(z.value_calls,1)
+
+    def test_group_oracle_count_fiber_boundaries(self):
+        z=group_oracle((F(0),F(1)),(F(-1,4),F(1,4)),F(1),{0:F(1)})
+        # Six threshold-sweep subqueries process shared fiber boundaries again.
+        self.assertEqual(z.set_points,14)
+        self.assertEqual(z.value_calls,22)
 
     def test_value_reuse(self):
         self.assertEqual(analyze(specimens()['value_alias'])['budget'],'0')

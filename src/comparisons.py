@@ -7,8 +7,9 @@ from .verify import reverse_effect
 def separation_bounds(program):
     """Exact marginals but no dependence across distinct channels.
 
-Two equivalent decompositions are independently relaxed, and their minimum is
-reported. This is an analytical baseline implemented here, not an external tool.
+Two exact decompositions are independently relaxed. Their resulting bounds are
+incomparable in general, so their pointwise minimum is reported. This is an
+analytical baseline implemented here, not an external tool.
 """
     cache = {}
     for name, decl in program['captures'].items():

@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import py_compile
 import subprocess
@@ -73,10 +74,13 @@ def main() -> int:
     args = parser.parse_args()
     check_integrity()
     if args.run:
-        proc = subprocess.run([sys.executable, "run_all.py"], cwd=ROOT)
+        env = os.environ.copy()
+        env["PYTHONDONTWRITEBYTECODE"] = "1"
+        proc = subprocess.run([sys.executable, "run_all.py"], cwd=ROOT, env=env)
         if proc.returncode:
             fail(f"run_all.py exited with {proc.returncode}")
-        print("scientific replay: PASS")
+        check_integrity()
+        print("scientific replay and post-replay integrity: PASS")
     return 0
 
 if __name__ == "__main__":

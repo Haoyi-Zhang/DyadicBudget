@@ -1,0 +1,63 @@
+{
+  "baseline_archive_sha256": "83f41588cc00e974b9b563fcb8a0f50deb84c5ce439df76d480257c98a084c09",
+  "baseline_source": "original uploaded final-project-paper-and-code.zip",
+  "frozen_512_rows_identical": true,
+  "required_statistics": {
+    "maximum": "4",
+    "median": "13/12",
+    "p90": "68/49",
+    "selected": {
+      "marginal": 57,
+      "residual": 290,
+      "tie": 165
+    },
+    "strict": 356
+  },
+  "results/ablation.csv": {
+    "baseline_sha256": "8c7c7710ed77daaf9aa891f287304282cca5a88283c33dae662b81d22d4025b3",
+    "current_sha256": "8c7c7710ed77daaf9aa891f287304282cca5a88283c33dae662b81d22d4025b3",
+    "identical": true
+  },
+  "results/ablation.json": {
+    "baseline_sha256": "e94d5c8fab37eb361e751dec41b35a385254f3ad7b2766e6f8b525e215ad2c9a",
+    "current_sha256": "e94d5c8fab37eb361e751dec41b35a385254f3ad7b2766e6f8b525e215ad2c9a",
+    "identical": true
+  },
+  "results/baselines.json": {
+    "baseline_sha256": "34f335c6a666b7966328a7991b0b9cfde1eff231b24def8d8af54ac057f39897",
+    "current_sha256": "34f335c6a666b7966328a7991b0b9cfde1eff231b24def8d8af54ac057f39897",
+    "identical": true
+  },
+  "results/generated.json": {
+    "baseline_sha256": "960f178d96d44ba16fd4e1be91f0c47d69da0e49a72382b81e0a35c3df8dad27",
+    "current_sha256": "960f178d96d44ba16fd4e1be91f0c47d69da0e49a72382b81e0a35c3df8dad27",
+    "identical": true
+  },
+  "results/paper/ablation.tex": {
+    "baseline_sha256": "f6d4f401bb9c659777f94efb84e527d588da7fbf5a9683b89726e1cd07ffed23",
+    "current_sha256": "f6d4f401bb9c659777f94efb84e527d588da7fbf5a9683b89726e1cd07ffed23",
+    "identical": true
+  },
+  "results/specimens.json": {
+    "baseline_sha256": "5042ddc7e056beadeeb4d1e84f94da4032aeba290844945f22ff6780360358bf",
+    "current_sha256": "5042ddc7e056beadeeb4d1e84f94da4032aeba290844945f22ff6780360358bf",
+    "identical": true
+  },
+  "scope_note": "This comparison freezes numerical/result products only; intentionally repaired source, prose, counter names, and operation-count fields are not asserted byte-identical.",
+  "specimen_crossovers": {
+    "prequantization_compensation": {
+      "exact": "1/2",
+      "halfstep": "1/2",
+      "marginal": "3/4",
+      "residual": "1/2",
+      "separation": "1/2"
+    },
+    "subthreshold_capture": {
+      "exact": "0",
+      "halfstep": "3/4",
+      "marginal": "0",
+      "residual": "1/2",
+      "separation": "0"
+    }
+  }
+}

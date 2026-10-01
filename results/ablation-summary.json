@@ -1,10 +1,10 @@
 {
   "checks": 512,
-  "cpu_seconds": 0.03366190799999996,
+  "cpu_seconds": 0.03627652399999992,
   "failures": 0,
-  "peak_rss_kib": 95776,
+  "peak_rss_kib": 97188,
   "positive_exact": 502,
   "strategies": 4,
-  "wall_seconds": 0.03367512899990288,
+  "wall_seconds": 0.03630142299994077,
   "workers": 1
 }

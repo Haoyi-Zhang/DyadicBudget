@@ -75,15 +75,17 @@ Those rows are factual coefficients only; the artifact does not reproduce the
 source paper's timing constellation, sampling process, signal reconstruction, or
 physical experiment.
 
-## Frozen abstraction-hierarchy ablation
+## Frozen partial-order ablation
 
-A four-level ablation runs on the same 12 specimens and 500 generated programs:
-`halfstep`, `marginal`, `residual`, and `separation`, each compared with the exact
-relational budget. Ratios are reported only when the exact budget is positive;
+A four-interface ablation runs on the same 12 specimens and 500 generated
+programs: `halfstep`, `marginal`, `residual`, and `separation`, each compared with
+the exact relational budget. These rows are not a total hierarchy: the output- and
+residual-marginal decompositions are incomparable, and `separation` is their
+pointwise minimum. Ratios are reported only when the exact budget is positive;
 zero-budget cases separately count whether a relaxation remains positive. The
 ablation asks which discarded relation causes overapproximation. It is not a
 population estimate, external-tool benchmark, or post-hoc workload-selection
-claim. The selected exact-marginal relaxation is also recorded per program so the
+claim. The selected exact-marginal relaxation is recorded per program so the
 reported minimum is auditable rather than a hidden oracle.
 
 ## Budgets, repair, and clean reproduction
@@ -97,7 +99,7 @@ certificate, failed strict witness, or surviving selected mutation blocks the
 corresponding claim until repaired and rerun.
 
 The final clean replay starts from the standalone repository ZIP extracted into an
-empty directory and executes, in order: 26 unit tests, pilot, support, envelopes,
+empty directory and executes, in order: 29 unit tests, pilot, support, envelopes,
 periods, programs, scaling, mutations, baselines, separation, fusion, ablation, a
 second complete period suite under `python -O`, table export, and example-certificate
 replay. The unit tests also launch the pilot under `python -O`. Scientific JSON is compared after

@@ -27,7 +27,7 @@ def write_json(path, data):
 
 
 def suite_support():
-    rows = []; points = 0
+    rows = []; value_calls = 0; set_points = 0
     for ps in it.combinations(range(-3, 2), 2):
         for ws in it.product(range(-2, 3), repeat=2):
             weights = dict(zip(ps, map(F, ws)))
@@ -38,15 +38,17 @@ def suite_support():
                     expected = (s.lower.value, s.upper.value, s.lower.attained, s.upper.attained)
                     require(expected == v[:4], (weights, a, b, lam, expected, v))
                     check_support(s.certificate, weights, a, b, lam)
-                    points += v[4]
-                    rows.append([*ps, *ws, str(a), str(b), str(lam), str(s.lower.value), str(s.upper.value), s.lower.attained, s.upper.attained, v[4]])
+                    value_calls += v.value_calls
+                    set_points += v.set_points
+                    rows.append([*ps, *ws, str(a), str(b), str(lam), str(s.lower.value), str(s.upper.value), s.lower.attained, s.upper.attained, v.value_calls, v.set_points])
     with (RESULTS/'support.csv').open('w', newline='') as f:
-        w = csv.writer(f); w.writerow(['p','q','wp','wq','a','b','linear','inf','sup','inf_attained','sup_attained','oracle_points']); w.writerows(rows)
-    return {'checks': len(rows), 'oracle_points': points, 'failures': 0}
+        w = csv.writer(f); w.writerow(['p','q','wp','wq','a','b','linear','inf','sup','inf_attained','sup_attained','oracle_value_calls','oracle_set_points']); w.writerows(rows)
+    return {'checks': len(rows), 'oracle_value_calls': value_calls,
+            'oracle_set_points': set_points, 'failures': 0}
 
 
 def suite_envelopes():
-    rows = []; points = 0
+    rows = []; value_calls = 0; set_points = 0
     for ps in it.combinations(range(-3, 2), 2):
         for ws in it.product(range(-2, 3), repeat=2):
             weights = dict(zip(ps, map(F, ws)))
@@ -57,11 +59,13 @@ def suite_envelopes():
                     v = group_oracle(x, u, c, weights)
                     require(actual == v[:4], (x, u, c, weights, actual, v))
                     check_group(s, x, u, c, weights)
-                    points += v[4]
-                    rows.append([*ps, *ws, j, str(c), *map(str, actual), v[4]])
+                    value_calls += v.value_calls
+                    set_points += v.set_points
+                    rows.append([*ps, *ws, j, str(c), *map(str, actual), v.value_calls, v.set_points])
     with (RESULTS/'envelopes.csv').open('w', newline='') as f:
-        w = csv.writer(f); w.writerow(['p','q','wp','wq','box','coefficient','inf','sup','inf_attained','sup_attained','oracle_points']); w.writerows(rows)
-    return {'checks': len(rows), 'oracle_points': points, 'failures': 0}
+        w = csv.writer(f); w.writerow(['p','q','wp','wq','box','coefficient','inf','sup','inf_attained','sup_attained','oracle_value_calls','oracle_set_points']); w.writerows(rows)
+    return {'checks': len(rows), 'oracle_value_calls': value_calls,
+            'oracle_set_points': set_points, 'failures': 0}
 
 
 def suite_periods():
@@ -245,10 +249,12 @@ def suite_baselines():
 
 
 def suite_ablation():
-    """Summarize the three abstraction levels on the frozen 512-program corpus.
+    """Summarize four partially ordered interfaces on the frozen 512 programs.
 
-    Ratios are reported only when the principal budget is positive.  Empirical
-    quantiles use the deterministic nearest-rank definition ceil(q*n).
+    The output- and residual-marginal decompositions are incomparable; the
+    ``separation`` row is their pointwise minimum. Ratios are reported only when
+    the principal budget is positive. Empirical quantiles use the deterministic
+    nearest-rank definition ceil(q*n).
     """
     rows = json.loads((RESULTS/'baselines.json').read_text())
     strategies = ['halfstep', 'marginal', 'residual', 'separation']

@@ -1,11 +1,10 @@
 {
   "artifact_python_files": 15,
-  "baseline_artifact_replay_log": "/mnt/data/final_release_baseline_artifact.log",
-  "baseline_paper_build_log": "/mnt/data/final_release_baseline_paper.log",
   "bibtex_entries": 62,
-  "fonts_fully_embedded": false,
+  "cache_integrity_result": "results/cache-integrity-validation.json",
+  "fonts_fully_embedded": true,
+  "frozen_value_baseline_result": "results/frozen-value-baseline-check.json",
   "paper_pdf": "main.pdf",
-  "paper_pdf_sha256": "7cf0ef136030de0ae823ae935d57094a5030e63661d96934e57f5d6c1c559f0b",
   "paper_source_files": 21,
   "pdf_pages": 23,
   "project_root_entries": [
@@ -15,9 +14,11 @@
     "research-plan.md"
   ],
   "references_start_page": 21,
-  "release_date": "2026-09-19",
-  "schema_version": 1,
-  "status": "internal release candidate; not peer reviewed or formally certified",
-  "unique_dois": 52,
-  "url_fields": 2
+  "schema_version": 2,
+  "scope_note": "Current verification snapshot only; no version history or external-review claim.",
+  "stable_url_only_records": 2,
+  "standalone_command_groups": 15,
+  "status": "internal research draft; not submitted, peer reviewed, accepted, or formally certified",
+  "unique_doi_records": 60,
+  "unit_tests": 29
 }

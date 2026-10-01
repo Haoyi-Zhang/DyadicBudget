@@ -22,7 +22,7 @@ material metadata repairs are recorded in `reference-audit.md`,
 ## Accepted clean-extraction replay
 
 The final standalone ZIP was extracted into a new empty directory and returned exit
-code zero for all 15 sequential command groups: 26 unit tests, the measured pilot,
+code zero for all 15 sequential command groups: 29 unit tests, the measured pilot,
 ten frozen scientific suites, a complete period suite under `python -O`, table
 export, and certificate replay. Forty retained input/result files matched the working
 artifact after removing only the named timing/RSS fields, and 15 scientific
