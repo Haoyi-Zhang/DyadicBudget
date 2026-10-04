@@ -156,12 +156,7 @@ No categorical “first” claim is made.
 
 ## Provenance and licensing
 
-A generative AI assistant carried out substantive research formulation, source
-comparison, proof construction, implementation, data-generation design, execution,
-analysis, validation, and technical writing. The exact scientific computations ran
-locally on CPU and did not invoke an external model service. Human authorship,
-accountability, policy compliance, and external publication readiness have not been
-certified.
+The exact scientific computations ran locally on CPU and did not invoke an external model service.
 
 See `LICENSE` and `licenses/README.md`. No scholarly PDF, third-party solver,
 private material, credentials, or external-model artifact is included. Source
