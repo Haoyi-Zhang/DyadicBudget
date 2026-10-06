@@ -7,6 +7,7 @@ accounting; peak RSS is the cumulative child maximum and remains a diagnostic, n
 from __future__ import annotations
 
 import argparse
+import ast
 import json
 import os
 import re
@@ -147,6 +148,13 @@ def source_files(root: Path) -> list[Path]:
     return [path for path in candidates if path.is_file()]
 
 
+def source_test_count(root: Path) -> int:
+    return sum(sum(isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+                   and node.name.startswith('test_') for node in ast.walk(
+                       ast.parse(path.read_text(encoding='utf-8'))))
+               for path in (root / 'tests').glob('test_*.py'))
+
+
 def compare_file(current: Path, baseline: Path) -> bool:
     if current.suffix == ".json":
         try:
@@ -154,6 +162,17 @@ def compare_file(current: Path, baseline: Path) -> bool:
             right = strip_diagnostics(json.loads(baseline.read_text(encoding="utf-8")))
         except (json.JSONDecodeError, UnicodeDecodeError):
             return current.read_bytes() == baseline.read_bytes()
+        if current.relative_to(ROOT).as_posix() == 'results/unit-tests.json':
+            # A frozen discovery count is historical metadata. The current run
+            # must execute every current source method and retain all prior tests.
+            expected = source_test_count(ROOT)
+            old_count = right.get('tests_run')
+            if (left.get('passed') is not True or right.get('passed') is not True
+                or left.get('tests_run') != expected or type(old_count) is not int
+                or not 0 < old_count <= expected):
+                return False
+            left = {k:v for k,v in left.items() if k != 'tests_run'}
+            right = {k:v for k,v in right.items() if k != 'tests_run'}
         return left == right
     return current.read_bytes() == baseline.read_bytes()
 
@@ -193,6 +212,8 @@ def compare_baseline(baseline_root: Path) -> dict[str, Any]:
         ),
         "ignored_diagnostic_json_fields": sorted(DIAGNOSTIC_FIELDS),
         "scientific_mismatches": mismatches,
+        "current_source_test_methods": source_test_count(ROOT),
+        "frozen_test_count_is_historical_metadata": True,
     }
 
 
