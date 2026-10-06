@@ -128,7 +128,7 @@ def generated_files(root: Path) -> list[Path]:
         path
         for path in (root / "results").rglob("*")
         if path.is_file() and path.name not in {"clean-reproduction.json", "resource-accounting.json"}
-        and path.relative_to(root / "results").parts[0] != "raw"
+        and path.relative_to(root / "results").parts[0] not in {"raw", "current-replay"}
     ]
     files.extend(path for path in (root / "inputs").rglob("*") if path.is_file())
     return sorted(files)
