@@ -53,9 +53,13 @@ therefore added on all unchanged 512 programs:
 
 - `marginal`: compute each quantizer channel's exact bounded marginal support but
   discard dependence between channels and pre-quantization uncertainty;
-- `residual`: retain the capture-uncertainty term with the combined residual bank,
-  but separate those two groups;
+- `residual`: compute each converter's exact bounded residual marginal and
+  combine those intervals separately from the capture-uncertainty term;
 - `separation`: report the smaller of the two valid exact-marginal relaxations.
+
+For vector outputs, each decomposition first takes the maximum of its row budgets;
+`separation` is the minimum of those two complete vector budgets, not a hybrid
+that selects a different decomposition for each row.
 
 This repair was not treated as an untouched preplanned experiment. No input was
 removed or selected according to its result.
@@ -98,8 +102,8 @@ hardware-performance benchmark. Any exact-oracle mismatch, invalid accepted
 certificate, failed strict witness, or surviving selected mutation blocks the
 corresponding claim until repaired and rerun.
 
-The final clean replay starts from the standalone repository ZIP extracted into an
-empty directory and executes, in order: 29 unit tests, pilot, support, envelopes,
+The retained historical Linux clean replay started from the standalone repository
+ZIP extracted into an empty directory and executed, in order: 29 unit tests, pilot, support, envelopes,
 periods, programs, scaling, mutations, baselines, separation, fusion, ablation, a
 second complete period suite under `python -O`, table export, and example-certificate
 replay. The unit tests also launch the pilot under `python -O`. Scientific JSON is compared after
@@ -108,3 +112,12 @@ byte-for-byte. Timing differences are permitted, scientific differences are not.
 The resulting 15-command-group report is `results/clean-reproduction.json`.
 Scientific guards use explicit exceptions rather than removable Python `assert`
 statements.
+
+The current runner keeps those 15 command groups and has 33 unit tests. The four
+additional regressions cover vector-baseline aggregation, output order, and string
+origin-name admission. Native Windows library replay exercised 30 tests and all
+ten frozen suite functions, leaving the frozen numerical products unchanged; the
+three POSIX-dependent tests require the supported Linux runtime. That replay does
+not replace the retained Linux resource measurements or establish a new full
+POSIX command-line campaign. Full subprocess logs are now retained in
+`results/raw/`, outside the deterministic-product comparison.

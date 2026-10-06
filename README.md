@@ -88,10 +88,25 @@ python export_tables.py
 python budget.py verify results/example-certificate.json
 ```
 
-The final campaign contains 15 command groups and 29 unit tests. The unit suite also
+The supplied campaign contains 15 command groups and 33 unit tests. The unit suite also
 launches the pilot under `python -O`; all scientific cross-checks use explicit
 runtime guards, not removable Python `assert` statements. The protocol and all
 post-pilot repairs are documented in `docs/experiment-plan.md`.
+
+The retained Linux clean-reproduction report ran the earlier 29-test suite. The
+current suite adds four regressions for vector-baseline aggregation, output-order
+invariance, and origin-name admission. Native Windows library replay exercised
+30 of the current 33 tests and all ten frozen suite functions; the three
+POSIX-dependent tests were not run on that host. Thirty regenerated input/result
+products matched the retained scientific values after excluding only the listed
+timing/RSS fields. The seven table/phase exports matched as text; six TeX files
+differed only in Windows line endings. Historical Linux CPU/RSS values are retained
+and are not current-host measurements.
+
+For multiple outputs, each exact-marginal decomposition takes its maximum row
+budget before their minimum is selected. The rowwise hybrid is a different,
+stronger baseline. This correction leaves all 512 frozen comparison rows and
+their reported statistics unchanged.
 
 The 500 seeded programs and 12 analytical specimens are implementation tests, not
 512 independent application workloads. The five published fusion rows are
@@ -119,6 +134,13 @@ the untouched originally supplied project archive: all 512 baseline rows and the
 reported 356, `13/12`, `68/49`, `4`, and 57/290/165 statistics are retained.
 `results/cache-integrity-validation.json` records the writable-clean-copy sequence
 of integrity check, replay, second integrity check, and repeated verifier entry.
+
+The `scientific-checks.yml` workflow is prepared for a flat artifact repository on
+Ubuntu 24.04. It enforces the existing failure gates, a 600-second whole-run wall
+bound, a 3-GiB address-space limit and CPU limits, and uploads raw output even on
+failure. Preparing the workflow is not evidence that a remote run has completed.
+`run_all.py` now retains full subprocess stdout/stderr in `results/raw/`; those
+logs are diagnostic and excluded from deterministic scientific comparisons.
 
 ## Repository map
 

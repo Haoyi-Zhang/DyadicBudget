@@ -13,6 +13,7 @@ from src.language import analyze, evaluate, validate, witness
 from src.oracle import sweep, group_oracle
 from src.verify import well_formed, check_result, replay_witness
 from src.checks import require
+from src.comparisons import separation_bounds
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -126,6 +127,48 @@ class Core(unittest.TestCase):
         p=program({0:F(1)}); p['contract']='latent-correlated'
         for fn in (validate,well_formed):
             with self.assertRaises(ValueError): fn(p)
+
+    def test_nonstring_capture_name_rejected(self):
+        p=program({0:F(1)})
+        p['captures'][7]=p['captures'].pop('g'); p['nodes'][1]['source']=7
+        for fn in (validate,well_formed):
+            with self.assertRaises(ValueError): fn(p)
+
+    def test_nonstring_noise_name_rejected(self):
+        p=program({0:F(1)},noise=('0','1'))
+        p['noises'][7]=p['noises'].pop('n')
+        next(n for n in p['nodes'] if n['op']=='noise')['origin']=7
+        for fn in (validate,well_formed):
+            with self.assertRaises(ValueError): fn(p)
+
+    def test_vector_baseline_minimum_after_maximum(self):
+        p=program({0:F(1)},x=('0','0'),analog=('-1/4','1/4'),analog_weight=F(1))
+        q=program({0:F(1)},x=('-3/8','3/8'),analog=('-1/4','1/4'),analog_weight=F(-1))
+        p['captures']['h']=q['captures']['g']
+        for node in q['nodes']:
+            n=deepcopy(node); n['id']='h_'+n['id']
+            for key in ('arg','left','right'):
+                if key in n: n[key]='h_'+n[key]
+            if 'source' in n: n['source']='h'
+            p['nodes'].append(n)
+        p['outputs'].append('h_'+q['outputs'][0])
+        result=analyze(p)
+        self.assertEqual(result['budget'],'1/2')
+        self.assertTrue(check_result(p,result))
+        self.assertEqual(separation_bounds(p),{'marginal':'1','residual':'3/4','separation':'3/4'})
+        # Each standalone row prefers the opposite decomposition.
+        row_bounds=[]
+        for output in p['outputs']:
+            row=deepcopy(p); row['outputs']=[output]
+            row_bounds.append(separation_bounds(row))
+        self.assertEqual(row_bounds[0],{'marginal':'1/4','residual':'3/4','separation':'1/4'})
+        self.assertEqual(row_bounds[1],{'marginal':'1','residual':'1/2','separation':'1/2'})
+
+    def test_baseline_vector_output_order_invariant(self):
+        p=specimens()['vector_outputs']
+        before=separation_bounds(p)
+        p['outputs'].reverse()
+        self.assertEqual(separation_bounds(p),before)
 
     def test_changed_result_rejected(self):
         p=program({0:F(1)}); r=analyze(p); r['budget']='0'

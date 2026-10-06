@@ -1,0 +1,54 @@
+name: Scientific checks
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    env:
+      PYTHONUTF8: '1'
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Bounded source-integrity and finite scientific replay
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p results/raw
+          timeout --signal=TERM --kill-after=5s 600s bash -c '
+            set -euo pipefail
+            ulimit -v 3145728
+            ulimit -t 300
+            python -B verify_release.py --integrity-only
+            python -B run_all.py
+            python -B verify_release.py --integrity-only
+          ' 2>&1 | tee results/raw/whole-run.txt
+      - name: Upload raw outputs even on failure
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: scientific-check-outputs
+          path: |
+            results/raw/
+            results/clean-reproduction.json
+            results/unit-tests.json
+            results/*-summary.json
+          if-no-files-found: warn
+          retention-days: 14

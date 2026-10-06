@@ -78,6 +78,10 @@ def run_command(obligation: str, command: list[str], timeout: int = 35) -> dict[
     wall = time.perf_counter() - started
     after = resource.getrusage(resource.RUSAGE_CHILDREN)
     cpu = (after.ru_utime + after.ru_stime) - (before.ru_utime + before.ru_stime)
+    raw = RESULTS / "raw"
+    raw.mkdir(parents=True, exist_ok=True)
+    for stream, content in (("stdout", stdout), ("stderr", stderr)):
+        (raw / f"{obligation}.{stream}.txt").write_text(content, encoding="utf-8")
     result: dict[str, Any] = {
         "obligation": obligation,
         "command": display(command),
@@ -87,6 +91,8 @@ def run_command(obligation: str, command: list[str], timeout: int = 35) -> dict[
         "wall_seconds": wall,
         "cpu_seconds": cpu,
         "peak_child_rss_kib": int(after.ru_maxrss),
+        "stdout_log": f"results/raw/{obligation}.stdout.txt",
+        "stderr_log": f"results/raw/{obligation}.stderr.txt",
     }
     if obligation == "unit":
         match = re.search(r"Ran\s+(\d+)\s+tests?", stderr + "\n" + stdout)
@@ -121,6 +127,7 @@ def generated_files(root: Path) -> list[Path]:
         path
         for path in (root / "results").rglob("*")
         if path.is_file() and path.name not in {"clean-reproduction.json", "resource-accounting.json"}
+        and path.relative_to(root / "results").parts[0] != "raw"
     ]
     files.extend(path for path in (root / "inputs").rglob("*") if path.is_file())
     return sorted(files)

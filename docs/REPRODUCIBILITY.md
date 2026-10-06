@@ -5,7 +5,9 @@ This artifact is self-contained and uses exact rational arithmetic from the Pyth
 ## Supported runtime
 
 - CPython 3.10 or newer.
-- A POSIX-like shell is convenient for the expanded command list, but the one-command driver itself is Python.
+- A POSIX/Linux host is required by the CLI process limits, campaign process-group
+  termination, and `resource` accounting. Native Windows can use the pure-library
+  analysis and replay functions, but does not support the complete supplied runner.
 - The retained validation was executed with one worker and deterministic seeds.
 
 ## One-command scientific replay

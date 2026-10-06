@@ -11,7 +11,10 @@ hardware validation.
 - Embedded-font audit: passed.
 - Bibliography: 62 unique cited records, including 60 DOI records and two stable-URL-only records.
 - Artifact Python files: 15.
-- Scientific replay: 15 sequential command groups and 29 unit tests.
+- Retained historical Linux replay: 15 sequential command groups and 29 unit tests.
+- Current suite: 33 tests; native Windows library replay exercised 30, with three
+  POSIX-dependent tests not run on that host. The ten frozen suite functions and
+  current library regressions passed without changing the frozen scientific values.
 
 ## Required release gates
 

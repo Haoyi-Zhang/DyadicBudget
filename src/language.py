@@ -57,12 +57,14 @@ def validate(program: dict) -> None:
         raise ValueError('captures/noises/nodes have invalid shape')
     if len(captures) + len(noises) > MAX_SOURCES or len(nodes) > MAX_NODES:
         raise ValueError('program exceeds finite implementation admission limits')
-    for s in captures.values():
-        if set(s) != {'ideal', 'encoding', 'analog'}:
+    for name, s in captures.items():
+        if not isinstance(name, str) or not isinstance(s, dict) or set(s) != {'ideal', 'encoding', 'analog'}:
             raise ValueError('capture requires ideal, encoding, and analog intervals')
         for x in s.values():
             interval(x)
-    for x in noises.values():
+    for name, x in noises.items():
+        if not isinstance(name, str):
+            raise ValueError('additive-error origin name must be a string')
         interval(x)
     ids: set[str] = set()
     for n in nodes:

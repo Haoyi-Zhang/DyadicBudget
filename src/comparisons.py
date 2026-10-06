@@ -42,4 +42,10 @@ analytical baseline implemented here, not an external tool.
             budgets['marginal' if decomposition else 'residual'] = max(-lower, upper, F(0))
         budgets['separation'] = min(budgets.values())
         rows.append(budgets)
-    return {k: str(max(row[k] for row in rows)) for k in ['marginal', 'residual', 'separation']}
+    # Each baseline first bounds the complete output vector. Choosing a different
+    # decomposition per row would be a stronger hybrid, not the stated minimum
+    # of these two vector budgets: max_e min(A_e,B_e) can be below
+    # min(max_e A_e,max_e B_e).
+    result = {k: max(row[k] for row in rows) for k in ['marginal', 'residual']}
+    result['separation'] = min(result.values())
+    return {k: str(v) for k, v in result.items()}

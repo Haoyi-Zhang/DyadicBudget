@@ -6,7 +6,6 @@ import hashlib
 import json
 import os
 from pathlib import Path
-import py_compile
 import subprocess
 import sys
 
@@ -62,7 +61,7 @@ def check_integrity() -> None:
     for p in sorted(ROOT.rglob("*.py")):
         if any(part in FORBIDDEN_PARTS for part in p.parts):
             continue
-        py_compile.compile(str(p), doraise=True, cfile=str(Path('/tmp') / (p.name + '.pyc')))
+        compile(p.read_bytes(), str(p), 'exec', dont_inherit=True)
     print(f"integrity: PASS ({len(expected)} immutable files)")
 
 
