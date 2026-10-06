@@ -1,0 +1,20 @@
+{
+  "tests": 701,
+  "oracle_value_calls": 5550,
+  "oracle_set_points": 3300,
+  "failures": 0,
+  "negative_control": {
+    "true_budget": "0",
+    "independent_envelope": "3/4"
+  },
+  "wide_gap": {
+    "span_bits": 80,
+    "threshold_lower_bound": "1208925819614629174706176",
+    "pieces": 83,
+    "budget": "1/2"
+  },
+  "cpu_seconds": 0.179951734,
+  "wall_seconds": 0.17998466099999888,
+  "peak_rss_kib": 15448,
+  "workers": 1
+}

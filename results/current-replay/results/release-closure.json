@@ -1,0 +1,24 @@
+{
+  "artifact_python_files": 15,
+  "bibtex_entries": 62,
+  "cache_integrity_result": "results/cache-integrity-validation.json",
+  "fonts_fully_embedded": true,
+  "frozen_value_baseline_result": "results/frozen-value-baseline-check.json",
+  "paper_pdf": "main.pdf",
+  "paper_source_files": 21,
+  "pdf_pages": 23,
+  "project_root_entries": [
+    "CURRENT-STATE.md",
+    "artifact",
+    "paper",
+    "research-plan.md"
+  ],
+  "references_start_page": 21,
+  "schema_version": 2,
+  "scope_note": "Current verification snapshot only; no version history or external-review claim.",
+  "stable_url_only_records": 2,
+  "standalone_command_groups": 15,
+  "status": "internal research draft; not submitted, peer reviewed, accepted, or formally certified",
+  "unique_doi_records": 60,
+  "unit_tests": 29
+}

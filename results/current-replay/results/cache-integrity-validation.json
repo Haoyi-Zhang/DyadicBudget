@@ -1,0 +1,30 @@
+{
+  "cache_artifacts_after_repeated_entries": [],
+  "changed_immutable_files": [],
+  "immutable_file_count": 34,
+  "immutable_hashes_unchanged": true,
+  "no_cache_artifacts": true,
+  "note": "The parent environment allowed normal bytecode behavior; controlled entry points suppressed bytecode for themselves and all scientific child processes.",
+  "parent_environment_PYTHONDONTWRITEBYTECODE": null,
+  "post_replay_integrity_passed": true,
+  "repeated_entry_passed": true,
+  "sequence": [
+    {
+      "command": "python verify_release.py --integrity-only",
+      "exit_code": 0
+    },
+    {
+      "command": "python run_all.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python verify_release.py --integrity-only",
+      "exit_code": 0
+    },
+    {
+      "command": "python verify_release.py --run",
+      "exit_code": 0
+    }
+  ],
+  "writable_posix_copy": true
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "mutation": "global-budget",
+    "rejected": true
+  },
+  {
+    "mutation": "effect-sign",
+    "rejected": true
+  },
+  {
+    "mutation": "group-deletion",
+    "rejected": true
+  },
+  {
+    "mutation": "origin-alias",
+    "rejected": true
+  },
+  {
+    "mutation": "metric",
+    "rejected": true
+  },
+  {
+    "mutation": "box-bound",
+    "rejected": true
+  },
+  {
+    "mutation": "attainment",
+    "rejected": true
+  },
+  {
+    "mutation": "fiber-slope",
+    "rejected": true
+  },
+  {
+    "mutation": "fiber-segment-removal",
+    "rejected": true
+  },
+  {
+    "mutation": "baseline-bound",
+    "rejected": true
+  },
+  {
+    "mutation": "coefficient",
+    "rejected": true
+  },
+  {
+    "mutation": "cover-gap",
+    "rejected": true
+  },
+  {
+    "mutation": "block-alignment",
+    "rejected": true
+  },
+  {
+    "mutation": "partial-open",
+    "rejected": true
+  },
+  {
+    "mutation": "domain",
+    "rejected": true
+  },
+  {
+    "mutation": "translation",
+    "rejected": true
+  },
+  {
+    "mutation": "witness-index",
+    "rejected": true
+  },
+  {
+    "mutation": "witness-attainment",
+    "rejected": true
+  },
+  {
+    "mutation": "inadmissible-input",
+    "rejected": true
+  },
+  {
+    "mutation": "changed-witness-error",
+    "rejected": true
+  },
+  {
+    "mutation": "nonviolating-witness",
+    "rejected": true
+  },
+  {
+    "mutation": "cascade-is-not-a-capture",
+    "rejected": true
+  },
+  {
+    "mutation": "nondyadic-step",
+    "rejected": true
+  },
+  {
+    "mutation": "cross-capture-correlation",
+    "rejected": true
+  }
+]

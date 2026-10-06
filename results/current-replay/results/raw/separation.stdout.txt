@@ -1,0 +1,1 @@
+{"convex_fusion_examples": 9, "cpu_seconds": 0.799722356, "failures": 0, "integer_weight_checks": 2800, "norm_vertex_checks": 1440, "peak_rss_kib": 20888, "wall_seconds": 0.8678537229999961, "workers": 1}

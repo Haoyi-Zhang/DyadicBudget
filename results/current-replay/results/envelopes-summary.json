@@ -1,0 +1,10 @@
+{
+  "checks": 3750,
+  "cpu_seconds": 5.769184097999999,
+  "failures": 0,
+  "oracle_set_points": 83400,
+  "oracle_value_calls": 153300,
+  "peak_rss_kib": 20404,
+  "wall_seconds": 5.773347512000001,
+  "workers": 1
+}

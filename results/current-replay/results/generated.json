@@ -1,0 +1,2502 @@
+[
+  {
+    "budget": "49/24",
+    "case": 0,
+    "independent_budget": "17/6"
+  },
+  {
+    "budget": "7/8",
+    "case": 1,
+    "independent_budget": "31/32"
+  },
+  {
+    "budget": "9/16",
+    "case": 2,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "1/8",
+    "case": 3,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "9/8",
+    "case": 4,
+    "independent_budget": "105/64"
+  },
+  {
+    "budget": "59/192",
+    "case": 5,
+    "independent_budget": "191/128"
+  },
+  {
+    "budget": "1",
+    "case": 6,
+    "independent_budget": "39/32"
+  },
+  {
+    "budget": "15/8",
+    "case": 7,
+    "independent_budget": "77/32"
+  },
+  {
+    "budget": "27/32",
+    "case": 8,
+    "independent_budget": "23/16"
+  },
+  {
+    "budget": "1",
+    "case": 9,
+    "independent_budget": "1"
+  },
+  {
+    "budget": "27/16",
+    "case": 10,
+    "independent_budget": "221/128"
+  },
+  {
+    "budget": "31/64",
+    "case": 11,
+    "independent_budget": "31/64"
+  },
+  {
+    "budget": "41/48",
+    "case": 12,
+    "independent_budget": "51/32"
+  },
+  {
+    "budget": "9/4",
+    "case": 13,
+    "independent_budget": "25/8"
+  },
+  {
+    "budget": "9/8",
+    "case": 14,
+    "independent_budget": "19/16"
+  },
+  {
+    "budget": "23/16",
+    "case": 15,
+    "independent_budget": "99/64"
+  },
+  {
+    "budget": "49/32",
+    "case": 16,
+    "independent_budget": "69/32"
+  },
+  {
+    "budget": "7/16",
+    "case": 17,
+    "independent_budget": "7/16"
+  },
+  {
+    "budget": "67/48",
+    "case": 18,
+    "independent_budget": "601/384"
+  },
+  {
+    "budget": "1/16",
+    "case": 19,
+    "independent_budget": "3/8"
+  },
+  {
+    "budget": "3/64",
+    "case": 20,
+    "independent_budget": "3/64"
+  },
+  {
+    "budget": "173/96",
+    "case": 21,
+    "independent_budget": "127/48"
+  },
+  {
+    "budget": "9/16",
+    "case": 22,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "85/64",
+    "case": 23,
+    "independent_budget": "171/128"
+  },
+  {
+    "budget": "1/4",
+    "case": 24,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "5/32",
+    "case": 25,
+    "independent_budget": "5/32"
+  },
+  {
+    "budget": "101/96",
+    "case": 26,
+    "independent_budget": "229/192"
+  },
+  {
+    "budget": "233/48",
+    "case": 27,
+    "independent_budget": "671/128"
+  },
+  {
+    "budget": "5/2",
+    "case": 28,
+    "independent_budget": "31/12"
+  },
+  {
+    "budget": "17/128",
+    "case": 29,
+    "independent_budget": "17/128"
+  },
+  {
+    "budget": "17/48",
+    "case": 30,
+    "independent_budget": "19/48"
+  },
+  {
+    "budget": "13/16",
+    "case": 31,
+    "independent_budget": "161/64"
+  },
+  {
+    "budget": "53/192",
+    "case": 32,
+    "independent_budget": "1/3"
+  },
+  {
+    "budget": "5/4",
+    "case": 33,
+    "independent_budget": "97/64"
+  },
+  {
+    "budget": "3/4",
+    "case": 34,
+    "independent_budget": "55/64"
+  },
+  {
+    "budget": "25/6",
+    "case": 35,
+    "independent_budget": "235/48"
+  },
+  {
+    "budget": "27/32",
+    "case": 36,
+    "independent_budget": "85/96"
+  },
+  {
+    "budget": "95/96",
+    "case": 37,
+    "independent_budget": "117/64"
+  },
+  {
+    "budget": "3/8",
+    "case": 38,
+    "independent_budget": "7/16"
+  },
+  {
+    "budget": "33/64",
+    "case": 39,
+    "independent_budget": "33/64"
+  },
+  {
+    "budget": "7/24",
+    "case": 40,
+    "independent_budget": "47/128"
+  },
+  {
+    "budget": "1/2",
+    "case": 41,
+    "independent_budget": "5/8"
+  },
+  {
+    "budget": "17/16",
+    "case": 42,
+    "independent_budget": "35/32"
+  },
+  {
+    "budget": "389/384",
+    "case": 43,
+    "independent_budget": "95/64"
+  },
+  {
+    "budget": "15/8",
+    "case": 44,
+    "independent_budget": "87/32"
+  },
+  {
+    "budget": "847/192",
+    "case": 45,
+    "independent_budget": "331/64"
+  },
+  {
+    "budget": "13/24",
+    "case": 46,
+    "independent_budget": "41/64"
+  },
+  {
+    "budget": "59/16",
+    "case": 47,
+    "independent_budget": "119/32"
+  },
+  {
+    "budget": "3/8",
+    "case": 48,
+    "independent_budget": "3/8"
+  },
+  {
+    "budget": "19/16",
+    "case": 49,
+    "independent_budget": "39/32"
+  },
+  {
+    "budget": "59/32",
+    "case": 50,
+    "independent_budget": "505/192"
+  },
+  {
+    "budget": "89/192",
+    "case": 51,
+    "independent_budget": "47/96"
+  },
+  {
+    "budget": "221/96",
+    "case": 52,
+    "independent_budget": "161/64"
+  },
+  {
+    "budget": "3/4",
+    "case": 53,
+    "independent_budget": "9/8"
+  },
+  {
+    "budget": "145/192",
+    "case": 54,
+    "independent_budget": "27/32"
+  },
+  {
+    "budget": "55/48",
+    "case": 55,
+    "independent_budget": "137/96"
+  },
+  {
+    "budget": "283/48",
+    "case": 56,
+    "independent_budget": "195/32"
+  },
+  {
+    "budget": "151/96",
+    "case": 57,
+    "independent_budget": "167/96"
+  },
+  {
+    "budget": "1/4",
+    "case": 58,
+    "independent_budget": "51/128"
+  },
+  {
+    "budget": "11/32",
+    "case": 59,
+    "independent_budget": "3/8"
+  },
+  {
+    "budget": "65/32",
+    "case": 60,
+    "independent_budget": "389/96"
+  },
+  {
+    "budget": "7/32",
+    "case": 61,
+    "independent_budget": "7/32"
+  },
+  {
+    "budget": "1/4",
+    "case": 62,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "143/16",
+    "case": 63,
+    "independent_budget": "345/32"
+  },
+  {
+    "budget": "1/16",
+    "case": 64,
+    "independent_budget": "1/16"
+  },
+  {
+    "budget": "13/32",
+    "case": 65,
+    "independent_budget": "13/32"
+  },
+  {
+    "budget": "1/2",
+    "case": 66,
+    "independent_budget": "1/2"
+  },
+  {
+    "budget": "5/4",
+    "case": 67,
+    "independent_budget": "95/48"
+  },
+  {
+    "budget": "15/32",
+    "case": 68,
+    "independent_budget": "17/32"
+  },
+  {
+    "budget": "4/3",
+    "case": 69,
+    "independent_budget": "571/384"
+  },
+  {
+    "budget": "7/3",
+    "case": 70,
+    "independent_budget": "311/96"
+  },
+  {
+    "budget": "21/8",
+    "case": 71,
+    "independent_budget": "59/16"
+  },
+  {
+    "budget": "215/192",
+    "case": 72,
+    "independent_budget": "263/192"
+  },
+  {
+    "budget": "7/16",
+    "case": 73,
+    "independent_budget": "45/64"
+  },
+  {
+    "budget": "1/32",
+    "case": 74,
+    "independent_budget": "1/32"
+  },
+  {
+    "budget": "77/64",
+    "case": 75,
+    "independent_budget": "93/64"
+  },
+  {
+    "budget": "1",
+    "case": 76,
+    "independent_budget": "1"
+  },
+  {
+    "budget": "27/16",
+    "case": 77,
+    "independent_budget": "15/8"
+  },
+  {
+    "budget": "37/128",
+    "case": 78,
+    "independent_budget": "39/128"
+  },
+  {
+    "budget": "5/6",
+    "case": 79,
+    "independent_budget": "5/6"
+  },
+  {
+    "budget": "15/8",
+    "case": 80,
+    "independent_budget": "7/2"
+  },
+  {
+    "budget": "143/128",
+    "case": 81,
+    "independent_budget": "105/64"
+  },
+  {
+    "budget": "23/32",
+    "case": 82,
+    "independent_budget": "55/64"
+  },
+  {
+    "budget": "839/384",
+    "case": 83,
+    "independent_budget": "647/192"
+  },
+  {
+    "budget": "221/64",
+    "case": 84,
+    "independent_budget": "123/32"
+  },
+  {
+    "budget": "25/96",
+    "case": 85,
+    "independent_budget": "19/48"
+  },
+  {
+    "budget": "9/16",
+    "case": 86,
+    "independent_budget": "31/32"
+  },
+  {
+    "budget": "5/4",
+    "case": 87,
+    "independent_budget": "41/32"
+  },
+  {
+    "budget": "11/16",
+    "case": 88,
+    "independent_budget": "143/192"
+  },
+  {
+    "budget": "37/96",
+    "case": 89,
+    "independent_budget": "17/32"
+  },
+  {
+    "budget": "5/4",
+    "case": 90,
+    "independent_budget": "5/4"
+  },
+  {
+    "budget": "99/32",
+    "case": 91,
+    "independent_budget": "127/32"
+  },
+  {
+    "budget": "25/16",
+    "case": 92,
+    "independent_budget": "33/16"
+  },
+  {
+    "budget": "113/32",
+    "case": 93,
+    "independent_budget": "397/96"
+  },
+  {
+    "budget": "13/16",
+    "case": 94,
+    "independent_budget": "43/48"
+  },
+  {
+    "budget": "17/24",
+    "case": 95,
+    "independent_budget": "17/24"
+  },
+  {
+    "budget": "53/128",
+    "case": 96,
+    "independent_budget": "173/384"
+  },
+  {
+    "budget": "0",
+    "case": 97,
+    "independent_budget": "0"
+  },
+  {
+    "budget": "1/8",
+    "case": 98,
+    "independent_budget": "1/6"
+  },
+  {
+    "budget": "171/64",
+    "case": 99,
+    "independent_budget": "157/48"
+  },
+  {
+    "budget": "55/96",
+    "case": 100,
+    "independent_budget": "119/192"
+  },
+  {
+    "budget": "83/48",
+    "case": 101,
+    "independent_budget": "39/16"
+  },
+  {
+    "budget": "47/128",
+    "case": 102,
+    "independent_budget": "61/128"
+  },
+  {
+    "budget": "195/64",
+    "case": 103,
+    "independent_budget": "255/64"
+  },
+  {
+    "budget": "1/2",
+    "case": 104,
+    "independent_budget": "73/64"
+  },
+  {
+    "budget": "11/16",
+    "case": 105,
+    "independent_budget": "11/16"
+  },
+  {
+    "budget": "17/64",
+    "case": 106,
+    "independent_budget": "17/64"
+  },
+  {
+    "budget": "5/8",
+    "case": 107,
+    "independent_budget": "25/32"
+  },
+  {
+    "budget": "47/48",
+    "case": 108,
+    "independent_budget": "5/3"
+  },
+  {
+    "budget": "19/48",
+    "case": 109,
+    "independent_budget": "5/12"
+  },
+  {
+    "budget": "33/32",
+    "case": 110,
+    "independent_budget": "141/128"
+  },
+  {
+    "budget": "25/48",
+    "case": 111,
+    "independent_budget": "449/192"
+  },
+  {
+    "budget": "1/8",
+    "case": 112,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "439/384",
+    "case": 113,
+    "independent_budget": "71/48"
+  },
+  {
+    "budget": "21/16",
+    "case": 114,
+    "independent_budget": "23/16"
+  },
+  {
+    "budget": "27/8",
+    "case": 115,
+    "independent_budget": "4"
+  },
+  {
+    "budget": "0",
+    "case": 116,
+    "independent_budget": "0"
+  },
+  {
+    "budget": "217/192",
+    "case": 117,
+    "independent_budget": "77/64"
+  },
+  {
+    "budget": "107/32",
+    "case": 118,
+    "independent_budget": "65/16"
+  },
+  {
+    "budget": "7/6",
+    "case": 119,
+    "independent_budget": "7/6"
+  },
+  {
+    "budget": "101/192",
+    "case": 120,
+    "independent_budget": "65/96"
+  },
+  {
+    "budget": "41/48",
+    "case": 121,
+    "independent_budget": "1"
+  },
+  {
+    "budget": "15/16",
+    "case": 122,
+    "independent_budget": "199/192"
+  },
+  {
+    "budget": "17/48",
+    "case": 123,
+    "independent_budget": "23/64"
+  },
+  {
+    "budget": "11/16",
+    "case": 124,
+    "independent_budget": "109/64"
+  },
+  {
+    "budget": "39/64",
+    "case": 125,
+    "independent_budget": "39/64"
+  },
+  {
+    "budget": "59/48",
+    "case": 126,
+    "independent_budget": "107/48"
+  },
+  {
+    "budget": "307/192",
+    "case": 127,
+    "independent_budget": "185/96"
+  },
+  {
+    "budget": "3/4",
+    "case": 128,
+    "independent_budget": "167/192"
+  },
+  {
+    "budget": "7/32",
+    "case": 129,
+    "independent_budget": "23/16"
+  },
+  {
+    "budget": "5/32",
+    "case": 130,
+    "independent_budget": "5/32"
+  },
+  {
+    "budget": "33/128",
+    "case": 131,
+    "independent_budget": "9/32"
+  },
+  {
+    "budget": "9/128",
+    "case": 132,
+    "independent_budget": "9/128"
+  },
+  {
+    "budget": "25/16",
+    "case": 133,
+    "independent_budget": "25/16"
+  },
+  {
+    "budget": "11/192",
+    "case": 134,
+    "independent_budget": "13/192"
+  },
+  {
+    "budget": "59/64",
+    "case": 135,
+    "independent_budget": "25/24"
+  },
+  {
+    "budget": "163/64",
+    "case": 136,
+    "independent_budget": "213/64"
+  },
+  {
+    "budget": "69/32",
+    "case": 137,
+    "independent_budget": "75/32"
+  },
+  {
+    "budget": "49/16",
+    "case": 138,
+    "independent_budget": "101/32"
+  },
+  {
+    "budget": "77/32",
+    "case": 139,
+    "independent_budget": "93/32"
+  },
+  {
+    "budget": "149/32",
+    "case": 140,
+    "independent_budget": "157/32"
+  },
+  {
+    "budget": "21/64",
+    "case": 141,
+    "independent_budget": "35/96"
+  },
+  {
+    "budget": "53/96",
+    "case": 142,
+    "independent_budget": "49/64"
+  },
+  {
+    "budget": "37/32",
+    "case": 143,
+    "independent_budget": "37/32"
+  },
+  {
+    "budget": "7/32",
+    "case": 144,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "35/64",
+    "case": 145,
+    "independent_budget": "19/32"
+  },
+  {
+    "budget": "19/48",
+    "case": 146,
+    "independent_budget": "7/16"
+  },
+  {
+    "budget": "163/24",
+    "case": 147,
+    "independent_budget": "129/16"
+  },
+  {
+    "budget": "11/8",
+    "case": 148,
+    "independent_budget": "15/8"
+  },
+  {
+    "budget": "31/32",
+    "case": 149,
+    "independent_budget": "19/16"
+  },
+  {
+    "budget": "7/16",
+    "case": 150,
+    "independent_budget": "3/4"
+  },
+  {
+    "budget": "3/8",
+    "case": 151,
+    "independent_budget": "7/16"
+  },
+  {
+    "budget": "55/64",
+    "case": 152,
+    "independent_budget": "127/128"
+  },
+  {
+    "budget": "75/64",
+    "case": 153,
+    "independent_budget": "79/64"
+  },
+  {
+    "budget": "3/2",
+    "case": 154,
+    "independent_budget": "25/16"
+  },
+  {
+    "budget": "3/4",
+    "case": 155,
+    "independent_budget": "169/192"
+  },
+  {
+    "budget": "15/16",
+    "case": 156,
+    "independent_budget": "63/64"
+  },
+  {
+    "budget": "5/64",
+    "case": 157,
+    "independent_budget": "17/192"
+  },
+  {
+    "budget": "83/48",
+    "case": 158,
+    "independent_budget": "85/48"
+  },
+  {
+    "budget": "13/64",
+    "case": 159,
+    "independent_budget": "13/64"
+  },
+  {
+    "budget": "13/16",
+    "case": 160,
+    "independent_budget": "27/32"
+  },
+  {
+    "budget": "29/32",
+    "case": 161,
+    "independent_budget": "29/32"
+  },
+  {
+    "budget": "5/8",
+    "case": 162,
+    "independent_budget": "5/8"
+  },
+  {
+    "budget": "11/48",
+    "case": 163,
+    "independent_budget": "15/64"
+  },
+  {
+    "budget": "77/192",
+    "case": 164,
+    "independent_budget": "59/128"
+  },
+  {
+    "budget": "25/32",
+    "case": 165,
+    "independent_budget": "13/16"
+  },
+  {
+    "budget": "7/8",
+    "case": 166,
+    "independent_budget": "31/32"
+  },
+  {
+    "budget": "49/96",
+    "case": 167,
+    "independent_budget": "65/96"
+  },
+  {
+    "budget": "31/8",
+    "case": 168,
+    "independent_budget": "83/16"
+  },
+  {
+    "budget": "17/48",
+    "case": 169,
+    "independent_budget": "17/48"
+  },
+  {
+    "budget": "5/3",
+    "case": 170,
+    "independent_budget": "191/96"
+  },
+  {
+    "budget": "29/32",
+    "case": 171,
+    "independent_budget": "113/96"
+  },
+  {
+    "budget": "57/64",
+    "case": 172,
+    "independent_budget": "73/64"
+  },
+  {
+    "budget": "9/32",
+    "case": 173,
+    "independent_budget": "9/32"
+  },
+  {
+    "budget": "9/16",
+    "case": 174,
+    "independent_budget": "11/16"
+  },
+  {
+    "budget": "17/8",
+    "case": 175,
+    "independent_budget": "59/24"
+  },
+  {
+    "budget": "57/32",
+    "case": 176,
+    "independent_budget": "59/32"
+  },
+  {
+    "budget": "1/8",
+    "case": 177,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "1",
+    "case": 178,
+    "independent_budget": "13/12"
+  },
+  {
+    "budget": "1/4",
+    "case": 179,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "5/16",
+    "case": 180,
+    "independent_budget": "43/96"
+  },
+  {
+    "budget": "25/96",
+    "case": 181,
+    "independent_budget": "5/16"
+  },
+  {
+    "budget": "5/2",
+    "case": 182,
+    "independent_budget": "29/8"
+  },
+  {
+    "budget": "241/128",
+    "case": 183,
+    "independent_budget": "1009/384"
+  },
+  {
+    "budget": "25/96",
+    "case": 184,
+    "independent_budget": "37/128"
+  },
+  {
+    "budget": "111/32",
+    "case": 185,
+    "independent_budget": "159/32"
+  },
+  {
+    "budget": "19/48",
+    "case": 186,
+    "independent_budget": "19/48"
+  },
+  {
+    "budget": "3/16",
+    "case": 187,
+    "independent_budget": "3/16"
+  },
+  {
+    "budget": "7/8",
+    "case": 188,
+    "independent_budget": "7/8"
+  },
+  {
+    "budget": "1/8",
+    "case": 189,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "0",
+    "case": 190,
+    "independent_budget": "3/64"
+  },
+  {
+    "budget": "11/16",
+    "case": 191,
+    "independent_budget": "13/16"
+  },
+  {
+    "budget": "13/16",
+    "case": 192,
+    "independent_budget": "13/16"
+  },
+  {
+    "budget": "5/8",
+    "case": 193,
+    "independent_budget": "81/128"
+  },
+  {
+    "budget": "9/16",
+    "case": 194,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "19/32",
+    "case": 195,
+    "independent_budget": "37/48"
+  },
+  {
+    "budget": "3/4",
+    "case": 196,
+    "independent_budget": "37/48"
+  },
+  {
+    "budget": "37/64",
+    "case": 197,
+    "independent_budget": "25/32"
+  },
+  {
+    "budget": "5/4",
+    "case": 198,
+    "independent_budget": "145/64"
+  },
+  {
+    "budget": "89/96",
+    "case": 199,
+    "independent_budget": "203/192"
+  },
+  {
+    "budget": "17/24",
+    "case": 200,
+    "independent_budget": "187/192"
+  },
+  {
+    "budget": "17/64",
+    "case": 201,
+    "independent_budget": "35/128"
+  },
+  {
+    "budget": "155/192",
+    "case": 202,
+    "independent_budget": "215/192"
+  },
+  {
+    "budget": "83/32",
+    "case": 203,
+    "independent_budget": "105/32"
+  },
+  {
+    "budget": "19/96",
+    "case": 204,
+    "independent_budget": "41/192"
+  },
+  {
+    "budget": "51/32",
+    "case": 205,
+    "independent_budget": "27/16"
+  },
+  {
+    "budget": "1/24",
+    "case": 206,
+    "independent_budget": "1/24"
+  },
+  {
+    "budget": "111/64",
+    "case": 207,
+    "independent_budget": "137/64"
+  },
+  {
+    "budget": "5/8",
+    "case": 208,
+    "independent_budget": "25/32"
+  },
+  {
+    "budget": "361/192",
+    "case": 209,
+    "independent_budget": "223/96"
+  },
+  {
+    "budget": "37/8",
+    "case": 210,
+    "independent_budget": "341/64"
+  },
+  {
+    "budget": "69/32",
+    "case": 211,
+    "independent_budget": "155/64"
+  },
+  {
+    "budget": "77/384",
+    "case": 212,
+    "independent_budget": "79/384"
+  },
+  {
+    "budget": "59/32",
+    "case": 213,
+    "independent_budget": "237/128"
+  },
+  {
+    "budget": "43/64",
+    "case": 214,
+    "independent_budget": "59/64"
+  },
+  {
+    "budget": "1",
+    "case": 215,
+    "independent_budget": "73/64"
+  },
+  {
+    "budget": "37/48",
+    "case": 216,
+    "independent_budget": "167/192"
+  },
+  {
+    "budget": "5/8",
+    "case": 217,
+    "independent_budget": "5/8"
+  },
+  {
+    "budget": "13/12",
+    "case": 218,
+    "independent_budget": "21/8"
+  },
+  {
+    "budget": "11/12",
+    "case": 219,
+    "independent_budget": "409/384"
+  },
+  {
+    "budget": "55/64",
+    "case": 220,
+    "independent_budget": "43/48"
+  },
+  {
+    "budget": "5/4",
+    "case": 221,
+    "independent_budget": "101/64"
+  },
+  {
+    "budget": "7/16",
+    "case": 222,
+    "independent_budget": "29/64"
+  },
+  {
+    "budget": "75/64",
+    "case": 223,
+    "independent_budget": "305/192"
+  },
+  {
+    "budget": "65/32",
+    "case": 224,
+    "independent_budget": "37/16"
+  },
+  {
+    "budget": "43/48",
+    "case": 225,
+    "independent_budget": "33/32"
+  },
+  {
+    "budget": "1/8",
+    "case": 226,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "5/3",
+    "case": 227,
+    "independent_budget": "211/96"
+  },
+  {
+    "budget": "53/64",
+    "case": 228,
+    "independent_budget": "69/64"
+  },
+  {
+    "budget": "29/32",
+    "case": 229,
+    "independent_budget": "21/16"
+  },
+  {
+    "budget": "1/4",
+    "case": 230,
+    "independent_budget": "5/16"
+  },
+  {
+    "budget": "17/8",
+    "case": 231,
+    "independent_budget": "23/8"
+  },
+  {
+    "budget": "241/96",
+    "case": 232,
+    "independent_budget": "311/96"
+  },
+  {
+    "budget": "1",
+    "case": 233,
+    "independent_budget": "49/48"
+  },
+  {
+    "budget": "419/384",
+    "case": 234,
+    "independent_budget": "65/48"
+  },
+  {
+    "budget": "11/4",
+    "case": 235,
+    "independent_budget": "49/16"
+  },
+  {
+    "budget": "11/16",
+    "case": 236,
+    "independent_budget": "253/192"
+  },
+  {
+    "budget": "3/8",
+    "case": 237,
+    "independent_budget": "3/8"
+  },
+  {
+    "budget": "0",
+    "case": 238,
+    "independent_budget": "0"
+  },
+  {
+    "budget": "57/64",
+    "case": 239,
+    "independent_budget": "31/32"
+  },
+  {
+    "budget": "37/16",
+    "case": 240,
+    "independent_budget": "173/64"
+  },
+  {
+    "budget": "23/48",
+    "case": 241,
+    "independent_budget": "23/48"
+  },
+  {
+    "budget": "5/32",
+    "case": 242,
+    "independent_budget": "5/32"
+  },
+  {
+    "budget": "143/192",
+    "case": 243,
+    "independent_budget": "175/192"
+  },
+  {
+    "budget": "41/12",
+    "case": 244,
+    "independent_budget": "61/16"
+  },
+  {
+    "budget": "5/12",
+    "case": 245,
+    "independent_budget": "23/48"
+  },
+  {
+    "budget": "71/16",
+    "case": 246,
+    "independent_budget": "37/8"
+  },
+  {
+    "budget": "31/16",
+    "case": 247,
+    "independent_budget": "377/192"
+  },
+  {
+    "budget": "7/16",
+    "case": 248,
+    "independent_budget": "7/16"
+  },
+  {
+    "budget": "105/64",
+    "case": 249,
+    "independent_budget": "105/64"
+  },
+  {
+    "budget": "9/16",
+    "case": 250,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "85/128",
+    "case": 251,
+    "independent_budget": "59/64"
+  },
+  {
+    "budget": "29/48",
+    "case": 252,
+    "independent_budget": "29/48"
+  },
+  {
+    "budget": "67/64",
+    "case": 253,
+    "independent_budget": "17/16"
+  },
+  {
+    "budget": "79/96",
+    "case": 254,
+    "independent_budget": "75/64"
+  },
+  {
+    "budget": "47/32",
+    "case": 255,
+    "independent_budget": "151/64"
+  },
+  {
+    "budget": "5/24",
+    "case": 256,
+    "independent_budget": "7/32"
+  },
+  {
+    "budget": "5/32",
+    "case": 257,
+    "independent_budget": "5/32"
+  },
+  {
+    "budget": "39/64",
+    "case": 258,
+    "independent_budget": "39/64"
+  },
+  {
+    "budget": "175/48",
+    "case": 259,
+    "independent_budget": "451/96"
+  },
+  {
+    "budget": "19/16",
+    "case": 260,
+    "independent_budget": "93/64"
+  },
+  {
+    "budget": "17/48",
+    "case": 261,
+    "independent_budget": "19/48"
+  },
+  {
+    "budget": "21/16",
+    "case": 262,
+    "independent_budget": "25/16"
+  },
+  {
+    "budget": "1",
+    "case": 263,
+    "independent_budget": "11/8"
+  },
+  {
+    "budget": "63/128",
+    "case": 264,
+    "independent_budget": "33/64"
+  },
+  {
+    "budget": "35/64",
+    "case": 265,
+    "independent_budget": "71/128"
+  },
+  {
+    "budget": "3/4",
+    "case": 266,
+    "independent_budget": "25/32"
+  },
+  {
+    "budget": "29/32",
+    "case": 267,
+    "independent_budget": "37/32"
+  },
+  {
+    "budget": "35/64",
+    "case": 268,
+    "independent_budget": "127/128"
+  },
+  {
+    "budget": "5/16",
+    "case": 269,
+    "independent_budget": "5/16"
+  },
+  {
+    "budget": "23/64",
+    "case": 270,
+    "independent_budget": "23/64"
+  },
+  {
+    "budget": "5/96",
+    "case": 271,
+    "independent_budget": "5/12"
+  },
+  {
+    "budget": "5/6",
+    "case": 272,
+    "independent_budget": "27/32"
+  },
+  {
+    "budget": "11/4",
+    "case": 273,
+    "independent_budget": "25/8"
+  },
+  {
+    "budget": "75/32",
+    "case": 274,
+    "independent_budget": "139/48"
+  },
+  {
+    "budget": "3/16",
+    "case": 275,
+    "independent_budget": "3/16"
+  },
+  {
+    "budget": "3/32",
+    "case": 276,
+    "independent_budget": "3/32"
+  },
+  {
+    "budget": "1/2",
+    "case": 277,
+    "independent_budget": "13/24"
+  },
+  {
+    "budget": "2",
+    "case": 278,
+    "independent_budget": "2"
+  },
+  {
+    "budget": "17/16",
+    "case": 279,
+    "independent_budget": "35/32"
+  },
+  {
+    "budget": "11/8",
+    "case": 280,
+    "independent_budget": "75/32"
+  },
+  {
+    "budget": "59/96",
+    "case": 281,
+    "independent_budget": "15/16"
+  },
+  {
+    "budget": "17/32",
+    "case": 282,
+    "independent_budget": "103/192"
+  },
+  {
+    "budget": "31/32",
+    "case": 283,
+    "independent_budget": "31/32"
+  },
+  {
+    "budget": "15/4",
+    "case": 284,
+    "independent_budget": "133/32"
+  },
+  {
+    "budget": "29/32",
+    "case": 285,
+    "independent_budget": "11/12"
+  },
+  {
+    "budget": "23/128",
+    "case": 286,
+    "independent_budget": "41/192"
+  },
+  {
+    "budget": "3/4",
+    "case": 287,
+    "independent_budget": "3/4"
+  },
+  {
+    "budget": "53/64",
+    "case": 288,
+    "independent_budget": "53/64"
+  },
+  {
+    "budget": "5/12",
+    "case": 289,
+    "independent_budget": "5/12"
+  },
+  {
+    "budget": "121/64",
+    "case": 290,
+    "independent_budget": "125/64"
+  },
+  {
+    "budget": "27/64",
+    "case": 291,
+    "independent_budget": "27/64"
+  },
+  {
+    "budget": "23/32",
+    "case": 292,
+    "independent_budget": "83/64"
+  },
+  {
+    "budget": "35/16",
+    "case": 293,
+    "independent_budget": "107/48"
+  },
+  {
+    "budget": "119/32",
+    "case": 294,
+    "independent_budget": "87/16"
+  },
+  {
+    "budget": "7/16",
+    "case": 295,
+    "independent_budget": "7/16"
+  },
+  {
+    "budget": "29/48",
+    "case": 296,
+    "independent_budget": "31/48"
+  },
+  {
+    "budget": "85/96",
+    "case": 297,
+    "independent_budget": "203/192"
+  },
+  {
+    "budget": "17/16",
+    "case": 298,
+    "independent_budget": "353/192"
+  },
+  {
+    "budget": "81/64",
+    "case": 299,
+    "independent_budget": "105/64"
+  },
+  {
+    "budget": "33/16",
+    "case": 300,
+    "independent_budget": "141/64"
+  },
+  {
+    "budget": "7/3",
+    "case": 301,
+    "independent_budget": "65/24"
+  },
+  {
+    "budget": "331/384",
+    "case": 302,
+    "independent_budget": "11/12"
+  },
+  {
+    "budget": "31/32",
+    "case": 303,
+    "independent_budget": "45/32"
+  },
+  {
+    "budget": "33/16",
+    "case": 304,
+    "independent_budget": "19/8"
+  },
+  {
+    "budget": "55/24",
+    "case": 305,
+    "independent_budget": "971/384"
+  },
+  {
+    "budget": "57/64",
+    "case": 306,
+    "independent_budget": "457/384"
+  },
+  {
+    "budget": "85/64",
+    "case": 307,
+    "independent_budget": "109/64"
+  },
+  {
+    "budget": "65/32",
+    "case": 308,
+    "independent_budget": "197/96"
+  },
+  {
+    "budget": "1",
+    "case": 309,
+    "independent_budget": "71/64"
+  },
+  {
+    "budget": "97/64",
+    "case": 310,
+    "independent_budget": "275/128"
+  },
+  {
+    "budget": "19/32",
+    "case": 311,
+    "independent_budget": "87/128"
+  },
+  {
+    "budget": "79/32",
+    "case": 312,
+    "independent_budget": "413/128"
+  },
+  {
+    "budget": "1/2",
+    "case": 313,
+    "independent_budget": "17/32"
+  },
+  {
+    "budget": "1/4",
+    "case": 314,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "25/48",
+    "case": 315,
+    "independent_budget": "25/8"
+  },
+  {
+    "budget": "71/64",
+    "case": 316,
+    "independent_budget": "143/128"
+  },
+  {
+    "budget": "1/2",
+    "case": 317,
+    "independent_budget": "41/64"
+  },
+  {
+    "budget": "19/96",
+    "case": 318,
+    "independent_budget": "5/24"
+  },
+  {
+    "budget": "5/24",
+    "case": 319,
+    "independent_budget": "553/96"
+  },
+  {
+    "budget": "9/32",
+    "case": 320,
+    "independent_budget": "9/32"
+  },
+  {
+    "budget": "25/24",
+    "case": 321,
+    "independent_budget": "39/32"
+  },
+  {
+    "budget": "9/8",
+    "case": 322,
+    "independent_budget": "9/8"
+  },
+  {
+    "budget": "7/4",
+    "case": 323,
+    "independent_budget": "31/8"
+  },
+  {
+    "budget": "17/32",
+    "case": 324,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "25/24",
+    "case": 325,
+    "independent_budget": "13/12"
+  },
+  {
+    "budget": "77/64",
+    "case": 326,
+    "independent_budget": "85/64"
+  },
+  {
+    "budget": "31/48",
+    "case": 327,
+    "independent_budget": "131/192"
+  },
+  {
+    "budget": "3",
+    "case": 328,
+    "independent_budget": "101/32"
+  },
+  {
+    "budget": "15/8",
+    "case": 329,
+    "independent_budget": "17/8"
+  },
+  {
+    "budget": "19/16",
+    "case": 330,
+    "independent_budget": "175/128"
+  },
+  {
+    "budget": "3/16",
+    "case": 331,
+    "independent_budget": "3/16"
+  },
+  {
+    "budget": "15/8",
+    "case": 332,
+    "independent_budget": "129/32"
+  },
+  {
+    "budget": "15/32",
+    "case": 333,
+    "independent_budget": "69/128"
+  },
+  {
+    "budget": "57/64",
+    "case": 334,
+    "independent_budget": "81/64"
+  },
+  {
+    "budget": "5/24",
+    "case": 335,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "5/2",
+    "case": 336,
+    "independent_budget": "5/2"
+  },
+  {
+    "budget": "23/24",
+    "case": 337,
+    "independent_budget": "139/96"
+  },
+  {
+    "budget": "11/96",
+    "case": 338,
+    "independent_budget": "31/192"
+  },
+  {
+    "budget": "63/64",
+    "case": 339,
+    "independent_budget": "75/64"
+  },
+  {
+    "budget": "149/64",
+    "case": 340,
+    "independent_budget": "217/64"
+  },
+  {
+    "budget": "33/64",
+    "case": 341,
+    "independent_budget": "33/64"
+  },
+  {
+    "budget": "15/32",
+    "case": 342,
+    "independent_budget": "43/64"
+  },
+  {
+    "budget": "23/12",
+    "case": 343,
+    "independent_budget": "191/96"
+  },
+  {
+    "budget": "85/64",
+    "case": 344,
+    "independent_budget": "111/64"
+  },
+  {
+    "budget": "59/24",
+    "case": 345,
+    "independent_budget": "295/96"
+  },
+  {
+    "budget": "3/32",
+    "case": 346,
+    "independent_budget": "7/64"
+  },
+  {
+    "budget": "13/32",
+    "case": 347,
+    "independent_budget": "43/96"
+  },
+  {
+    "budget": "5/16",
+    "case": 348,
+    "independent_budget": "5/16"
+  },
+  {
+    "budget": "7/32",
+    "case": 349,
+    "independent_budget": "7/32"
+  },
+  {
+    "budget": "1/16",
+    "case": 350,
+    "independent_budget": "1/16"
+  },
+  {
+    "budget": "77/32",
+    "case": 351,
+    "independent_budget": "231/64"
+  },
+  {
+    "budget": "11/96",
+    "case": 352,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "27/32",
+    "case": 353,
+    "independent_budget": "27/32"
+  },
+  {
+    "budget": "3/32",
+    "case": 354,
+    "independent_budget": "3/32"
+  },
+  {
+    "budget": "35/16",
+    "case": 355,
+    "independent_budget": "119/48"
+  },
+  {
+    "budget": "5/12",
+    "case": 356,
+    "independent_budget": "11/24"
+  },
+  {
+    "budget": "103/32",
+    "case": 357,
+    "independent_budget": "103/32"
+  },
+  {
+    "budget": "13/32",
+    "case": 358,
+    "independent_budget": "79/192"
+  },
+  {
+    "budget": "5/8",
+    "case": 359,
+    "independent_budget": "5/8"
+  },
+  {
+    "budget": "1/16",
+    "case": 360,
+    "independent_budget": "45/64"
+  },
+  {
+    "budget": "1/8",
+    "case": 361,
+    "independent_budget": "35/32"
+  },
+  {
+    "budget": "15/16",
+    "case": 362,
+    "independent_budget": "15/16"
+  },
+  {
+    "budget": "75/64",
+    "case": 363,
+    "independent_budget": "31/24"
+  },
+  {
+    "budget": "1/6",
+    "case": 364,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "9/8",
+    "case": 365,
+    "independent_budget": "11/8"
+  },
+  {
+    "budget": "1/4",
+    "case": 366,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "9/8",
+    "case": 367,
+    "independent_budget": "37/32"
+  },
+  {
+    "budget": "35/32",
+    "case": 368,
+    "independent_budget": "5/4"
+  },
+  {
+    "budget": "59/64",
+    "case": 369,
+    "independent_budget": "59/64"
+  },
+  {
+    "budget": "13/64",
+    "case": 370,
+    "independent_budget": "13/64"
+  },
+  {
+    "budget": "1/2",
+    "case": 371,
+    "independent_budget": "1/2"
+  },
+  {
+    "budget": "27/32",
+    "case": 372,
+    "independent_budget": "7/8"
+  },
+  {
+    "budget": "1/96",
+    "case": 373,
+    "independent_budget": "1/64"
+  },
+  {
+    "budget": "617/384",
+    "case": 374,
+    "independent_budget": "191/96"
+  },
+  {
+    "budget": "463/192",
+    "case": 375,
+    "independent_budget": "527/192"
+  },
+  {
+    "budget": "1",
+    "case": 376,
+    "independent_budget": "4/3"
+  },
+  {
+    "budget": "79/48",
+    "case": 377,
+    "independent_budget": "7/4"
+  },
+  {
+    "budget": "5/2",
+    "case": 378,
+    "independent_budget": "53/16"
+  },
+  {
+    "budget": "3/8",
+    "case": 379,
+    "independent_budget": "3/8"
+  },
+  {
+    "budget": "15/32",
+    "case": 380,
+    "independent_budget": "23/24"
+  },
+  {
+    "budget": "287/192",
+    "case": 381,
+    "independent_budget": "625/384"
+  },
+  {
+    "budget": "5/32",
+    "case": 382,
+    "independent_budget": "5/32"
+  },
+  {
+    "budget": "1/4",
+    "case": 383,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "55/32",
+    "case": 384,
+    "independent_budget": "73/32"
+  },
+  {
+    "budget": "47/16",
+    "case": 385,
+    "independent_budget": "161/48"
+  },
+  {
+    "budget": "49/96",
+    "case": 386,
+    "independent_budget": "43/48"
+  },
+  {
+    "budget": "7/16",
+    "case": 387,
+    "independent_budget": "15/32"
+  },
+  {
+    "budget": "5/16",
+    "case": 388,
+    "independent_budget": "5/16"
+  },
+  {
+    "budget": "7/32",
+    "case": 389,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "19/24",
+    "case": 390,
+    "independent_budget": "5/6"
+  },
+  {
+    "budget": "25/48",
+    "case": 391,
+    "independent_budget": "17/32"
+  },
+  {
+    "budget": "25/4",
+    "case": 392,
+    "independent_budget": "201/32"
+  },
+  {
+    "budget": "29/64",
+    "case": 393,
+    "independent_budget": "29/64"
+  },
+  {
+    "budget": "11/16",
+    "case": 394,
+    "independent_budget": "11/16"
+  },
+  {
+    "budget": "5/48",
+    "case": 395,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "9/16",
+    "case": 396,
+    "independent_budget": "25/16"
+  },
+  {
+    "budget": "173/192",
+    "case": 397,
+    "independent_budget": "31/32"
+  },
+  {
+    "budget": "19/128",
+    "case": 398,
+    "independent_budget": "19/128"
+  },
+  {
+    "budget": "153/32",
+    "case": 399,
+    "independent_budget": "161/32"
+  },
+  {
+    "budget": "27/16",
+    "case": 400,
+    "independent_budget": "41/16"
+  },
+  {
+    "budget": "151/64",
+    "case": 401,
+    "independent_budget": "327/128"
+  },
+  {
+    "budget": "9/16",
+    "case": 402,
+    "independent_budget": "43/64"
+  },
+  {
+    "budget": "427/192",
+    "case": 403,
+    "independent_budget": "19/8"
+  },
+  {
+    "budget": "1/4",
+    "case": 404,
+    "independent_budget": "9/32"
+  },
+  {
+    "budget": "53/48",
+    "case": 405,
+    "independent_budget": "19/16"
+  },
+  {
+    "budget": "65/32",
+    "case": 406,
+    "independent_budget": "41/16"
+  },
+  {
+    "budget": "75/64",
+    "case": 407,
+    "independent_budget": "83/64"
+  },
+  {
+    "budget": "41/48",
+    "case": 408,
+    "independent_budget": "3/2"
+  },
+  {
+    "budget": "89/48",
+    "case": 409,
+    "independent_budget": "199/96"
+  },
+  {
+    "budget": "259/128",
+    "case": 410,
+    "independent_budget": "11/4"
+  },
+  {
+    "budget": "1/8",
+    "case": 411,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "131/64",
+    "case": 412,
+    "independent_budget": "17/8"
+  },
+  {
+    "budget": "37/16",
+    "case": 413,
+    "independent_budget": "37/16"
+  },
+  {
+    "budget": "17/48",
+    "case": 414,
+    "independent_budget": "21/32"
+  },
+  {
+    "budget": "11/32",
+    "case": 415,
+    "independent_budget": "11/32"
+  },
+  {
+    "budget": "463/192",
+    "case": 416,
+    "independent_budget": "183/64"
+  },
+  {
+    "budget": "5/32",
+    "case": 417,
+    "independent_budget": "5/32"
+  },
+  {
+    "budget": "53/32",
+    "case": 418,
+    "independent_budget": "107/64"
+  },
+  {
+    "budget": "7/4",
+    "case": 419,
+    "independent_budget": "29/16"
+  },
+  {
+    "budget": "13/8",
+    "case": 420,
+    "independent_budget": "53/32"
+  },
+  {
+    "budget": "0",
+    "case": 421,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "31/16",
+    "case": 422,
+    "independent_budget": "33/8"
+  },
+  {
+    "budget": "77/48",
+    "case": 423,
+    "independent_budget": "2"
+  },
+  {
+    "budget": "23/12",
+    "case": 424,
+    "independent_budget": "13/6"
+  },
+  {
+    "budget": "9/32",
+    "case": 425,
+    "independent_budget": "9/32"
+  },
+  {
+    "budget": "9/16",
+    "case": 426,
+    "independent_budget": "85/96"
+  },
+  {
+    "budget": "37/12",
+    "case": 427,
+    "independent_budget": "219/32"
+  },
+  {
+    "budget": "3/8",
+    "case": 428,
+    "independent_budget": "117/64"
+  },
+  {
+    "budget": "1/8",
+    "case": 429,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "17/32",
+    "case": 430,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "55/96",
+    "case": 431,
+    "independent_budget": "7/12"
+  },
+  {
+    "budget": "149/96",
+    "case": 432,
+    "independent_budget": "157/96"
+  },
+  {
+    "budget": "31/32",
+    "case": 433,
+    "independent_budget": "121/64"
+  },
+  {
+    "budget": "1/2",
+    "case": 434,
+    "independent_budget": "1/2"
+  },
+  {
+    "budget": "17/96",
+    "case": 435,
+    "independent_budget": "19/96"
+  },
+  {
+    "budget": "659/384",
+    "case": 436,
+    "independent_budget": "73/32"
+  },
+  {
+    "budget": "89/96",
+    "case": 437,
+    "independent_budget": "427/384"
+  },
+  {
+    "budget": "25/48",
+    "case": 438,
+    "independent_budget": "7/12"
+  },
+  {
+    "budget": "179/96",
+    "case": 439,
+    "independent_budget": "265/128"
+  },
+  {
+    "budget": "113/96",
+    "case": 440,
+    "independent_budget": "613/384"
+  },
+  {
+    "budget": "251/48",
+    "case": 441,
+    "independent_budget": "207/32"
+  },
+  {
+    "budget": "1/16",
+    "case": 442,
+    "independent_budget": "1/16"
+  },
+  {
+    "budget": "25/48",
+    "case": 443,
+    "independent_budget": "49/48"
+  },
+  {
+    "budget": "7/4",
+    "case": 444,
+    "independent_budget": "225/128"
+  },
+  {
+    "budget": "1/16",
+    "case": 445,
+    "independent_budget": "1/16"
+  },
+  {
+    "budget": "67/32",
+    "case": 446,
+    "independent_budget": "45/16"
+  },
+  {
+    "budget": "15/64",
+    "case": 447,
+    "independent_budget": "1/4"
+  },
+  {
+    "budget": "65/96",
+    "case": 448,
+    "independent_budget": "67/96"
+  },
+  {
+    "budget": "1",
+    "case": 449,
+    "independent_budget": "137/96"
+  },
+  {
+    "budget": "5/8",
+    "case": 450,
+    "independent_budget": "143/192"
+  },
+  {
+    "budget": "59/96",
+    "case": 451,
+    "independent_budget": "49/64"
+  },
+  {
+    "budget": "45/64",
+    "case": 452,
+    "independent_budget": "29/32"
+  },
+  {
+    "budget": "15/16",
+    "case": 453,
+    "independent_budget": "59/48"
+  },
+  {
+    "budget": "7/12",
+    "case": 454,
+    "independent_budget": "65/96"
+  },
+  {
+    "budget": "39/32",
+    "case": 455,
+    "independent_budget": "13/8"
+  },
+  {
+    "budget": "13/8",
+    "case": 456,
+    "independent_budget": "325/192"
+  },
+  {
+    "budget": "5/24",
+    "case": 457,
+    "independent_budget": "5/24"
+  },
+  {
+    "budget": "23/96",
+    "case": 458,
+    "independent_budget": "47/192"
+  },
+  {
+    "budget": "107/32",
+    "case": 459,
+    "independent_budget": "109/32"
+  },
+  {
+    "budget": "131/64",
+    "case": 460,
+    "independent_budget": "1091/384"
+  },
+  {
+    "budget": "103/128",
+    "case": 461,
+    "independent_budget": "27/32"
+  },
+  {
+    "budget": "31/8",
+    "case": 462,
+    "independent_budget": "43/8"
+  },
+  {
+    "budget": "17/64",
+    "case": 463,
+    "independent_budget": "17/64"
+  },
+  {
+    "budget": "37/64",
+    "case": 464,
+    "independent_budget": "37/64"
+  },
+  {
+    "budget": "11/12",
+    "case": 465,
+    "independent_budget": "23/24"
+  },
+  {
+    "budget": "71/128",
+    "case": 466,
+    "independent_budget": "7/8"
+  },
+  {
+    "budget": "1/8",
+    "case": 467,
+    "independent_budget": "1/8"
+  },
+  {
+    "budget": "155/192",
+    "case": 468,
+    "independent_budget": "23/24"
+  },
+  {
+    "budget": "61/32",
+    "case": 469,
+    "independent_budget": "71/32"
+  },
+  {
+    "budget": "1",
+    "case": 470,
+    "independent_budget": "5/4"
+  },
+  {
+    "budget": "29/64",
+    "case": 471,
+    "independent_budget": "29/64"
+  },
+  {
+    "budget": "59/64",
+    "case": 472,
+    "independent_budget": "65/64"
+  },
+  {
+    "budget": "53/32",
+    "case": 473,
+    "independent_budget": "23/12"
+  },
+  {
+    "budget": "17/16",
+    "case": 474,
+    "independent_budget": "25/16"
+  },
+  {
+    "budget": "3/8",
+    "case": 475,
+    "independent_budget": "3/8"
+  },
+  {
+    "budget": "0",
+    "case": 476,
+    "independent_budget": "7/4"
+  },
+  {
+    "budget": "25/32",
+    "case": 477,
+    "independent_budget": "73/64"
+  },
+  {
+    "budget": "9/16",
+    "case": 478,
+    "independent_budget": "53/64"
+  },
+  {
+    "budget": "103/96",
+    "case": 479,
+    "independent_budget": "107/96"
+  },
+  {
+    "budget": "9/16",
+    "case": 480,
+    "independent_budget": "11/16"
+  },
+  {
+    "budget": "19/32",
+    "case": 481,
+    "independent_budget": "19/32"
+  },
+  {
+    "budget": "31/96",
+    "case": 482,
+    "independent_budget": "1/3"
+  },
+  {
+    "budget": "19/8",
+    "case": 483,
+    "independent_budget": "55/16"
+  },
+  {
+    "budget": "9/16",
+    "case": 484,
+    "independent_budget": "19/32"
+  },
+  {
+    "budget": "51/16",
+    "case": 485,
+    "independent_budget": "221/64"
+  },
+  {
+    "budget": "5/3",
+    "case": 486,
+    "independent_budget": "97/48"
+  },
+  {
+    "budget": "27/64",
+    "case": 487,
+    "independent_budget": "9/16"
+  },
+  {
+    "budget": "11/6",
+    "case": 488,
+    "independent_budget": "2"
+  },
+  {
+    "budget": "169/384",
+    "case": 489,
+    "independent_budget": "57/128"
+  },
+  {
+    "budget": "25/24",
+    "case": 490,
+    "independent_budget": "179/96"
+  },
+  {
+    "budget": "15/32",
+    "case": 491,
+    "independent_budget": "15/32"
+  },
+  {
+    "budget": "67/32",
+    "case": 492,
+    "independent_budget": "323/128"
+  },
+  {
+    "budget": "15/16",
+    "case": 493,
+    "independent_budget": "15/16"
+  },
+  {
+    "budget": "25/16",
+    "case": 494,
+    "independent_budget": "31/16"
+  },
+  {
+    "budget": "29/16",
+    "case": 495,
+    "independent_budget": "83/32"
+  },
+  {
+    "budget": "19/128",
+    "case": 496,
+    "independent_budget": "19/128"
+  },
+  {
+    "budget": "5/2",
+    "case": 497,
+    "independent_budget": "203/48"
+  },
+  {
+    "budget": "53/64",
+    "case": 498,
+    "independent_budget": "63/64"
+  },
+  {
+    "budget": "2",
+    "case": 499,
+    "independent_budget": "195/64"
+  }
+]

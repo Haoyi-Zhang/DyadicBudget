@@ -1,0 +1,1 @@
+{"certificate_replayed": true, "strict_witness_replayed": true, "budget": "1/6"}

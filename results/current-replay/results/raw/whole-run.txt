@@ -1,0 +1,32 @@
+[run_all] unit: python -m unittest discover -s tests -v
+[run_all] unit: exit=0 wall=2.246s
+[run_all] pilot: python pilot.py
+[run_all] pilot: exit=0 wall=0.217s
+[run_all] support: python reproduce.py --suite support
+[run_all] support: exit=0 wall=3.409s
+[run_all] envelopes: python reproduce.py --suite envelopes
+[run_all] envelopes: exit=0 wall=5.831s
+[run_all] periods: python reproduce.py --suite periods
+[run_all] periods: exit=0 wall=4.523s
+[run_all] programs: python reproduce.py --suite programs
+[run_all] programs: exit=0 wall=3.393s
+[run_all] scaling: python reproduce.py --suite scaling
+[run_all] scaling: exit=0 wall=2.693s
+[run_all] mutations: python reproduce.py --suite mutations
+[run_all] mutations: exit=0 wall=0.062s
+[run_all] baselines: python reproduce.py --suite baselines
+[run_all] baselines: exit=0 wall=2.073s
+[run_all] separation: python reproduce.py --suite separation
+[run_all] separation: exit=0 wall=0.926s
+[run_all] fusion: python reproduce.py --suite fusion
+[run_all] fusion: exit=0 wall=0.688s
+[run_all] ablation: python reproduce.py --suite ablation
+[run_all] ablation: exit=0 wall=0.083s
+[run_all] optimized_periods: python -O reproduce.py --suite periods
+[run_all] optimized_periods: exit=0 wall=4.999s
+[run_all] tables: python export_tables.py
+[run_all] tables: exit=0 wall=0.036s
+[run_all] example: python budget.py verify results/example-certificate.json
+[run_all] example: exit=0 wall=0.033s
+Artifact campaign passed: 15 command groups, 33 unit tests, all frozen suites, optimized-mode periods, table export, and certificate replay.
+integrity: PASS (35 immutable files)

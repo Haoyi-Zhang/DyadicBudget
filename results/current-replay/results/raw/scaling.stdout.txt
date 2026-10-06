@@ -1,0 +1,1 @@
+{"checks": 15, "cpu_seconds": 2.5745661650000002, "failures": 0, "peak_rss_kib": 23024, "wall_seconds": 2.6378015080000026, "workers": 1}

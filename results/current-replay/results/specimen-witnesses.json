@@ -1,0 +1,492 @@
+{
+  "multirate_difference": [
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "3/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "1/4",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "3/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "999/2000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "3/8"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ],
+  "prequantization_compensation": [
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "-1/16",
+            "encoding": "-1/16",
+            "ideal": "-3/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "1/4",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "-1/16",
+            "encoding": "-1/16",
+            "ideal": "-3/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "999/2000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "-1/16",
+            "encoding": "-1/16",
+            "ideal": "-3/8"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ],
+  "separate_captures": [
+    {
+      "errors": [
+        "7/8"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          },
+          "h": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "3/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "15/16"
+      ],
+      "output_index": 0,
+      "requested_budget": "1/2",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          },
+          "h": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "7/16"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "7999/8000"
+      ],
+      "output_index": 0,
+      "requested_budget": "999/1000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          },
+          "h": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "3999/8000"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ],
+  "signed_three_rate": [
+    {
+      "errors": [
+        "3/4"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "-11/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "3/4"
+      ],
+      "output_index": 0,
+      "requested_budget": "3/8",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "-11/8"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "3/4"
+      ],
+      "output_index": 0,
+      "requested_budget": "2997/4000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "-11/8"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ],
+  "three_rate_average": [
+    {
+      "errors": [
+        "1/6"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/6"
+      ],
+      "output_index": 0,
+      "requested_budget": "1/12",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/6"
+      ],
+      "output_index": 0,
+      "requested_budget": "333/2000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ],
+  "threshold_crossing": [
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "1/4",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "1/2"
+      ],
+      "output_index": 0,
+      "requested_budget": "999/2000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ],
+  "two_captures_and_box": [
+    {
+      "errors": [
+        "2719/2520"
+      ],
+      "output_index": 0,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "1/9",
+            "encoding": "1/7",
+            "ideal": "125/252"
+          },
+          "h": {
+            "analog": "-1/8",
+            "encoding": "0",
+            "ideal": "-13/16"
+          }
+        },
+        "noises": {
+          "n": "1/5"
+        }
+      }
+    },
+    {
+      "errors": [
+        "1517/1344"
+      ],
+      "output_index": 0,
+      "requested_budget": "1517/2520",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "1/9",
+            "encoding": "1/7",
+            "ideal": "125/252"
+          },
+          "h": {
+            "analog": "-1/8",
+            "encoding": "0",
+            "ideal": "-31757/40320"
+          }
+        },
+        "noises": {
+          "n": "1/5"
+        }
+      }
+    },
+    {
+      "errors": [
+        "12134483/10080000"
+      ],
+      "output_index": 0,
+      "requested_budget": "168387/140000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "1/9",
+            "encoding": "1/7",
+            "ideal": "125/252"
+          },
+          "h": {
+            "analog": "-1/8",
+            "encoding": "0",
+            "ideal": "-15121517/20160000"
+          }
+        },
+        "noises": {
+          "n": "1/5"
+        }
+      }
+    }
+  ],
+  "vector_outputs": [
+    {
+      "errors": [
+        "-1/2",
+        "3/2",
+        "0"
+      ],
+      "output_index": 1,
+      "requested_budget": "0",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "-1/2",
+        "3/2",
+        "0"
+      ],
+      "output_index": 1,
+      "requested_budget": "3/4",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    },
+    {
+      "errors": [
+        "-1/2",
+        "3/2",
+        "0"
+      ],
+      "output_index": 1,
+      "requested_budget": "2997/2000",
+      "side": "upper",
+      "valuation": {
+        "captures": {
+          "g": {
+            "analog": "0",
+            "encoding": "0",
+            "ideal": "1/2"
+          }
+        },
+        "noises": {}
+      }
+    }
+  ]
+}

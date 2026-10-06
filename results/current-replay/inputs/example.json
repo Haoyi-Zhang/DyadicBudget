@@ -1,0 +1,84 @@
+{
+  "captures": {
+    "g": {
+      "analog": [
+        "0",
+        "0"
+      ],
+      "encoding": [
+        "0",
+        "0"
+      ],
+      "ideal": [
+        "0",
+        "1"
+      ]
+    }
+  },
+  "contract": "cartesian-closed-rational-captures",
+  "nodes": [
+    {
+      "id": "zero",
+      "op": "const",
+      "value": "0"
+    },
+    {
+      "exponent": -2,
+      "id": "q0",
+      "op": "round",
+      "source": "g"
+    },
+    {
+      "arg": "q0",
+      "factor": "1/3",
+      "id": "t0",
+      "op": "scale"
+    },
+    {
+      "id": "s0",
+      "left": "zero",
+      "op": "add",
+      "right": "t0"
+    },
+    {
+      "exponent": -1,
+      "id": "q1",
+      "op": "round",
+      "source": "g"
+    },
+    {
+      "arg": "q1",
+      "factor": "1/3",
+      "id": "t1",
+      "op": "scale"
+    },
+    {
+      "id": "s1",
+      "left": "s0",
+      "op": "add",
+      "right": "t1"
+    },
+    {
+      "exponent": 0,
+      "id": "q2",
+      "op": "round",
+      "source": "g"
+    },
+    {
+      "arg": "q2",
+      "factor": "1/3",
+      "id": "t2",
+      "op": "scale"
+    },
+    {
+      "id": "s2",
+      "left": "s1",
+      "op": "add",
+      "right": "t2"
+    }
+  ],
+  "noises": {},
+  "outputs": [
+    "s2"
+  ]
+}

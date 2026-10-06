@@ -1,0 +1,38 @@
+test_baseline_vector_output_order_invariant (test_core.Core.test_baseline_vector_output_order_invariant) ... ok
+test_boolean_exponent_rejected (test_core.Core.test_boolean_exponent_rejected) ... ok
+test_changed_result_rejected (test_core.Core.test_changed_result_rejected) ... ok
+test_changed_witness_rejected (test_core.Core.test_changed_witness_rejected) ... ok
+test_cli_duplicate_json_key (test_core.Core.test_cli_duplicate_json_key) ... ok
+test_cli_roundtrip (test_core.Core.test_cli_roundtrip) ... ok
+test_converter_reuse (test_core.Core.test_converter_reuse) ... ok
+test_correlated_contract_rejected (test_core.Core.test_correlated_contract_rejected) ... ok
+test_cover_complete (test_core.Core.test_cover_complete) ... ok
+test_distinct_capture_not_alias (test_core.Core.test_distinct_capture_not_alias) ... ok
+test_floats_rejected (test_core.Core.test_floats_rejected) ... ok
+test_group_oracle_count_fiber_boundaries (test_core.Core.test_group_oracle_count_fiber_boundaries) ... ok
+test_invalid_envelope_rejected (test_core.Core.test_invalid_envelope_rejected) ... ok
+test_narrow_range (test_core.Core.test_narrow_range) ... ok
+test_negative_tie (test_core.Core.test_negative_tie) ... ok
+test_no_quantizers (test_core.Core.test_no_quantizers) ... ok
+test_nonstring_capture_name_rejected (test_core.Core.test_nonstring_capture_name_rejected) ... ok
+test_nonstring_noise_name_rejected (test_core.Core.test_nonstring_noise_name_rejected) ... ok
+test_oracle_count_interval (test_core.Core.test_oracle_count_interval) ... ok
+test_oracle_count_singleton (test_core.Core.test_oracle_count_singleton) ... ok
+test_pilot_runs_with_optimized_python (test_core.Core.test_pilot_runs_with_optimized_python) ... ok
+test_positive_tie (test_core.Core.test_positive_tie) ... ok
+test_refinement_not_monotone (test_core.Core.test_refinement_not_monotone) ... ok
+test_scientific_guard_is_not_an_assert (test_core.Core.test_scientific_guard_is_not_an_assert) ... ok
+test_sharp_positive_fusion (test_core.Core.test_sharp_positive_fusion) ... ok
+test_singleton_tie (test_core.Core.test_singleton_tie) ... ok
+test_strict_approach (test_core.Core.test_strict_approach) ... ok
+test_unattained_infimum (test_core.Core.test_unattained_infimum) ... ok
+test_unused_bad_node_rejected (test_core.Core.test_unused_bad_node_rejected) ... ok
+test_unused_cycle_rejected (test_core.Core.test_unused_cycle_rejected) ... ok
+test_value_reuse (test_core.Core.test_value_reuse) ... ok
+test_vector_baseline_minimum_after_maximum (test_core.Core.test_vector_baseline_minimum_after_maximum) ... ok
+test_zero_budget_has_no_nonnegative_violation (test_core.Core.test_zero_budget_has_no_nonnegative_violation) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 2.147s
+
+OK
