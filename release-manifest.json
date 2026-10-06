@@ -1,8 +1,8 @@
 {
   "files": {
     ".github/workflows/scientific-checks.yml": {
-      "sha256": "985cb36b8af6c1f339900bd7e257043ba6f487403f37cfd26a6ac277ce3c0a0c",
-      "size": 1582
+      "sha256": "44914e75b77639cf41f77a62f9228e2f81c0c652dfdd994a14eaa43c7db4bbc9",
+      "size": 2071
     },
     "LICENSE": {
       "sha256": "af8879dd10caf72b0d0d1b50f8ce2e859977eeb413a8baa82ad195695777681c",
