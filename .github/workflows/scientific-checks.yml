@@ -32,12 +32,23 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p results/raw
+          export P098_BASELINE="$RUNNER_TEMP/dyadic-budget-baseline"
+          python -B verify_release.py --integrity-only
+          python -B - <<'PY'
+          import os
+          import shutil
+          from pathlib import Path
+          source = Path.cwd().resolve()
+          baseline = Path(os.environ["P098_BASELINE"]).resolve()
+          if baseline.exists() or baseline.is_relative_to(source):
+              raise SystemExit("Baseline destination must be new and outside the checkout")
+          shutil.copytree(source, baseline, ignore=shutil.ignore_patterns(".git", "__pycache__", "*.pyc"))
+          PY
           timeout --signal=TERM --kill-after=5s 600s bash -c '
             set -euo pipefail
             ulimit -v 3145728
             ulimit -t 300
-            python -B verify_release.py --integrity-only
-            python -B run_all.py
+            python -B run_all.py --baseline "$P098_BASELINE"
             python -B verify_release.py --integrity-only
           ' 2>&1 | tee results/raw/whole-run.txt
       - name: Upload raw outputs even on failure
@@ -46,9 +57,7 @@ jobs:
         with:
           name: scientific-check-outputs
           path: |
-            results/raw/
-            results/clean-reproduction.json
-            results/unit-tests.json
-            results/*-summary.json
-          if-no-files-found: warn
+            results/
+            inputs/
+          if-no-files-found: error
           retention-days: 14
