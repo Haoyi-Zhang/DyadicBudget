@@ -88,20 +88,39 @@ python export_tables.py
 python budget.py verify results/example-certificate.json
 ```
 
-The supplied campaign contains 15 command groups and 33 unit tests. The unit suite also
+The supplied campaign contains 15 command groups and 36 current unit tests,
+including three portable capture-index regressions. The unit suite also
 launches the pilot under `python -O`; all scientific cross-checks use explicit
 runtime guards, not removable Python `assert` statements. The protocol and all
 post-pilot repairs are documented in `docs/experiment-plan.md`.
 
 The retained Linux clean-reproduction report ran the earlier 29-test suite. The
-current suite adds four regressions for vector-baseline aggregation, output-order
+preceding 33-test suite adds four regressions for vector-baseline aggregation, output-order
 invariance, and origin-name admission. Native Windows library replay exercised
-30 of the current 33 tests and all ten frozen suite functions; the three
+30 of that preceding 33-test suite and all ten frozen suite functions; the three
 POSIX-dependent tests were not run on that host. Thirty regenerated input/result
 products matched the retained scientific values after excluding only the listed
 timing/RSS fields. The seven table/phase exports matched as text; six TeX files
 differed only in Windows line endings. Historical Linux CPU/RSS values are retained
 and are not current-host measurements.
+
+Current analysis indexes each output's quantizer effect coefficients once by
+capture rather than filtering the entire effect map for every capture. Signed
+coefficients, declared capture order, full unused-input admission, support
+certificates, exact-marginal baselines and witnesses are unchanged. This is a
+grouping-work change, not a tighter interval, a new support algorithm or a
+measured speedup. Frozen CPU/RSS results remain tied to the pre-index sources.
+The new tests run in the existing discovery step; their portable standalone
+command is:
+
+```sh
+python -B -m unittest discover -s tests -p test_capture_index.py -v
+```
+
+The release manifest describes current distributed file bytes, not scientific
+replay success. Historical replay reports remain unchanged. Source comparison
+includes all current test modules and still rejects differing scientific source
+bytes when comparing to a genuinely different implementation.
 
 For multiple outputs, each exact-marginal decomposition takes its maximum row
 budget before their minimum is selected. The rowwise hybrid is a different,

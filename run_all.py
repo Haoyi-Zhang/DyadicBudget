@@ -142,8 +142,8 @@ def source_files(root: Path) -> list[Path]:
         root / "reproduce.py",
         root / "run_all.py",
         root / "proofs" / "principal-budgets.md",
-        root / "tests" / "test_core.py",
     ]
+    candidates.extend(sorted((root / "tests").glob("test_*.py")))
     candidates.extend(sorted((root / "src").glob("*.py")))
     return [path for path in candidates if path.is_file()]
 

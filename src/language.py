@@ -165,12 +165,16 @@ def capture_domain(decl: dict) -> tuple[tuple[F, F], tuple[F, F]]:
 def analyze(program: dict) -> dict:
     rows = []
     for effect in effects(program):
+        weights_by_capture = {}
+        for key, value in effect.items():
+            if key[0] == 'q':
+                weights_by_capture.setdefault(key[1], {})[key[2]] = value
         groups, boxes = {}, {}
         lo = hi = F(0)
         relaxed_lo = relaxed_hi = F(0)
         for name, decl in program['captures'].items():
             c = effect.get(('u', name), F(0))
-            weights = {k[2]: v for k, v in effect.items() if k[:2] == ('q', name)}
+            weights = weights_by_capture.get(name, {})
             x, u = capture_domain(decl)
             if not c and not weights:
                 continue
