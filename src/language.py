@@ -9,6 +9,7 @@ from fractions import Fraction as F
 from copy import deepcopy
 from typing import Any
 from .dyadic import group_support, pow2, round_dyadic
+from .exact_io import exact_value, exact_text
 
 MAX_NODES = 2048
 MAX_SOURCES = 128
@@ -19,7 +20,7 @@ MAX_RATIONAL_BITS = 16384
 def rational(x: Any) -> F:
     if isinstance(x, bool) or not isinstance(x, (str, int, F)):
         raise ValueError('exact rational required, not floating point')
-    q = F(x)
+    q = exact_value(x)
     if max(q.numerator.bit_length(), q.denominator.bit_length()) > MAX_RATIONAL_BITS:
         raise ValueError('rational exceeds admitted bit-size limit')
     return q
@@ -125,14 +126,14 @@ def evaluate(program: dict, valuation: dict) -> list[tuple[F, F]]:
     for name, declaration in program['captures'].items():
         vals = valuation['captures'][name]
         for key in ('ideal', 'encoding', 'analog'):
-            v = rational(vals[key]); lo, hi = interval(declaration[key])
+            v = exact_value(vals[key]); lo, hi = interval(declaration[key])
             if not lo <= v <= hi:
                 raise ValueError('capture valuation outside its declared envelope')
-        x[name] = rational(vals['ideal'])
-        s[name] = sum((rational(vals[k]) for k in ('ideal', 'encoding', 'analog')), F(0))
+        x[name] = exact_value(vals['ideal'])
+        s[name] = sum((exact_value(vals[k]) for k in ('ideal', 'encoding', 'analog')), F(0))
     noise = {}
     for name, domain in program['noises'].items():
-        v = rational(valuation['noises'][name]); lo, hi = interval(domain)
+        v = exact_value(valuation['noises'][name]); lo, hi = interval(domain)
         if not lo <= v <= hi:
             raise ValueError('noise valuation outside envelope')
         noise[name] = v
@@ -214,7 +215,7 @@ def witness(program: dict, result: dict, beta: F) -> dict:
     valuation = {'captures': {}, 'noises': {}}
     for name, decl in program['captures'].items():
         if name not in row['groups']:
-            vals = {key: str(interval(domain)[0]) for key, domain in decl.items()}
+            vals = {key: exact_text(interval(domain)[0]) for key, domain in decl.items()}
         else:
             group = row['groups'][name][side]
             ep = group['endpoint']
@@ -232,16 +233,16 @@ def witness(program: dict, result: dict, beta: F) -> dict:
             u = F(seg['u_slope'])*s+F(seg['u_constant'])
             enc, ana = interval(decl['encoding']), interval(decl['analog'])
             z = max(enc[0], u-ana[1])
-            vals = {'ideal': str(s-u), 'encoding': str(z), 'analog': str(u-z)}
+            vals = {'ideal': exact_text(s-u), 'encoding': exact_text(z), 'analog': exact_text(u-z)}
         valuation['captures'][name] = vals
     for name, domain in program['noises'].items():
         a, b = interval(domain)
         coef = F(row['boxes'].get(name, {}).get('coefficient', '0'))
         use_b = (coef >= 0) == (side == 'upper')
-        valuation['noises'][name] = str(b if use_b else a)
+        valuation['noises'][name] = exact_text(b if use_b else a)
     values = evaluate(program, valuation)
     errors = [actual-ideal for ideal, actual in values]
     if abs(errors[i]) <= beta:
         raise RuntimeError('internal witness construction failed to violate requested budget')
-    return {'requested_budget': str(beta), 'output_index': i, 'side': side,
-            'valuation': valuation, 'errors': list(map(str, errors))}
+    return {'requested_budget': exact_text(beta), 'output_index': i, 'side': side,
+            'valuation': valuation, 'errors': list(map(exact_text, errors))}

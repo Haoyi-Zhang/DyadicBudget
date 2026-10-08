@@ -7,6 +7,7 @@ second implementation by the same research executor, NOT a verified proof
 assistant or an independent external review.
 """
 from fractions import Fraction as F
+from .exact_io import exact_value
 
 
 def need(condition, message):
@@ -261,12 +262,12 @@ def replay_witness(program, wit):
     for name, domain in program['captures'].items():
         parts = v['captures'][name]
         for key in ('ideal', 'encoding', 'analog'):
-            a, b = bounds(domain[key]); q = F(parts[key])
+            a, b = bounds(domain[key]); q = exact_value(parts[key])
             need(a <= q <= b, 'inadmissible capture witness')
-        xs[name] = F(parts['ideal'])
-        ss[name] = sum((F(parts[k]) for k in ('ideal', 'encoding', 'analog')), F(0))
+        xs[name] = exact_value(parts['ideal'])
+        ss[name] = sum((exact_value(parts[k]) for k in ('ideal', 'encoding', 'analog')), F(0))
     for name, domain in program['noises'].items():
-        a, b = bounds(domain); q = F(v['noises'][name])
+        a, b = bounds(domain); q = exact_value(v['noises'][name])
         need(a <= q <= b, 'inadmissible noise witness'); ns[name] = q
     ideal, actual = {}, {}
     for n in program['nodes']:
@@ -290,8 +291,8 @@ def replay_witness(program, wit):
             z = actual[n['left']]+actual[n['right']]
         ideal[name], actual[name] = i, z
     errors = [actual[o]-ideal[o] for o in program['outputs']]
-    need(list(map(F, wit['errors'])) == errors, 'recorded witness errors changed')
-    j = wit['output_index']; beta = F(wit['requested_budget'])
+    need(list(map(exact_value, wit['errors'])) == errors, 'recorded witness errors changed')
+    j = wit['output_index']; beta = exact_value(wit['requested_budget'])
     need(type(j) is int and 0 <= j < len(errors) and beta >= 0, 'invalid witness request')
     need(abs(errors[j]) > beta, 'not a strict budget violation')
     return True

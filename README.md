@@ -88,8 +88,10 @@ python export_tables.py
 python budget.py verify results/example-certificate.json
 ```
 
-The supplied campaign contains 15 command groups and 36 current unit tests,
-including three portable capture-index regressions. The unit suite also
+The supplied campaign contains 15 command groups and 38 current unit tests,
+including three portable capture-index regressions and two strict-witness boundary
+regressions. Thirty-five portable tests passed on Windows; the three CLI/pilot
+tests require POSIX resource support and are not Windows tests. The unit suite also
 launches the pilot under `python -O`; all scientific cross-checks use explicit
 runtime guards, not removable Python `assert` statements. The protocol and all
 post-pilot repairs are documented in `docs/experiment-plan.md`.
