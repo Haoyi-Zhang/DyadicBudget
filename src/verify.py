@@ -7,7 +7,7 @@ second implementation by the same research executor, NOT a verified proof
 assistant or an independent external review.
 """
 from fractions import Fraction as F
-from .exact_io import exact_value
+from .exact_io import exact_value, exact_text
 
 
 def need(condition, message):
@@ -16,7 +16,7 @@ def need(condition, message):
 
 
 def p2(p):
-    return F(2**p) if p >= 0 else F(1, 2**(-p))
+    return exact_value(2**p) if p >= 0 else F(1, 2**(-p))
 
 
 def fl(x):
@@ -24,24 +24,24 @@ def fl(x):
 
 
 def bounds(pair):
-    a, b = map(F, pair)
+    a, b = map(exact_value, pair)
     need(a <= b, 'invalid domain')
     return a, b
 
 
 def check_support(cert, weights, a, b, lam=F(0), const=F(0)):
     """Replay a bounded bit-block support certificate against external inputs."""
-    weights = {p: F(w) for p, w in weights.items() if w}
-    need(list(map(F, cert['interval'])) == [a, b], 'support domain changed')
-    need(F(cert['linear']) == lam and F(cert['constant']) == const, 'affine term changed')
-    need(cert['weights'] == [[p, str(w)] for p, w in sorted(weights.items())], 'converter changed')
+    weights = {p: exact_value(w) for p, w in weights.items() if w}
+    need(list(map(exact_value, cert['interval'])) == [a, b], 'support domain changed')
+    need(exact_value(cert['linear']) == lam and exact_value(cert['constant']) == const, 'affine term changed')
+    need(cert['weights'] == [[p, exact_text(w)] for p, w in sorted(weights.items())], 'converter changed')
     delta = p2(min(weights)-1) if weights else F(1)
     period = p2(max(weights)) if weights else F(1)
     shift = fl(a/period)*period
     na, nb = fl((a-shift)/delta), fl((b-shift)/delta)
     width = max(nb.bit_length(), max(weights)-min(weights)+1 if weights else 0, 1)
     need(width <= 32768, 'certificate exceeds replay bit-size limit')
-    need(F(cert['delta']) == delta and F(cert['shift']) == shift, 'lattice changed')
+    need(exact_value(cert['delta']) == delta and exact_value(cert['shift']) == shift, 'lattice changed')
     cs = []
     p0 = min(weights)-1 if weights else 0
     for j in range(width):
@@ -53,7 +53,7 @@ def check_support(cert, weights, a, b, lam=F(0), const=F(0)):
             if j == h-1:
                 coefficient += w*delta*(1 << h)
         cs.append(coefficient)
-    need(list(map(F, cert['coefficients'])) == cs, 'bit coefficients changed')
+    need(list(map(exact_value, cert['coefficients'])) == cs, 'bit coefficients changed')
     rho = lam-sum(weights.values(), F(0))
 
     def fixed(n):
@@ -66,7 +66,7 @@ def check_support(cert, weights, a, b, lam=F(0), const=F(0)):
     cursor = na
     for index, piece in enumerate(pieces):
         if piece['kind'] == 'partial':
-            n = piece['n']; rlo, rhi = F(piece['rlo']), F(piece['rhi'])
+            n = piece['n']; rlo, rhi = exact_value(piece['rlo']), exact_value(piece['rhi'])
             closed = piece['hi_closed']
             need(type(n) is int and n == cursor, 'partial cell out of order')
             need(type(closed) is bool, 'endpoint flag must be Boolean')
@@ -94,7 +94,7 @@ def check_support(cert, weights, a, b, lam=F(0), const=F(0)):
             low_att, high_att = rho >= 0, rho <= 0
             ranges.append(('block', start, stop, F(0), delta, False))
             cursor = stop+1
-        need(F(piece['lower']) == low and F(piece['upper']) == high, 'piece support changed')
+        need(exact_value(piece['lower']) == low and exact_value(piece['upper']) == high, 'piece support changed')
         candidates['lower'].append((low, low_att))
         candidates['upper'].append((high, high_att))
     need(cursor == nb+1, 'incomplete interval cover')
@@ -104,15 +104,15 @@ def check_support(cert, weights, a, b, lam=F(0), const=F(0)):
         value = (min if side == 'lower' else max)(v for v, _ in candidates[side])
         attained = any(att and v == value for v, att in candidates[side])
         ep = cert[side]
-        need(F(ep['value']) == value and type(ep['attained']) is bool and ep['attained'] == attained, 'global extremum changed')
-        n, r = ep['n'], F(ep['r'])
+        need(exact_value(ep['value']) == value and type(ep['attained']) is bool and ep['attained'] == attained, 'global extremum changed')
+        n, r = ep['n'], exact_value(ep['r'])
         need(type(n) is int and na <= n <= nb, 'endpoint index outside cover')
         piece = next(item for item in ranges if item[1] <= n <= item[2])
         _, _, _, rlo, rhi, closed = piece
         need(rlo <= r <= rhi, 'endpoint residual outside cell')
         actual_att = r < rhi or closed
         need(actual_att == attained, 'endpoint attainment inconsistent')
-        need(F(ep['delta']) == delta and F(ep['shift']) == shift and F(ep['slope']) == rho and F(ep['r_lower']) == rlo, 'endpoint metadata changed')
+        need(exact_value(ep['delta']) == delta and exact_value(ep['shift']) == shift and exact_value(ep['slope']) == rho and exact_value(ep['r_lower']) == rlo, 'endpoint metadata changed')
         need(fixed(n)+rho*r == value, 'endpoint does not realize claimed limit')
         result.extend([value, attained])
     return tuple(result)
@@ -126,7 +126,7 @@ def well_formed(program):
     need(len(captures)+len(noises) <= 128 and len(nodes) <= 2048, 'program too large')
     def rational(value):
         need(not isinstance(value, bool) and isinstance(value, (int, str, F)), 'inexact numeric input')
-        v = F(value)
+        v = exact_value(value)
         need(max(v.numerator.bit_length(), v.denominator.bit_length()) <= 16384, 'numeric input too large')
         return v
     for name, cap in captures.items():
@@ -175,7 +175,7 @@ def reverse_effect(program, output):
         if op == 'add':
             plus(adj, n['left'], a); plus(adj, n['right'], a)
         elif op == 'scale':
-            plus(adj, n['arg'], a*F(n['factor']))
+            plus(adj, n['arg'], a*exact_value(n['factor']))
         elif op == 'round':
             plus(effect, ('q', n['source'], n['exponent']), a)
             plus(effect, ('u', n['source']), a)
@@ -203,12 +203,12 @@ def check_group(item, x, u, c, weights):
         need(len(data['segments']) == 2, 'fiber segment missing')
         candidates = []
         for seg, (a, b, A, C) in zip(data['segments'], domains):
-            need(F(seg['u_slope']) == A and F(seg['u_constant']) == C, 'fiber relation changed')
+            need(exact_value(seg['u_slope']) == A and exact_value(seg['u_constant']) == C, 'fiber relation changed')
             v = check_support(seg['support'], weights, a, b, c*A, c*C)
             candidates.append(v[2:] if side == 'upper' else v[:2])
         optimum = (max if side == 'upper' else min)(v for v, _ in candidates)
         att = any(v == optimum and a for v, a in candidates)
-        need(F(data['value']) == optimum and data['attained'] == att, 'wrong group optimum')
+        need(exact_value(data['value']) == optimum and data['attained'] == att, 'wrong group optimum')
         chosen = data['chosen_segment']
         need(type(chosen) is int and 0 <= chosen < 2, 'bad selected segment')
         need(candidates[chosen] == (optimum, att), 'selected segment not optimal')
@@ -225,7 +225,7 @@ def check_result(program, result):
     total = F(0)
     for out, row in zip(program['outputs'], result['rows']):
         ef = reverse_effect(program, out)
-        need(row['effect'] == [[*k, str(v)] for k, v in sorted(ef.items())], 'effect changed')
+        need(row['effect'] == [[*k, exact_text(v)] for k, v in sorted(ef.items())], 'effect changed')
         expected_groups = {k[1] for k in ef if k[0] in ('u', 'q')}
         expected_boxes = {k[1] for k in ef if k[0] == 'e'}
         need(set(row['groups']) == expected_groups and set(row['boxes']) == expected_boxes, 'lost or extra effect origin')
@@ -244,14 +244,14 @@ def check_result(program, result):
         for name in expected_boxes:
             c = ef[('e', name)]; a, b = bounds(program['noises'][name])
             low_b, high_b = min(c*a, c*b), max(c*a, c*b)
-            need(row['boxes'][name] == {'coefficient': str(c), 'lower': str(low_b), 'upper': str(high_b)}, 'box support changed')
+            need(row['boxes'][name] == {'coefficient': exact_text(c), 'lower': exact_text(low_b), 'upper': exact_text(high_b)}, 'box support changed')
             low += low_b; high += high_b
             relaxed_low += low_b; relaxed_high += high_b
         budget = max(-low, high, F(0))
-        need(F(row['lower']) == low and F(row['upper']) == high and F(row['budget']) == budget, 'row support changed')
-        need(F(row['independent_budget']) == max(-relaxed_low, relaxed_high, F(0)), 'baseline changed')
+        need(exact_value(row['lower']) == low and exact_value(row['upper']) == high and exact_value(row['budget']) == budget, 'row support changed')
+        need(exact_value(row['independent_budget']) == max(-relaxed_low, relaxed_high, F(0)), 'baseline changed')
         total = max(total, budget)
-    need(F(result['budget']) == total, 'global budget changed')
+    need(exact_value(result['budget']) == total, 'global budget changed')
     return True
 
 
@@ -273,7 +273,7 @@ def replay_witness(program, wit):
     for n in program['nodes']:
         name, op = n['id'], n['op']
         if op == 'const':
-            i = z = F(n['value'])
+            i = z = exact_value(n['value'])
         elif op == 'ideal':
             i = z = xs[n['source']]
         elif op == 'analog':
@@ -284,7 +284,7 @@ def replay_witness(program, wit):
         elif op == 'noise':
             i, z = F(0), ns[n['origin']]
         elif op == 'scale':
-            i, z = F(n['factor'])*ideal[n['arg']], F(n['factor'])*actual[n['arg']]
+            i, z = exact_value(n['factor'])*ideal[n['arg']], exact_value(n['factor'])*actual[n['arg']]
         else:
             need(op == 'add', 'unsupported replay node')
             i = ideal[n['left']]+ideal[n['right']]

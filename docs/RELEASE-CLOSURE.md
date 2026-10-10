@@ -12,7 +12,7 @@ hardware validation.
 - Bibliography: 62 unique cited records, including 60 DOI records and two stable-URL-only records.
 - Artifact Python files: 15.
 - Retained historical Linux replay: 15 sequential command groups and 29 unit tests.
-- Current suite: 33 tests; native Windows library replay exercised 30, with three
+- Separate recorded suite snapshot: 33 tests; native Windows library replay exercised 30, with three
   POSIX-dependent tests not run on that host. The ten frozen suite functions and
   current library regressions passed without changing the frozen scientific values.
 
@@ -31,9 +31,14 @@ hardware validation.
    symbolic links, absolute paths, path traversal, or packaged bytecode caches.
 
 `results/cache-integrity-validation.json` records the completed writable-clean-copy
-sequence. All 34 manifest-listed immutable hashes remained unchanged and no
+sequence against the earlier 34-file manifest. All its immutable hashes remained unchanged and no
 `__pycache__` directory or `.pyc` file remained. The earlier incomplete pre-repair
 attempt is not reported as an observed failure.
+
+The exact-I/O repair adds three small offline regressions; their command is in
+`REPRODUCIBILITY.md`. They are not part of either recorded suite snapshot or the
+historical clean-copy replay. The distributed source manifest tracks the repaired
+files without rewriting those historical validation records.
 
 `results/frozen-value-baseline-check.json` records a separate comparison with the
 untouched originally supplied project archive. It verifies that the repair did not

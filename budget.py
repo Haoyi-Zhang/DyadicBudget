@@ -7,7 +7,7 @@ can be solved within them. Failure to finish is not a proof of a budget.
 """
 from __future__ import annotations
 import argparse
-from fractions import Fraction
+from src.exact_io import exact_value, exact_text, exact_json_text, integer_value
 import json
 from pathlib import Path
 import sys
@@ -37,7 +37,7 @@ def load(path: str) -> dict:
                 raise ValueError("duplicate JSON object key")
             out[key] = value
         return out
-    obj = json.loads(data, object_pairs_hook=pairs)
+    obj = json.loads(data, object_pairs_hook=pairs, parse_int=integer_value)
     if not isinstance(obj, dict):
         raise ValueError("a JSON object is required")
     return obj
@@ -62,35 +62,35 @@ def main() -> int:
             check_result(program, result)
             packet = {'program': program, 'analysis': result}
             if args.budget is not None:
-                beta = Fraction(args.budget)
+                beta = exact_value(args.budget)
                 if beta < 0:
                     raise ValueError('budget must be nonnegative')
-                packet['declared_budget'] = str(beta)
-                packet['within_budget'] = Fraction(result['budget']) <= beta
+                packet['declared_budget'] = exact_text(beta)
+                packet['within_budget'] = exact_value(result['budget']) <= beta
                 if not packet['within_budget']:
                     packet['witness'] = witness(program, result, beta)
                     replay_witness(program, packet['witness'])
-            print(json.dumps(packet, indent=2, sort_keys=True))
+            print(exact_json_text(packet))
         else:
             from src.verify import check_result, replay_witness
             packet = load(args.packet)
             check_result(packet['program'], packet['analysis'])
             if 'declared_budget' in packet:
-                beta = Fraction(packet['declared_budget'])
+                beta = exact_value(packet['declared_budget'])
                 if beta < 0 or type(packet['within_budget']) is not bool:
                     raise ValueError('invalid budget declaration')
-                if packet['within_budget'] != (Fraction(packet['analysis']['budget']) <= beta):
+                if packet['within_budget'] != (exact_value(packet['analysis']['budget']) <= beta):
                     raise ValueError('incorrect declaration outcome')
                 if not packet['within_budget'] and 'witness' not in packet:
                     raise ValueError('strict-violation witness missing')
-                if 'witness' in packet and Fraction(packet['witness']['requested_budget']) != beta:
+                if 'witness' in packet and exact_value(packet['witness']['requested_budget']) != beta:
                     raise ValueError('witness challenges a different budget')
             if 'witness' in packet:
                 replay_witness(packet['program'], packet['witness'])
-            print(json.dumps({'certificate_replayed': True,
+            print(exact_json_text({'certificate_replayed': True,
                               'strict_witness_replayed': 'witness' in packet,
                               'budget': packet['analysis']['budget']}))
-    except (ValueError, TypeError, KeyError, IndexError, OSError, OverflowError, MemoryError) as exc:
+    except (ValueError, TypeError, KeyError, IndexError, OSError, OverflowError, MemoryError, ZeroDivisionError) as exc:
         print(f"error: {type(exc).__name__}: {exc}", file=sys.stderr)
         return 2
     return 0

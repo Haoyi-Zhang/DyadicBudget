@@ -10,6 +10,22 @@ This artifact is self-contained and uses exact rational arithmetic from the Pyth
   analysis and replay functions, but does not support the complete supplied runner.
 - The retained validation was executed with one worker and deterministic seeds.
 
+Original rational parameters retain the 16,384-bit admission limit. Derived
+coefficients, supports, budgets and witness coordinates use chunked exact decimal
+parsing and formatting, without reapplying that original-input limit. The CLI
+also uses chunked conversion for JSON integer inputs and certificate indices;
+interpreter-wide decimal-conversion safeguards are unchanged. Its existing file,
+CPU and memory limits still apply, so successful completion is not promised for
+every admitted program.
+
+The three small exact-I/O regressions use owned rational programs and a mocked
+unavailable ordinary formatter, rather than boundary-sized inputs. Their run is
+separate from retained campaign and clean-copy validation records:
+
+```bash
+python -B -m unittest discover -s tests -p test_exact_pipeline.py -v
+```
+
 ## One-command scientific replay
 
 ```bash

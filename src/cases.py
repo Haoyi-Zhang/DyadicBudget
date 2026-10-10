@@ -1,6 +1,7 @@
 """Deterministic analytical specimens and finite falsification inputs."""
 from fractions import Fraction as F
 import random
+from .exact_io import exact_value, exact_text
 
 INTERVALS = [(F(-2), F(2)), (F(0), F(1)), (F(1, 7), F(13, 7)),
              (F(-3, 4), F(-1, 4)), (F(1, 2), F(1, 2)),
@@ -21,23 +22,23 @@ def program(weights, x=('0', '1'), encoding=('0', '0'), analog=('0', '0'),
     out = 'zero'
     for i, (p, w) in enumerate(sorted(weights.items())):
         nodes.extend([{'id': f'q{i}', 'op': 'round', 'source': 'g', 'exponent': p},
-                      {'id': f't{i}', 'op': 'scale', 'arg': f'q{i}', 'factor': str(w)},
+                      {'id': f't{i}', 'op': 'scale', 'arg': f'q{i}', 'factor': exact_text(w)},
                       {'id': f's{i}', 'op': 'add', 'left': out, 'right': f't{i}'}])
         out = f's{i}'
     if analog_weight:
         nodes.extend([{'id': 'a', 'op': 'analog', 'source': 'g'},
-                      {'id': 'at', 'op': 'scale', 'arg': 'a', 'factor': str(analog_weight)},
+                      {'id': 'at', 'op': 'scale', 'arg': 'a', 'factor': exact_text(analog_weight)},
                       {'id': 'as', 'op': 'add', 'left': out, 'right': 'at'}])
         out = 'as'
     noises = {}
     if noise:
-        noises['n'] = list(map(str, noise))
+        noises['n'] = list(map(lambda v: exact_text(exact_value(v)), noise))
         nodes.extend([{'id': 'n', 'op': 'noise', 'origin': 'n'},
                       {'id': 'ns', 'op': 'add', 'left': out, 'right': 'n'}])
         out = 'ns'
     return {'contract': 'cartesian-closed-rational-captures',
-            'captures': {'g': {'ideal': list(map(str, x)), 'encoding': list(map(str, encoding)),
-                               'analog': list(map(str, analog))}},
+            'captures': {'g': {'ideal': list(map(lambda v: exact_text(exact_value(v)), x)), 'encoding': list(map(lambda v: exact_text(exact_value(v)), encoding)),
+                               'analog': list(map(lambda v: exact_text(exact_value(v)), analog))}},
             'noises': noises, 'nodes': nodes, 'outputs': [out]}
 
 

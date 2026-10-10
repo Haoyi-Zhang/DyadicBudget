@@ -13,20 +13,20 @@
       "size": 11353
     },
     "budget.py": {
-      "sha256": "0688e03c3b2097d3cd623ef14496663b5d8b9e7212cd871187c3f166adcad6e7",
-      "size": 4325
+      "sha256": "da5b840968e21662ef755dc586467e89b1d35d84757b4d56295be35d3bc5c507",
+      "size": 4425
     },
     "claim_evidence_ledger.csv": {
       "sha256": "017bc4f8344c0a73b4f498425df11747f48c0eae830214ba0f7028e06ddb9347",
       "size": 9020
     },
     "docs/RELEASE-CLOSURE.md": {
-      "sha256": "c49aa507a7fe68048e3a83460b4c235c9d6422e442f1a17155e1be95ce07e65d",
-      "size": 2813
+      "sha256": "1774fb290c951ffd0c578fcd3efe357084229618b28c3e9897fb0661db405caa",
+      "size": 3158
     },
     "docs/REPRODUCIBILITY.md": {
-      "sha256": "74cfd67dcf43180db9bbbdf0bd8d4e1157d502a83767d3ce93a9bb47eb5ce57c",
-      "size": 1990
+      "sha256": "e844b73a9655dc40854d0dbe65637e28b355131e711d73c4744108e902507ce8",
+      "size": 2799
     },
     "docs/experiment-plan.md": {
       "sha256": "d91d6ea27d6a7dbcd6178fcd8deb33d9d5c9a89c01087d2b34bae6de034c6e74",
@@ -105,36 +105,36 @@
       "size": 0
     },
     "src/cases.py": {
-      "sha256": "5f9e5518b7f81e86593a762da3f29a71b73efd27f3fddedc494a6574a2b0cc67",
-      "size": 5560
+      "sha256": "b03b4ce33dc8e9b7f4ee85759d4dd1df569213a0bbdf23b4e0388135d225a5a9",
+      "size": 5752
     },
     "src/checks.py": {
       "sha256": "8e1eded8c42036a0d17f2fad87795dc06a58b1e7240c73fe097cb7269d8fcbba",
       "size": 523
     },
     "src/comparisons.py": {
-      "sha256": "654574d9225477c6f7fc2dce8857cc5c331563a9d764b416bf9b96b0bfad99bf",
-      "size": 2570
+      "sha256": "021ef5b9c1e22908fcfc41c4d32203fca4c7cd2a2c683b645362756e64aee2c4",
+      "size": 2683
     },
     "src/dyadic.py": {
-      "sha256": "dafeff43867cc853bd3842e5404f88cb8f86015d1eec16d3d5130cf0abc68cab",
-      "size": 7350
+      "sha256": "ffb0eabe2324decac93056be1fca7280ac065d9dcb42aed6226e17f8f1a98c31",
+      "size": 7509
     },
     "src/exact_io.py": {
-      "sha256": "6bd1fddab6071f6d923dac0c7dc59d6ea2cdca5376f02e80c7b24726955ee2ca",
-      "size": 1588
+      "sha256": "4cdfa40365648db95bbe94d867e5c8ad446e80a14db839e0433e861b7e6d9d1f",
+      "size": 3503
     },
     "src/language.py": {
-      "sha256": "c469b3eade10607e6aa76374a7c7648722cc9aa7df23fa432fa8376a61cd353c",
-      "size": 11139
+      "sha256": "903435d41a0f5176ca1d2e25fbc8f78131ec04e076d8061aa561e923d4d6b0c4",
+      "size": 11342
     },
     "src/oracle.py": {
       "sha256": "7a606400543a9251d718c923fd6ad3950aba3b7fa9bb5b0822671355bd1c40dd",
       "size": 4180
     },
     "src/verify.py": {
-      "sha256": "1f2090ab7065f9412bcffbbed9beb6b742b8819f53a52a8d3cb0cb97e09cf49a",
-      "size": 15108
+      "sha256": "5e630451ac42ff6b7421c7948c1f7f070832823954d82ff57930f7ec734c1ed0",
+      "size": 15475
     },
     "tests/test_capture_index.py": {
       "sha256": "15db5ec3519e03365d8bc7b2f5b255e6ca4b98229efa596df63e958b901c9fad",
@@ -143,6 +143,10 @@
     "tests/test_core.py": {
       "sha256": "d28d02f1a429b5195e4cfdfb3bb2271a6480f230eb3e76e36de28b6869f04712",
       "size": 9424
+    },
+    "tests/test_exact_pipeline.py": {
+      "sha256": "8639c29af446db41fcf4174d6dc4d7bb959d6fd127f55272629074896dde0784",
+      "size": 6531
     },
     "tests/test_witness_boundary.py": {
       "sha256": "1487dd10101d9af6d3252270b65721fd14fe6427cfb5f7f1aae64ade35819688",

@@ -181,7 +181,7 @@ def analyze(program: dict) -> dict:
                 continue
             item = group_support(x, u, c, weights)
             groups[name] = item
-            lo += F(item['lower']['value']); hi += F(item['upper']['value'])
+            lo += exact_value(item['lower']['value']); hi += exact_value(item['upper']['value'])
             independent = sum((abs(w)*pow2(p)/2 for p, w in weights.items()), F(0))
             relaxed_lo += min(c*u[0], c*u[1])-independent
             relaxed_hi += max(c*u[0], c*u[1])+independent
@@ -191,25 +191,25 @@ def analyze(program: dict) -> dict:
                 continue
             a, b = interval(domain)
             lower, upper = min(c*a, c*b), max(c*a, c*b)
-            boxes[name] = {'coefficient': str(c), 'lower': str(lower), 'upper': str(upper)}
+            boxes[name] = {'coefficient': exact_text(c), 'lower': exact_text(lower), 'upper': exact_text(upper)}
             lo += lower; hi += upper
             relaxed_lo += lower; relaxed_hi += upper
-        rows.append({'effect': [[*k, str(v)] for k, v in sorted(effect.items())],
-                     'groups': groups, 'boxes': boxes, 'lower': str(lo), 'upper': str(hi),
-                     'budget': str(max(-lo, hi, F(0))),
-                     'independent_budget': str(max(-relaxed_lo, relaxed_hi, F(0)))})
-    return {'metric': 'linfinity', 'budget': str(max(F(r['budget']) for r in rows)), 'rows': rows}
+        rows.append({'effect': [[*k, exact_text(v)] for k, v in sorted(effect.items())],
+                     'groups': groups, 'boxes': boxes, 'lower': exact_text(lo), 'upper': exact_text(hi),
+                     'budget': exact_text(max(-lo, hi, F(0))),
+                     'independent_budget': exact_text(max(-relaxed_lo, relaxed_hi, F(0)))})
+    return {'metric': 'linfinity', 'budget': exact_text(max(exact_value(r['budget']) for r in rows)), 'rows': rows}
 
 
 def witness(program: dict, result: dict, beta: F) -> dict:
     """Construct a rational strict witness for every 0 <= beta < principal budget."""
     beta = rational(beta)
-    B = F(result['budget'])
+    B = exact_value(result['budget'])
     if not F(0) <= beta < B:
         raise ValueError('witness requires 0 <= requested budget < inferred budget')
-    i = next(i for i, r in enumerate(result['rows']) if F(r['budget']) == B)
+    i = next(i for i, r in enumerate(result['rows']) if exact_value(r['budget']) == B)
     row = result['rows'][i]
-    side = 'upper' if F(row['upper']) == B else 'lower'
+    side = 'upper' if exact_value(row['upper']) == B else 'lower'
     margin = B-beta
     share = margin/(2*max(1, len(row['groups'])))
     valuation = {'captures': {}, 'noises': {}}
@@ -219,25 +219,25 @@ def witness(program: dict, result: dict, beta: F) -> dict:
         else:
             group = row['groups'][name][side]
             ep = group['endpoint']
-            r = F(ep['r'])
+            r = exact_value(ep['r'])
             if not ep['attained']:
-                slope = abs(F(ep['slope']))
+                slope = abs(exact_value(ep['slope']))
                 if slope == 0:
                     raise ValueError('zero-slope unattained certificate is invalid')
-                epsilon = min((r-F(ep['r_lower']))/2, share/(2*slope))
+                epsilon = min((r-exact_value(ep['r_lower']))/2, share/(2*slope))
                 if epsilon <= 0:
                     raise ValueError('no rational interior approach to endpoint')
                 r -= epsilon
-            s = F(ep['shift']) + F(ep['delta'])*ep['n'] + r
+            s = exact_value(ep['shift']) + exact_value(ep['delta'])*ep['n'] + r
             seg = group['segments'][group['chosen_segment']]
-            u = F(seg['u_slope'])*s+F(seg['u_constant'])
+            u = exact_value(seg['u_slope'])*s+exact_value(seg['u_constant'])
             enc, ana = interval(decl['encoding']), interval(decl['analog'])
             z = max(enc[0], u-ana[1])
             vals = {'ideal': exact_text(s-u), 'encoding': exact_text(z), 'analog': exact_text(u-z)}
         valuation['captures'][name] = vals
     for name, domain in program['noises'].items():
         a, b = interval(domain)
-        coef = F(row['boxes'].get(name, {}).get('coefficient', '0'))
+        coef = exact_value(row['boxes'].get(name, {}).get('coefficient', '0'))
         use_b = (coef >= 0) == (side == 'upper')
         valuation['noises'][name] = exact_text(b if use_b else a)
     values = evaluate(program, valuation)

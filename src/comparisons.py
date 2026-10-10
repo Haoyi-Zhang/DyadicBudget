@@ -2,6 +2,7 @@
 from fractions import Fraction as F
 from .oracle import group_oracle
 from .verify import reverse_effect
+from .exact_io import exact_value, exact_text
 
 
 def separation_bounds(program):
@@ -13,8 +14,8 @@ analytical baseline implemented here, not an external tool.
 """
     cache = {}
     for name, decl in program['captures'].items():
-        x = tuple(map(F, decl['ideal']))
-        enc, ana = tuple(map(F, decl['encoding'])), tuple(map(F, decl['analog']))
+        x = tuple(map(exact_value, decl['ideal']))
+        enc, ana = tuple(map(exact_value, decl['encoding'])), tuple(map(exact_value, decl['analog']))
         u = (enc[0]+ana[0], enc[1]+ana[1])
         ps = {n['exponent'] for n in program['nodes'] if n['op'] == 'round' and n['source'] == name}
         for p in ps:
@@ -28,7 +29,7 @@ analytical baseline implemented here, not an external tool.
         for decomposition in [0, 1]:
             lower = upper = F(0)
             for name, decl in program['captures'].items():
-                enc, ana = tuple(map(F, decl['encoding'])), tuple(map(F, decl['analog']))
+                enc, ana = tuple(map(exact_value, decl['encoding'])), tuple(map(exact_value, decl['analog']))
                 u = (enc[0]+ana[0], enc[1]+ana[1])
                 ws = {k[2]: v for k, v in ef.items() if k[:2] == ('q', name)}
                 c = ef.get(('u', name), F(0))-decomposition*sum(ws.values(), F(0))
@@ -37,7 +38,7 @@ analytical baseline implemented here, not an external tool.
                     a, b = cache[(name, p, decomposition)]
                     lower += min(w*a, w*b); upper += max(w*a, w*b)
             for name, dom in program['noises'].items():
-                a, b = map(F, dom); c = ef.get(('e', name), F(0))
+                a, b = map(exact_value, dom); c = ef.get(('e', name), F(0))
                 lower += min(c*a, c*b); upper += max(c*a, c*b)
             budgets['marginal' if decomposition else 'residual'] = max(-lower, upper, F(0))
         budgets['separation'] = min(budgets.values())
@@ -48,4 +49,4 @@ analytical baseline implemented here, not an external tool.
     # min(max_e A_e,max_e B_e).
     result = {k: max(row[k] for row in rows) for k in ['marginal', 'residual']}
     result['separation'] = min(result.values())
-    return {k: str(v) for k, v in result.items()}
+    return {k: exact_text(v) for k, v in result.items()}

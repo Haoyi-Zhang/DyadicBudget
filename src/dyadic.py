@@ -7,6 +7,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from fractions import Fraction as F
 from typing import Iterable
+from .exact_io import exact_text
 
 ZERO = F(0)
 ONE = F(1)
@@ -52,7 +53,7 @@ class Endpoint:
     slope: F
 
     def to_json(self) -> dict:
-        return {k: str(v) if isinstance(v, F) else v
+        return {k: exact_text(v) if isinstance(v, F) else v
                 for k, v in self.__dict__.items()}
 
 
@@ -121,9 +122,9 @@ def support(weights: dict[int, F], a: F, b: F,
             r = rhi if use_high else rlo
             attained = hi_closed if use_high else True
             out.append(Endpoint(base+rho*r, attained, n, r, rlo, delta, shift, rho))
-        pieces.append({'kind':'partial','n':n,'rlo':str(rlo),'rhi':str(rhi),
+        pieces.append({'kind':'partial','n':n,'rlo':exact_text(rlo),'rhi':exact_text(rhi),
                        'hi_closed':hi_closed,
-                       'lower':str(lowers[-1].value),'upper':str(uppers[-1].value)})
+                       'lower':exact_text(lowers[-1].value),'upper':exact_text(uppers[-1].value)})
 
     if na == nb:
         partial(na, a-shift-na*delta, b-shift-na*delta, True)
@@ -141,12 +142,12 @@ def support(weights: dict[int, F], a: F, b: F,
                 value = base+prefix[k]+rho*r
                 out.append(Endpoint(value, not use_high, n, r, ZERO, delta, shift, rho))
             pieces.append({'kind':'block','start':start,'k':k,
-                           'lower':str(lowers[-1].value),'upper':str(uppers[-1].value)})
+                           'lower':exact_text(lowers[-1].value),'upper':exact_text(uppers[-1].value)})
         partial(nb, ZERO, b-shift-nb*delta, True)
     low, high = pick(lowers, False), pick(uppers, True)
-    cert = {'interval':[str(a),str(b)],'linear':str(linear),'constant':str(constant),
-            'weights':[[p,str(w)] for p,w in sorted(weights.items())],
-            'delta':str(delta),'shift':str(shift),'coefficients':[str(c) for c in cs],
+    cert = {'interval':[exact_text(a),exact_text(b)],'linear':exact_text(linear),'constant':exact_text(constant),
+            'weights':[[p,exact_text(w)] for p,w in sorted(weights.items())],
+            'delta':exact_text(delta),'shift':exact_text(shift),'coefficients':[exact_text(c) for c in cs],
             'pieces':pieces,'lower':low.to_json(),'upper':high.to_json()}
     return Support(low, high, cert)
 
@@ -176,11 +177,11 @@ def group_support(x: tuple[F,F], u: tuple[F,F], coefficient: F,
             s=support(weights,a,b,coefficient*A,coefficient*B)
             ep=s.upper if upper else s.lower
             candidates.append((ep,A,B))
-            certificates.append({'u_slope':str(A),'u_constant':str(B),
+            certificates.append({'u_slope':exact_text(A),'u_constant':exact_text(B),
                                  'support':s.certificate})
         ep=pick([x[0] for x in candidates],upper)
         chosen=next(i for i,c in enumerate(candidates) if c[0] is ep)
-        sides[name]={'value':str(ep.value),'attained':ep.attained,
+        sides[name]={'value':exact_text(ep.value),'attained':ep.attained,
                      'chosen_segment':chosen,'segments':certificates,
                      'endpoint':ep.to_json()}
     return sides
