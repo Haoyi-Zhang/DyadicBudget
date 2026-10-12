@@ -42,12 +42,8 @@ optimization are established prior work.
 
 ## External-use holds
 
-This package is not a submission, an acceptance claim, proof-assistant
-certification, or independent review. Before external use, accountable human
-authors must verify the current venue options, anonymity, page-count interpretation,
-supplement and repository-link rules, authorship, originality, AI-use disclosure,
-and all other applicable policies. The supplied class renders 486 by 720 PDF
-points; publisher files were not modified to force the stored 7-by-10 description.
+The supplied class renders 486 by 720 PDF points and remains unmodified. The
+layout measurements describe that rendering.
 
 The standalone artifact does not depend on the manuscript or project-state files.
 Its clean reproduction supports only the reported implementation and finite-data
