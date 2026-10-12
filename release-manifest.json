@@ -155,6 +155,34 @@
     "verify_release.py": {
       "sha256": "37551f8c7527148a4656ff57327c7cce5312484cc06da49c18f57de839f3b434",
       "size": 2934
+    },
+    "FIGURES.md": {
+      "sha256": "3c2c54086ca57db62dd539d769f41924e1734b70a2782ea740910eb18e74c59e",
+      "size": 1232
+    },
+    "requirements-figures.txt": {
+      "sha256": "9df69ae4cf6b400990aaf7627a772b38c58efdfc8d34db975eb632ca66db350f",
+      "size": 103
+    },
+    "scripts/plot_figures.py": {
+      "sha256": "368dade689ede51fc3767d4eb4891a7bfb070a71d200c492045f6d0426a82511",
+      "size": 4436
+    },
+    "figures/phase.pdf": {
+      "sha256": "6990a7e6d00d2801b864024a4e533e82d3fbbaf01eba1ea26d57e9ad6a2f5bf3",
+      "size": 16612
+    },
+    "fonts/LinLibertine_Rah.ttf": {
+      "sha256": "06e2b67aa9a899e71f78b91da21cd0bba0fb1c5791fd3b58752ea25a4b9b79d7",
+      "size": 806856
+    },
+    "fonts/LinLibertine_RIah.ttf": {
+      "sha256": "8006a620ae7487b45c8279cc51b676ec0209af7151fea00d69df44142171e7b6",
+      "size": 721340
+    },
+    "fonts/OFL-1.1.txt": {
+      "sha256": "99f03128fa33d48b52ca4bbe7b536e5a49a569cdfdaa458c94bb55d5e0842afa",
+      "size": 4462
     }
   },
   "hash_algorithm": "sha256",
