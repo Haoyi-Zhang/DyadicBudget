@@ -206,18 +206,3 @@ private material, credentials, or external-model artifact is included. Source
 attribution for the five numerical rows is in
 `inputs/published-fusion-README.md`; the live-policy and literature boundary is in
 `docs/readiness.md`.
-
-## Optional vector figures
-
-From the standalone artifact root, install the renderer dependencies if needed
-and generate the PDF figures:
-
-```sh
-python -m pip install -r requirements-figures.txt
-python -B scripts/plot_figures.py
-```
-
-Keep the bundled regular and italic Libertine fonts and their accompanying license files. The renderer uses the retained rational phase table.
-
-This optional rendering step is separate from the scientific reproduction
-commands and works without a sibling paper directory.
