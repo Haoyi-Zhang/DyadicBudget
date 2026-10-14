@@ -437,14 +437,14 @@ individual-precision monotonicity is not a law of this language.
 
 ## 9. Relation to published converter fusion
 
-McMichael, Maymon, and Oppenheim, ��Exploiting Cross-Channel Quantizer Error
-Correlation in Time-Interleaved Analog-to-Digital Converters,�� ASILOMAR 2011,
-pp. 525�C529, Section IV and Table II, already establish a deterministic
+McMichael, Maymon, and Oppenheim, “Exploiting Cross-Channel Quantizer Error
+Correlation in Time-Interleaved Analog-to-Digital Converters,” ASILOMAR 2011,
+pp. 525–529, Section IV and Table II, already establish a deterministic
 relation between different-precision residuals and derive covariance-aware
 weighted least-squares fusion. Consequently neither correlated quantization
 nor using correlated errors in positive-weight fusion is claimed here as a
 new phenomenon. Their statistical criterion is not the universal support
-criterion of Theorems 3�C10.
+criterion of Theorems 3–10.
 
 For comparison, under the *additional hypothetical assumption* of a uniformly
 distributed phase over one period and consecutive steps, the same bit identity
