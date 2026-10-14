@@ -376,6 +376,19 @@ largest fine-cell index. Rational arithmetic has nonconstant cost. A binary
 encoding of an exponent does not make expansion to 2^p polynomial in its
 encoded exponent length. No unqualified strongly polynomial claim is made.
 
+These are support-query counts. For n graph nodes, q output rows, a distinct
+error origins, and D capture/auxiliary declarations, forward effect propagation
+uses at most O(n(1+a)) coefficient operations and retains O(n(1+a)) coefficients.
+For output e, let a_e be its nonzero effect entries and g_e its active captures.
+Analyzer grouping and visits to declarations add O(sum_e(a_e+D)) entry visits.
+The replayer instead makes a reverse graph pass for each output, adding O(q*n)
+graph work, and filters the output effect for each active capture, adding
+O(sum_e a_e*g_e) entry visits. Sum all support-query costs separately. Sorting
+effect keys, exact decimal I/O, certificate storage, and each full-graph direct
+witness interpretation are additional pipeline work. Coefficient counts and
+dictionary-entry visits do not assign constant bit cost to rational arithmetic
+or serialization and are not measured speedups.
+
 The certificate contains coefficients, a complete aligned cover, both supports,
 endpoint-attainment flags, and actual or limiting coordinates. The replay
 implementation independently validates the entire input DAG, rederives output
@@ -424,14 +437,14 @@ individual-precision monotonicity is not a law of this language.
 
 ## 9. Relation to published converter fusion
 
-McMichael, Maymon, and Oppenheim, “Exploiting Cross-Channel Quantizer Error
-Correlation in Time-Interleaved Analog-to-Digital Converters,” ASILOMAR 2011,
-pp. 525–529, Section IV and Table II, already establish a deterministic
+McMichael, Maymon, and Oppenheim, ��Exploiting Cross-Channel Quantizer Error
+Correlation in Time-Interleaved Analog-to-Digital Converters,�� ASILOMAR 2011,
+pp. 525�C529, Section IV and Table II, already establish a deterministic
 relation between different-precision residuals and derive covariance-aware
 weighted least-squares fusion. Consequently neither correlated quantization
 nor using correlated errors in positive-weight fusion is claimed here as a
 new phenomenon. Their statistical criterion is not the universal support
-criterion of Theorems 3–10.
+criterion of Theorems 3�C10.
 
 For comparison, under the *additional hypothetical assumption* of a uniformly
 distributed phase over one period and consecutive steps, the same bit identity
