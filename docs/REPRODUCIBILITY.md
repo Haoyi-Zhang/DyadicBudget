@@ -36,7 +36,7 @@ export OPENBLAS_NUM_THREADS=1
 python run_all.py
 ```
 
-`run_all.py` returns nonzero on any failed unit test, oracle comparison, certificate replay, timeout, or deterministic-result comparison. It also sets `PYTHONDONTWRITEBYTECODE=1` for every child process so the documented replay does not create caches rejected by release integrity checking. The explicit commands remain documented in the main README and status records.
+`run_all.py` returns nonzero on any failed unit test, oracle comparison, certificate replay, timeout, or deterministic-result comparison. It also sets `PYTHONDONTWRITEBYTECODE=1` for every child process so the documented replay does not create caches rejected by release integrity checking. The command groups are defined in `run_all.py`; the main README documents the entry points and output locations.
 
 ## Distribution integrity
 

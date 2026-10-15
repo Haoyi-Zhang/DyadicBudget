@@ -1,208 +1,142 @@
 # Principal relational error budgets for shared-signal dyadic quantization
 
-This standalone research artifact contains an exact-rational analyzer, a separately
-implemented certificate replayer, a threshold-enumeration oracle, complete written
-mathematical arguments, and frozen finite validation data. It concerns a specified
-static mathematical language, not a physical analog device or a measured software
-kernel. The accompanying manuscript is a complete internal scientific draft, but
-neither the paper nor this repository is an external submission, an independently
-reviewed proof, or a certification of publication priority.
+An exact-rational analyzer for a finite affine capture language, with a separately
+implemented certificate replayer, threshold-enumeration oracle, handwritten
+proofs, deterministic inputs and frozen finite results.
 
-## What the mathematics establishes
+Quantizers are parallel, zero-offset, unsaturated, nearest dyadic converters
+reading the same frozen capture value; ties go toward positive infinity.
+Signed origins and pre-quantization uncertainty are retained in the support
+calculation. The mathematical model and its interval/absolute/maximum-norm
+targets are specified in `proofs/principal-budgets.md`; finite tests are
+implementation evidence rather than proof-assistant certification.
 
-For parallel, zero-offset, unsaturated, nearest dyadic quantizers reading the same
-frozen signal, the closed convex hull of their joint residual trace admits a
-compressed support formula. On consecutive precisions, separating half-step error
-intervals loses at most, and sometimes exactly, a factor `(m+1)/2`; the extremal
-weights can be nonnegative and sum to one. All normalized full-period minimax
-fusers are characterized.
+## Setup and worked example
 
-A finite affine capture language preserves signed error origins and reduces its
-least closed output-error interval to exact bounded support queries.
-Pre-quantization encoding and analog boxes are eliminated through exact fibers
-without separating them from quantizer phase. The returned interval is the best
-correct abstraction in the closed-interval domain, and its absolute or maximum-norm
-projection is principal. A rational admissible input strictly violating every
-smaller nonnegative rational declaration can be produced, including when a support
-endpoint is only a limit. The certificate theorem states the sufficient replay
-obligations under exact arithmetic.
+Scientific code needs Python 3.10 or newer and the standard library. No package
+installation, network, external solver, model API, GPU or external dataset is
+required. `environment-lock.json` records the retained Linux/CPython 3.13.5
+environment and deterministic controls.
 
-`proofs/principal-budgets.md` contains the hand arguments. These are not
-proof-assistant-certified theorems. Python replay, finite exhaustive instances, and
-mutation checks are separate implementation evidence. The replayer is a second code
-path by the same research executor, not independent human or blind review.
-
-## Run the worked three-rate example
-
-Use Python's standard library on a POSIX/Linux host. No package installation,
-network connection, solver, model, API, GPU, external compute, or dataset is needed.
-The CLI applies POSIX resource limits, accepts input JSON up to 8 MiB, and limits
-itself to 30 CPU seconds and 3 GiB of virtual address space. Exceeding a limit never
-certifies a budget.
+The CLI and complete campaign require POSIX/Linux resource/process-group support.
+Run from the standalone repository root:
 
 ```sh
-python budget.py analyze inputs/example.json --budget 1/10 > example-certificate.json
-python budget.py verify example-certificate.json
+python -B budget.py analyze inputs/example.json --budget 1/10 > example-certificate.json
+python -B budget.py verify example-certificate.json
 ```
 
-The example averages quantizers of steps `1/4`, `1/2`, and `1`. Its least budget is
-`1/6`, while the separated half-step radius is `7/24`; `v=1/2` is an attained strict
-witness against the declaration `1/10`. The checker independently rederives effects,
-checks all support pieces, and directly evaluates the witness. The retained result
-is `results/example-certificate.json`.
+The example averages quantizer steps `1/4`, `1/2` and `1`. Its least budget
+is `1/6`, the separated half-step radius is `7/24`, and `v=1/2` is an
+attained strict witness against `1/10`. The saved packet includes its program,
+analysis and optional declaration/witness; `results/example-certificate.json`
+retains the supplied example.
 
-## Reproduce the finite evidence
+The CLI rejects duplicate JSON keys and input above 8 MiB, and applies a
+30-CPU-second limit and 3 GiB address-space limit. Failure to finish does not
+certify a budget. Native Windows supports pure-library analysis/replay and the
+portable unit tests, not the bounded CLI or complete runner.
 
-The recommended command runs every frozen obligation sequentially with a 35-second
-limit per scientific subprocess. It writes a machine-readable report to
-`results/clean-reproduction.json` and returns nonzero on any failure:
+## Reproduction and integrity
+
+Use a writable fresh extraction to keep the supplied measurements unchanged:
 
 ```sh
-export PYTHONDONTWRITEBYTECODE=1
+export PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+python verify_release.py --integrity-only
 python run_all.py
+python verify_release.py --integrity-only
 ```
 
-For a clean-extraction comparison against another artifact root, use:
+`python verify_release.py --run` combines integrity, full replay and post-check.
+The SHA-256 manifest binds immutable source/input/document/font bytes, excluding
+generated result files, logs and itself. The verifier also checks required files,
+safe paths, Python syntax and absence of packaged caches.
+
+`run_all.py` runs 15 sequential command groups: the current 43 unit methods,
+pilot, ten frozen suites, a second period suite under `python -O`, table
+export and example replay. Each child has a 35-second wall timeout and a failed
+gate returns nonzero. It refreshes `inputs/`, `results/` and table products
+in place, retaining child stdout/stderr under `results/raw/` and a report at
+`results/clean-reproduction.json`.
+
+For comparison against a separate artifact root:
 
 ```sh
 python run_all.py --baseline /absolute/path/to/reference-artifact-root
 ```
 
-The comparison checks all retained scientific input/result products, ignoring only
-the named timing/RSS diagnostic fields in JSON, and compares the listed scientific
-source/proof files byte-for-byte. It does not treat a timing difference as a
-scientific mismatch.
+The comparison checks scientific inputs/results, ignoring only the explicitly
+listed timing/RSS fields in JSON, and compares scientific source/proof files
+byte-for-byte. CSV/TeX products are byte-compared; line endings therefore matter.
+A frozen unit-test count is historical metadata, while a fresh run must execute
+every current source method.
 
-The equivalent explicit sequence is:
-
-```sh
-export PYTHONDONTWRITEBYTECODE=1
-python -m unittest discover -s tests -v
-timeout 35s python pilot.py
-for suite in support envelopes periods programs scaling mutations baselines separation fusion ablation; do
-    timeout 35s python reproduce.py --suite "$suite" || exit "$?"
-done
-timeout 35s python -O reproduce.py --suite periods
-python export_tables.py
-python budget.py verify results/example-certificate.json
-```
-
-The supplied campaign contains 15 command groups and 38 current unit tests,
-including three portable capture-index regressions and two strict-witness boundary
-regressions. Thirty-five portable tests passed on Windows; the three CLI/pilot
-tests require POSIX resource support and are not Windows tests. The unit suite also
-launches the pilot under `python -O`; all scientific cross-checks use explicit
-runtime guards, not removable Python `assert` statements. The protocol and all
-post-pilot repairs are documented in `docs/experiment-plan.md`.
-
-The retained Linux clean-reproduction report ran the earlier 29-test suite. The
-preceding 33-test suite adds four regressions for vector-baseline aggregation, output-order
-invariance, and origin-name admission. Native Windows library replay exercised
-30 of that preceding 33-test suite and all ten frozen suite functions; the three
-POSIX-dependent tests were not run on that host. Thirty regenerated input/result
-products matched the retained scientific values after excluding only the listed
-timing/RSS fields. The seven table/phase exports matched as text; six TeX files
-differed only in Windows line endings. Historical Linux CPU/RSS values are retained
-and are not current-host measurements.
-
-Current analysis indexes each output's quantizer effect coefficients once by
-capture rather than filtering the entire effect map for every capture. Signed
-coefficients, declared capture order, full unused-input admission, support
-certificates, exact-marginal baselines and witnesses are unchanged. This is a
-grouping-work change, not a tighter interval, a new support algorithm or a
-measured speedup. Frozen CPU/RSS results remain tied to the pre-index sources.
-The new tests run in the existing discovery step; their portable standalone
-command is:
+The current suite has 40 portable methods and three POSIX-only CLI/pilot methods.
+Focused portable commands include:
 
 ```sh
 python -B -m unittest discover -s tests -p test_capture_index.py -v
+python -B -m unittest discover -s tests -p test_exact_pipeline.py -v
+python -B -m unittest discover -s tests -p test_witness_boundary.py -v
 ```
 
-The release manifest describes current distributed file bytes, not scientific
-replay success. Historical replay reports remain unchanged. Source comparison
-includes all current test modules and still rejects differing scientific source
-bytes when comparing to a genuinely different implementation.
+The scientific-checks workflow runs the bounded full campaign on Ubuntu 24.04,
+with a clean baseline, 600-second whole-run wall limit, 3 GiB address-space limit,
+CPU limits and raw-output upload on failure. Full protocol, exclusions and
+post-pilot baseline changes remain in `docs/experiment-plan.md`; supported
+runtime and release checks are in `docs/REPRODUCIBILITY.md`.
 
-For multiple outputs, each exact-marginal decomposition takes its maximum row
-budget before their minimum is selected. The rowwise hybrid is a different,
-stronger baseline. This correction leaves all 512 frozen comparison rows and
-their reported statistics unchanged.
+## Inputs, outputs and figures
 
-The 500 seeded programs and 12 analytical specimens are implementation tests, not
-512 independent application workloads. The five published fusion rows are
-attributed numerical inputs, not a reproduction of the source's physical or
-stochastic experiment.
+`inputs/specimens.json` contains 12 analytical semantic specimens;
+`inputs/generated.json` contains 500 seeded programs. These are implementation
+tests, not 512 independent application workloads. The five attributed fusion
+weight rows in `inputs/published-fusion.csv` are numerical inputs, not replay
+of their source's physical/stochastic experiment; attribution and restrictions
+are in `inputs/published-fusion-README.md`.
 
-The frozen campaign covers 8,250 support queries, 3,750 capture-envelope queries,
-750 full-period comparisons, 512 programs, 1,506 strict program witnesses, 15 scale
-cases, 24 invalid mutations, and two excluded-semantics counterexamples. Derived
-checks cover 2,800 integer-weight banks, 1,440 transformed-norm vertices, nine
-extremal families, 781 normalized cases, 60 wide-range cases, ten published-weight
-envelope cases, and ten additional witnesses. The four-interface partial-order ablation evaluates all
-512 unchanged programs; the two exact-marginal decompositions are incomparable and
-the reported separation row is their pointwise minimum. Counts overlap and must not be summed into a workload-breadth
-claim.
+`results/` retains exact budgets, supports, strict witnesses, finite suite
+summaries, ablations, resource accounting and historical clean-replay records.
+`results/current-replay/` keeps native replay output separate from the original
+measurements. Historical CPU/RSS values belong to their original source/runtime
+boundary and are not current-host performance measurements.
 
-`results/clean-reproduction.json` records the clean-extraction replay. Exact budgets,
-predicates, witnesses, CSV, and TeX products must agree; CPU/wall time and RSS may
-vary. `results/resource-accounting.json` separates measured replay diagnostics from
-unmetered literature, editing, rendering, and TeX work rather than inventing an exact
-whole-campaign total.
+`export_tables.py` reads retained results and writes five exact tables and the
+phase-curve data under `results/paper/`; it does not run an experiment.
+Optional vector rendering uses `requirements-figures.txt` and
+`scripts/plot_figures.py`. See `FIGURES.md` for bundled Libertine font licenses
+and output controls; by default the renderer also copies the figure to an
+existing sibling paper. Use a private copy or explicit destinations to preserve
+a frozen manuscript.
 
-`results/frozen-value-baseline-check.json` records the independent comparison with
-the untouched originally supplied project archive: all 512 baseline rows and the
-reported 356, `13/12`, `68/49`, `4`, and 57/290/165 statistics are retained.
-`results/cache-integrity-validation.json` records the writable-clean-copy sequence
-of integrity check, replay, second integrity check, and repeated verifier entry.
+`src/language.py` implements admission, signed effects, analysis and witnesses;
+`src/dyadic.py` implements support/fibers; `src/oracle.py` is the separately
+written threshold sweep; `src/verify.py` reconstructs and replays certificates.
+`src/comparisons.py` contains local relaxation baselines, not external tools.
+`claim_evidence_ledger.csv` maps claims to proof/code/input/result consumers.
 
-The `scientific-checks.yml` workflow is prepared for a flat artifact repository on
-Ubuntu 24.04. It enforces the existing failure gates, a 600-second whole-run wall
-bound, a 3-GiB address-space limit and CPU limits, and uploads raw output even on
-failure. Preparing the workflow is not evidence that a remote run has completed.
-`run_all.py` now retains full subprocess stdout/stderr in `results/raw/`; those
-logs are diagnostic and excluded from deterministic scientific comparisons.
+## Conditions, provenance and licensing
 
-## Repository map
+Admissible captures form a Cartesian product of closed rational intervals;
+separate names cannot hide a correlation. Downstream affine arithmetic is exact.
+Digital rounding requires a separate valid contract. Saturation, offsets,
+cascades, nonlinear downstream operations, stochastic tails, Euclidean vector
+maxima and empirical device/energy/speed claims are outside the model.
+Principality concerns this semantics and these targets, not every mixed-signal
+program. Analyzer/replayer code paths share development history.
 
-- `src/language.py`: finite affine DAG admission, signed effects, paired interpreters,
-  analyzer integration, and strict witnesses.
-- `src/dyadic.py`: phase-bit coefficients, aligned covers, fibers, and full-period
-  support.
-- `src/oracle.py`: independently written exact threshold sweep, capped at 200,000
-  set points, with separate cumulative set-point and actual objective-call counters.
-- `src/verify.py`: separate admission, reverse effects, coefficient reconstruction,
-  cover replay, and witness evaluation.
-- `src/comparisons.py`: specified local relaxation baselines, not external tools.
-- `src/cases.py`: deterministic specimens and seeded generator.
-- `claim_evidence_ledger.csv`: each material claim mapped to proof, code, input,
-  result, and manuscript location.
-- `reference_audit.csv` and `docs/reference-audit.md`: per-record bibliography
-  evidence depth, locator, calibration role, and corrected high-risk metadata.
-- `external_resources.csv`: scientific/workflow sources, access state, and use.
-- `run_all.py`: bounded 15-group campaign runner and optional clean-baseline
-  comparator.
-- `results/paper/`: deterministic TeX table rows and exact phase-curve data.
+Original rational parameters retain their 16,384-bit admission bound. Derived
+support/budget/witness coordinates use exact chunked conversion without
+reapplying the original-input bound; CLI resource limits still apply.
 
-## Boundaries
+`reference_audit.csv`, `docs/reference-audit.md` and
+`external_resources.csv` preserve source identities, reading depth and access
+limits, including metadata-only coverage of the 2026 Shem publisher version.
+The complete 2024 preprint has a separately recorded comparison. No categorical
+priority or policy-compliance claim follows from these records.
 
-The admitted set is a Cartesian product of closed rational intervals. Separate
-capture names cannot hide a correlation; every converter attached to one capture
-sees the same frozen value. Rounding ties go toward positive infinity. Downstream
-affine arithmetic is exact; digital rounding must be supplied as a separate valid
-contract. Saturation, offsets, cascades, nonlinear downstream operations, stochastic
-tails, Euclidean vector maxima, and empirical energy/speed/device claims are outside
-the results. Principality is for this concrete semantics and the closed-interval or
-absolute/maximum-norm targets, not every mixed-signal program or abstract domain.
-Finite tests do not establish the general proof or universal checker correctness.
-No categorical “first” claim is made.
-
-## Provenance and licensing
-
-The exact scientific computations ran locally on CPU and did not invoke an external model service.
-
-See `LICENSE` and `licenses/README.md`. No scholarly PDF, third-party solver,
-private material, credentials, or external-model artifact is included. Source
-attribution for the five numerical rows is in
-`inputs/published-fusion-README.md`; the live-policy and literature boundary is in
-`docs/readiness.md`.
+The exact scientific computations ran locally on CPU and did not invoke an
+external model service. See `LICENSE` and `licenses/README.md`; scholarly PDFs,
+third-party solvers, credentials and external-model artifacts are not bundled.

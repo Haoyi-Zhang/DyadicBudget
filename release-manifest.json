@@ -9,8 +9,8 @@
       "size": 1281
     },
     "README.md": {
-      "sha256": "f188c479c072ea8c25023dc920437383b56d9cce5f82d75feec9dfa094394160",
-      "size": 11353
+      "sha256": "6d0b381af973360a6cee0bb3f759998b0500b22b7455df33b20850bf436541f5",
+      "size": 7240
     },
     "budget.py": {
       "sha256": "da5b840968e21662ef755dc586467e89b1d35d84757b4d56295be35d3bc5c507",
@@ -20,21 +20,13 @@
       "sha256": "017bc4f8344c0a73b4f498425df11747f48c0eae830214ba0f7028e06ddb9347",
       "size": 9020
     },
-    "docs/RELEASE-CLOSURE.md": {
-      "sha256": "1774fb290c951ffd0c578fcd3efe357084229618b28c3e9897fb0661db405caa",
-      "size": 3158
-    },
     "docs/REPRODUCIBILITY.md": {
-      "sha256": "e844b73a9655dc40854d0dbe65637e28b355131e711d73c4744108e902507ce8",
-      "size": 2799
+      "sha256": "7ce703b763be8415f7fa68029c3f7a76048c0de9a99a4f78885be27f18c8eeed",
+      "size": 2833
     },
     "docs/experiment-plan.md": {
-      "sha256": "d91d6ea27d6a7dbcd6178fcd8deb33d9d5c9a89c01087d2b34bae6de034c6e74",
-      "size": 7669
-    },
-    "docs/readiness.md": {
-      "sha256": "3e84a63ecca7a0a745ec68b4525f146acb37a17b46cc0f230a01027ab8a4120f",
-      "size": 2951
+      "sha256": "45c246b88875d82a9b5545b66992f6d8ca2704e0bb8ed71b65bc82a8b7677161",
+      "size": 7911
     },
     "docs/reference-audit.md": {
       "sha256": "60c3c278fbadce1b13847e0d4f3c8a10500b5dc7968aeaa5b5b4c6f8ddcb8556",

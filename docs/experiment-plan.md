@@ -113,7 +113,7 @@ The resulting 15-command-group report is `results/clean-reproduction.json`.
 Scientific guards use explicit exceptions rather than removable Python `assert`
 statements.
 
-The current runner keeps those 15 command groups and has 33 unit tests. The four
+The recorded 33-test runner snapshot kept those 15 command groups. Its four
 additional regressions cover vector-baseline aggregation, output order, and string
 origin-name admission. Native Windows library replay exercised 30 tests and all
 ten frozen suite functions, leaving the frozen numerical products unchanged; the
@@ -121,3 +121,7 @@ three POSIX-dependent tests require the supported Linux runtime. That replay doe
 not replace the retained Linux resource measurements or establish a new full
 POSIX command-line campaign. Full subprocess logs are now retained in
 `results/raw/`, outside the deterministic-product comparison.
+
+Current discovery contains 43 unit methods: 40 portable library methods and three
+POSIX-dependent CLI/pilot methods. Later exact-I/O, capture-index and strict-witness
+regressions do not relabel the historical replay or its resource measurements.
