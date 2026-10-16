@@ -17,3 +17,9 @@ The legacy `results/paper/phase-lines.tex` remains an unchanged scientific-expor
 record, not an input to the paper's vector wrapper. Re-exporting scientific
 tables therefore cannot restore a PGFPlots container in the paper.
 No TeX rendering or model API is used by the vector producer.
+
+The shared-capture schematic is generated separately by
+`python -B scripts/draw_schematics.py --out figures`, using the same packaged
+Libertine fonts. Its fixed vector asset is `figures/capture.pdf`; pass
+`--out ../paper/figures` to regenerate the companion paper copy. Both the phase
+plot and the capture schematic are direct Python outputs without a TeX backend.

@@ -208,7 +208,8 @@ def check_group(item, x, u, c, weights):
             candidates.append(v[2:] if side == 'upper' else v[:2])
         optimum = (max if side == 'upper' else min)(v for v, _ in candidates)
         att = any(v == optimum and a for v, a in candidates)
-        need(exact_value(data['value']) == optimum and data['attained'] == att, 'wrong group optimum')
+        need(exact_value(data['value']) == optimum and type(data['attained']) is bool and
+             data['attained'] == att, 'wrong group optimum')
         chosen = data['chosen_segment']
         need(type(chosen) is int and 0 <= chosen < 2, 'bad selected segment')
         need(candidates[chosen] == (optimum, att), 'selected segment not optimal')

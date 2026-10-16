@@ -9,8 +9,8 @@
       "size": 1281
     },
     "README.md": {
-      "sha256": "6d0b381af973360a6cee0bb3f759998b0500b22b7455df33b20850bf436541f5",
-      "size": 7240
+      "size": 7240,
+      "sha256": "a318d0b142c58abd0fd67a255c3202ab4be713a4a96606c3146a91c21148cf55"
     },
     "budget.py": {
       "sha256": "da5b840968e21662ef755dc586467e89b1d35d84757b4d56295be35d3bc5c507",
@@ -125,8 +125,8 @@
       "size": 4180
     },
     "src/verify.py": {
-      "sha256": "5e630451ac42ff6b7421c7948c1f7f070832823954d82ff57930f7ec734c1ed0",
-      "size": 15475
+      "size": 15523,
+      "sha256": "e02c2689cfb45438e88aacb0a7064c1acfef9e2203d35646ba953ece0d6f1376"
     },
     "tests/test_capture_index.py": {
       "sha256": "15db5ec3519e03365d8bc7b2f5b255e6ca4b98229efa596df63e958b901c9fad",
@@ -149,8 +149,8 @@
       "size": 2934
     },
     "FIGURES.md": {
-      "sha256": "3c2c54086ca57db62dd539d769f41924e1734b70a2782ea740910eb18e74c59e",
-      "size": 1232
+      "size": 1598,
+      "sha256": "3f4e31a95afc1840b13a714f8e7f3310ba66c614293324bfa42b6bfc5f57c2a5"
     },
     "requirements-figures.txt": {
       "sha256": "9df69ae4cf6b400990aaf7627a772b38c58efdfc8d34db975eb632ca66db350f",
@@ -175,6 +175,18 @@
     "fonts/OFL-1.1.txt": {
       "sha256": "99f03128fa33d48b52ca4bbe7b536e5a49a569cdfdaa458c94bb55d5e0842afa",
       "size": 4462
+    },
+    "scripts/draw_schematics.py": {
+      "size": 5107,
+      "sha256": "5c443f2b25ec4e0e6087ac8418f3cb70f347733de85353788caf17195feeee02"
+    },
+    "tests/test_group_attainment.py": {
+      "size": 1331,
+      "sha256": "d8e1667a379afd7dd03e67c86f5d80aab780a0f1d0071b453c9eeb2678eb95b2"
+    },
+    "figures/capture.pdf": {
+      "size": 13572,
+      "sha256": "42fac48db8ccc859722dc291c27a8ac988ab1f96443dce0973c2a1fdfe98b386"
     }
   },
   "hash_algorithm": "sha256",

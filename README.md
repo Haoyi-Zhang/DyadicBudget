@@ -54,7 +54,7 @@ The SHA-256 manifest binds immutable source/input/document/font bytes, excluding
 generated result files, logs and itself. The verifier also checks required files,
 safe paths, Python syntax and absence of packaged caches.
 
-`run_all.py` runs 15 sequential command groups: the current 43 unit methods,
+`run_all.py` runs 15 sequential command groups: the current 45 unit methods,
 pilot, ten frozen suites, a second period suite under `python -O`, table
 export and example replay. Each child has a 35-second wall timeout and a failed
 gate returns nonzero. It refreshes `inputs/`, `results/` and table products
@@ -73,7 +73,7 @@ byte-for-byte. CSV/TeX products are byte-compared; line endings therefore matter
 A frozen unit-test count is historical metadata, while a fresh run must execute
 every current source method.
 
-The current suite has 40 portable methods and three POSIX-only CLI/pilot methods.
+The current suite has 42 portable methods and three POSIX-only CLI/pilot methods.
 Focused portable commands include:
 
 ```sh
