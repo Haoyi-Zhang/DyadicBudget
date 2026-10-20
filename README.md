@@ -140,3 +140,7 @@ priority or policy-compliance claim follows from these records.
 The exact scientific computations ran locally on CPU and did not invoke an
 external model service. See `LICENSE` and `licenses/README.md`; scholarly PDFs,
 third-party solvers, credentials and external-model artifacts are not bundled.
+
+## Source repository
+
+[DyadicBudget](https://github.com/Haoyi-Zhang/DyadicBudget)
