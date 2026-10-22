@@ -18,7 +18,7 @@ interpreter-wide decimal-conversion safeguards are unchanged. Its existing file,
 CPU and memory limits still apply, so successful completion is not promised for
 every admitted program.
 
-The three small exact-I/O regressions use owned rational programs and a mocked
+The five small exact-I/O regressions use owned rational programs and a mocked
 unavailable ordinary formatter, rather than boundary-sized inputs. Their run is
 separate from retained campaign and clean-copy validation records:
 

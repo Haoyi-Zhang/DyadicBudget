@@ -122,6 +122,6 @@ not replace the retained Linux resource measurements or establish a new full
 POSIX command-line campaign. Full subprocess logs are now retained in
 `results/raw/`, outside the deterministic-product comparison.
 
-Current discovery contains 43 unit methods: 40 portable library methods and three
+Current discovery contains 45 unit methods: 42 portable library methods and three
 POSIX-dependent CLI/pilot methods. Later exact-I/O, capture-index and strict-witness
 regressions do not relabel the historical replay or its resource measurements.

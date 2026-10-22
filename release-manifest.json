@@ -17,20 +17,20 @@
       "size": 4425
     },
     "claim_evidence_ledger.csv": {
-      "sha256": "b85b52bd98f9e2daf98ad091ac4e44001b350adeda4bd4ff32a134547bc5192c",
-      "size": 9035
+      "sha256": "f3c37853db0c6de559f2c5df46047d9b39bb64681c0eaed990600bee7e2ce179",
+      "size": 9176
     },
     "docs/REPRODUCIBILITY.md": {
-      "sha256": "7ce703b763be8415f7fa68029c3f7a76048c0de9a99a4f78885be27f18c8eeed",
-      "size": 2833
+      "sha256": "4b7c1f03b199ba3a65173f770d60be0cd771f37a6c944d37e6227ae1fd1047a3",
+      "size": 2832
     },
     "docs/experiment-plan.md": {
-      "sha256": "45c246b88875d82a9b5545b66992f6d8ca2704e0bb8ed71b65bc82a8b7677161",
+      "sha256": "cea139cd5affb099ee251e19dd498029ab5b404ccd77797095e4441138e2cc35",
       "size": 7911
     },
     "docs/reference-audit.md": {
-      "sha256": "60c3c278fbadce1b13847e0d4f3c8a10500b5dc7968aeaa5b5b4c6f8ddcb8556",
-      "size": 3498
+      "sha256": "cfe9ad5b56b7ac18860b0c2fd2c17a42da3613b3103d1f50b44770f5037588ee",
+      "size": 3634
     },
     "environment-lock.json": {
       "sha256": "f5c03aefdcaa5c96b1d8f9b179cec27951a591e3afd6fce8d98fbc0d5dda6557",
@@ -77,8 +77,8 @@
       "size": 25749
     },
     "reference_audit.csv": {
-      "sha256": "491333427495f3706700b837317fb0467ea80b10d4a86b70a4fbf7b21f5e88e5",
-      "size": 25546
+      "sha256": "2d9b044cb1c290c880ef6ca6b2f13f01d3aeb3a9d17528811fd2fffff696c986",
+      "size": 25525
     },
     "reproduce.py": {
       "sha256": "d705ff840b637ac0bde26416561d3352a5350d677eb5822a84017d01d62ac9e6",

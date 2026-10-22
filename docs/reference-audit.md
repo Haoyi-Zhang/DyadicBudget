@@ -22,16 +22,19 @@ publisher page was fetched during reproduction.
 
 ## Full-text calibration count
 
-`artifact/external_resources.csv` records 22 full substantive source reads used for
+`artifact/external_resources.csv` records 21 full substantive source reads used for
 venue and related-work calibration:
 
 - 12 TACO research articles;
 - 5 influential or foundational papers;
-- 5 adjacent-venue papers.
+- 4 adjacent-venue papers.
+
+Cost of Soundness in Mixed-Precision Tuning has a separate claim-scoped original
+reading record; it is not counted as a full-paper read.
 
 The numbered sequences are checked for completeness and duplicates. The 2026
 publisher version of Shem remains explicitly metadata-only and is not included in
-the 22-source full-text count. Seventeen of the 22 calibration sources are also
+the 21-source full-text count. Sixteen of the 21 calibration sources are also
 manuscript references. Five TACO papers were read only to calibrate venue-native
 problem framing, evidence, and narrative structure; they are not added to the
 bibliography merely to increase its size.
