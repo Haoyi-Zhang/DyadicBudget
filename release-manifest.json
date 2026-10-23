@@ -187,6 +187,14 @@
     "figures/capture.pdf": {
       "size": 13572,
       "sha256": "42fac48db8ccc859722dc291c27a8ac988ab1f96443dce0973c2a1fdfe98b386"
+    },
+    ".github/manuscript/verify_release.py": {
+      "sha256": "be7a01578e025ab570adda7d49f83e22975a7e47a2310e0d84f72991ec7ab0d5",
+      "size": 3185
+    },
+    ".github/manuscript/release-manifest.json": {
+      "sha256": "d10fcb5ab2190b858039dfaf6f81f8efe9442ab5a80a8874efd7c1d3bbd580bd",
+      "size": 3469
     }
   },
   "hash_algorithm": "sha256",

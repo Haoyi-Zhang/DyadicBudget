@@ -1,0 +1,102 @@
+{
+  "files": {
+    "ACM-Reference-Format.bst": {
+      "sha256": "4342d27456645567ef1a027f6474e894715bc31d468f040142fa54540440ad04",
+      "size": 94292
+    },
+    "BUILDING.md": {
+      "sha256": "7a188c0dfeb82d82b5ca14dd9b4a50194d45443641177c7c54b0b2b1714dda42",
+      "size": 1041
+    },
+    "LICENSE": {
+      "sha256": "ca3227f672053cb608959d7e1d476c7a13efea11be3f6e53758a68b650c918e8",
+      "size": 19040
+    },
+    "README.md": {
+      "sha256": "15482d43487a39c72a2b14bd4b458333ce47c63aa513c3ba820ece6e3617b590",
+      "size": 5568
+    },
+    "acmart.cls": {
+      "sha256": "784c4f2fb07a70d8a797ee9d1c63f441c10fbd2f915c9c615d28cda35c0b742a",
+      "size": 121874
+    },
+    "build.py": {
+      "sha256": "6b21fa291fc63a950d292f0de2de24cc0ec5ea5ac0d671279b93ae6e24a44595",
+      "size": 9182
+    },
+    "check_references.py": {
+      "sha256": "81d757a689fc13b4b749d4e6703de490e38437c9c24419a113a70b7f56345939",
+      "size": 15786
+    },
+    "figures/ablation.tex": {
+      "sha256": "f6d4f401bb9c659777f94efb84e527d588da7fbf5a9683b89726e1cd07ffed23",
+      "size": 278
+    },
+    "figures/fusion.tex": {
+      "sha256": "2546f374128cf0436c4f750c4c1a54c7c37d7a438ee555d799befd7d0b06a246",
+      "size": 197
+    },
+    "figures/phase-lines.tex": {
+      "sha256": "e211eeb61c31c990f059096a150d8115f2c12e47c25692441fe679f80cfae22b",
+      "size": 54
+    },
+    "figures/phase.csv": {
+      "sha256": "cca170cc37a8c794618ba21e6409192a0f059ca096c5ec312909e647fe1869f0",
+      "size": 129
+    },
+    "figures/phase.pdf": {
+      "sha256": "6990a7e6d00d2801b864024a4e533e82d3fbbaf01eba1ea26d57e9ad6a2f5bf3",
+      "size": 16612
+    },
+    "figures/phase.tex": {
+      "sha256": "e211eeb61c31c990f059096a150d8115f2c12e47c25692441fe679f80cfae22b",
+      "size": 54
+    },
+    "figures/scaling.tex": {
+      "sha256": "c289dbda2cc06b7fb4d8b49893de2a71f6b5cff65ac9f5edf62d05c0cd054eea",
+      "size": 317
+    },
+    "figures/separation.tex": {
+      "sha256": "7ae7211234792b5a01c7a1ebffebeb22c30e11b89116e6aaca70ba5f50738a6d",
+      "size": 431
+    },
+    "figures/specimens.tex": {
+      "sha256": "c97596107cb0a5d4426d855eb892afed19345463bb3ff4f071d78fa1ac8e3f8f",
+      "size": 577
+    },
+    "main.tex": {
+      "sha256": "2fdb96dc8be56386797029efd95c380affca93955e05463c3de84258f303c456",
+      "size": 74977
+    },
+    "reference-audit-summary.json": {
+      "sha256": "13284203fbd7c378b66b983581a9fe82093f2837ff0032e3b93ff31e1cd091f8",
+      "size": 841
+    },
+    "references.bib": {
+      "sha256": "2ea9d219a4b9fc9579fa2b6225d72a67be22f0e00d157744f9a604da952f3417",
+      "size": 20090
+    },
+    "verify_release.py": {
+      "sha256": "cdc6f77b658df24d4c3d9e6dfca1de8a44b0d27422874471478604c322014257",
+      "size": 412
+    },
+    "current-authors.tex": {
+      "sha256": "ff4326743081791bb4ba3aa208e04b0e55986a6041dba985472485ac22381331",
+      "size": 276
+    },
+    "figures/capture.pdf": {
+      "sha256": "42fac48db8ccc859722dc291c27a8ac988ab1f96443dce0973c2a1fdfe98b386",
+      "size": 13572
+    }
+  },
+  "hash_algorithm": "sha256",
+  "kind": "paper",
+  "schema_version": 1,
+  "scope": "immutable distributed files; generated results/build products are excluded",
+  "companion_files": {
+    ".github/manuscript/verify_release.py": {
+      "sha256": "be7a01578e025ab570adda7d49f83e22975a7e47a2310e0d84f72991ec7ab0d5",
+      "size": 3185
+    }
+  }
+}
